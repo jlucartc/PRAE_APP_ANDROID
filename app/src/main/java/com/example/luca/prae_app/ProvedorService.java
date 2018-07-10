@@ -20,10 +20,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class ProvedorService extends Service {
 
     private RequestQueue requestQ;
     private Noticia[] noticiasService;
+    private Timer timer;
+    private TimerTask timerTask;
 
     public ProvedorService() {
     }
@@ -37,15 +42,32 @@ public class ProvedorService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
-        Log.d("buscarNoticias","Buscando notícias...");
+        this.timer = new Timer();
+        this.iniciarCronometro();
+        this.timer.schedule(this.timerTask,1000,5000);
+        Log.i("buscarNoticias","Buscando notícias...");
         this.requestQ = Volley.newRequestQueue(this);
         this.buscarNoticias();
+
         return Service.START_STICKY;
+    }
+
+    public void iniciarCronometro(){
+
+        this.timerTask = new TimerTask() {
+            @Override
+            public void run() {
+
+                buscarNoticias();
+
+            }
+        };
+
     }
 
     public void buscarNoticias(){
 
-        String url = "http://192.168.0.104:8000/app/ws/noticias";
+        String url = "http://192.168.2.108:8000/app/ws/noticias";
 
         StringRequest request  = new StringRequest(Request.Method.GET,url,new Response.Listener<String>() {
 
@@ -68,7 +90,7 @@ public class ProvedorService extends Service {
 
             public void onErrorResponse(VolleyError error) {
 
-                Log.e("Error",error.getMessage());
+                //Log.e("Error",error.getMessage());
 
             }
 
@@ -78,4 +100,6 @@ public class ProvedorService extends Service {
         this.requestQ.start();
 
     }
+
+
 }
