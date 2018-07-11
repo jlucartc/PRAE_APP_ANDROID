@@ -35,7 +35,7 @@
         <service
             android:name=".DataAccessService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
     </application>
 
 </manifest>

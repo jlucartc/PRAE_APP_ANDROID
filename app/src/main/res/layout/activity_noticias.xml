@@ -6,4 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".NoticiasActivity">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Noticias"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9" >
+
+            <ListView
+                android:id="@+id/listaDeNoticias"
+                android:layout_width="407dp"
+                android:layout_height="match_parent" />
+        </TableRow>
+
+    </TableLayout>
 </android.support.constraint.ConstraintLayout>

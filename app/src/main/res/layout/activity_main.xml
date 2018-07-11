@@ -13,21 +13,6 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.25">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/colorPrimary"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_weight="1">
 
             <Button
@@ -37,7 +22,8 @@
                 android:layout_weight="1"
                 android:background="#0077aa"
                 android:text="Noticias"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:onClick="noticias" />
 
             <Button
                 android:id="@+id/button28"
