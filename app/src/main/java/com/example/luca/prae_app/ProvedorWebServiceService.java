@@ -23,14 +23,18 @@ import org.json.JSONObject;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class ProvedorService extends Service {
+public class ProvedorWebServiceService extends Service implements IProvedor{
+    @Override
+    public Noticia[] getNoticias() {
+        return new Noticia[0];
+    }
 
     private RequestQueue requestQ;
     private Noticia[] noticiasService;
     private Timer timer;
     private TimerTask timerTask;
 
-    public ProvedorService() {
+    public ProvedorWebServiceService() {
     }
 
     @Override

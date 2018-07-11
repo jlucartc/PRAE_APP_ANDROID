@@ -4,17 +4,17 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-public class NotificarService extends Service {
-    public NotificarService() {
+public class DataAccessService extends Service {
+
+    private IProvedor provedor;
+    private NotificarService notificarService;
+
+    public DataAccessService() {
     }
 
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
-    }
-
-    public void notificarNoticias(Noticia[] noticias){
-
     }
 }
