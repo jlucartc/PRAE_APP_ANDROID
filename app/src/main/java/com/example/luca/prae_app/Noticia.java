@@ -13,6 +13,8 @@ public class Noticia {
     @SerializedName("guid")
     private String guid;
 
+    private boolean isNova;
+
     Noticia(){}
 
     public int getId() {
