@@ -1,5 +1,7 @@
 package com.example.luca.prae_app;
 
+import android.app.Activity;
+import android.app.Service;
 import android.content.Context;
 import android.util.Log;
 
@@ -11,9 +13,17 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
-public class DataWebServiceProvider {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
-    private static final String  url = "http://192.168.0.104:8000/app/ws/noticias";
+public class DataWebServiceProvider{
+
+    private static final String endereco = "http://192.168.2.108:8000/app/ws/noticias";
 
     private Noticia[] noticias;
     private StringRequest stringRequestNoticias;
@@ -21,37 +31,37 @@ public class DataWebServiceProvider {
     private Context context;
     private Gson gson;
 
-    public DataWebServiceProvider(Context context){
+    public DataWebServiceProvider(){
 
-        this.context = context;
-        this.noticias = null;
-        this.requestQueue = Volley.newRequestQueue(this.context);
-        this.gson = new Gson();
+        try {
 
-        this.stringRequestNoticias = new StringRequest(Request.Method.GET,this.url, new Response.Listener<String>(){
+            URL url = new URL(this.endereco);
 
-            @Override
-            public void onResponse(String response) {
+            HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
 
-                noticias = gson.fromJson(response,Noticia[].class);
+            httpCon.setRequestMethod("GET");
 
-            }
-        },new Response.ErrorListener(){
+            InputStream inputStream = httpCon.getInputStream();
 
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
 
-            @Override
-            public void onErrorResponse(VolleyError error) {
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-                Log.i("ErroDWSP","Erro na requisição");
+            String response = bufferedReader.readLine();
 
-            }
-        });
+            Log.i("DATAWEBSERVICEPROVIDER",response);
+
+            this.noticias = null;
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     public Noticia[] getNoticias(){
-
-        this.requestQueue.add(this.stringRequestNoticias);
 
         return this.noticias;
 

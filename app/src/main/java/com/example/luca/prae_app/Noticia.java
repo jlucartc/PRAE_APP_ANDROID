@@ -40,4 +40,12 @@ public class Noticia {
     public void setGuid(String guid) {
         this.guid = guid;
     }
+
+    public void setNova(boolean nova) {
+        isNova = nova;
+    }
+
+    public boolean isNova() {
+        return isNova;
+    }
 }
