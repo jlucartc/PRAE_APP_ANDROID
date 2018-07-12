@@ -24,18 +24,6 @@
             android:name=".NoticiasActivity"
             android:label="@string/title_activity_noticias" />
 
-        <service
-            android:name=".ProvedorWebServiceService"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".NotificarService"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".DataAccessService"
-            android:enabled="true"
-            android:exported="true" />
     </application>
 
 </manifest>
