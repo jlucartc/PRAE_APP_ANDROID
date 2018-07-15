@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">PRAE_APP</string>
+    <string name="app_name">PRAE UFC</string>
     <string name="title_activity_noticias">NoticiasActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 </resources>

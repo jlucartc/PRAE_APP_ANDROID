@@ -1,8 +1,13 @@
 package com.example.luca.prae_app;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -34,24 +39,26 @@ public class AtualizarNoticias extends Worker {
     public Worker.Result doWork() {
 
     this.context = this.getApplicationContext();
-    this.dataWebServiceProvider = new DataWebServiceProvider();
+    this.dataWebServiceProvider = new DataWebServiceProvider(this.context);
     Log.i("isNull",String.valueOf((boolean)(this.context == null)));
     this.sharedṔreferences = this.context.getSharedPreferences("com.example.luca.prae_app",Context.MODE_PRIVATE);
     this.noticiasNaoLidasArray = new ArrayList<Integer>();
 
     this.ultimoId = this.sharedṔreferences.getInt("ultimoId",0);
-    String s = this.sharedṔreferences.getString("noticiasNaoLidasArray","0");
+    String s = this.sharedṔreferences.getString("noticiasNaoLidasArray","");
     Scanner scanner = new Scanner(s);
     while(scanner.hasNextInt()){
         this.noticiasNaoLidasArray.add(scanner.nextInt());
     }
 
-    this.noticias = this.dataWebServiceProvider.getNoticias();
+        this.noticias = this.dataWebServiceProvider.getNoticias();
 
         ArrayList<Integer> oldNoticiasNaoLidas = (ArrayList<Integer>) this.noticiasNaoLidasArray.clone();
 
         if(this.noticias != null) {
             for (Noticia n : this.noticias) {
+
+                Log.i("NOTICIA",String.valueOf(n.getId())+" - "+String.valueOf(this.ultimoId));
 
                 if (n.getId() > this.ultimoId) {
 
@@ -73,7 +80,15 @@ public class AtualizarNoticias extends Worker {
 
                         /// emitir notificação;
                         Log.i("NOTIFICAÇÃO", "NOTIFICAÇÃO DE NOVA NOTÍCIA!!!");
-
+                        Intent intent = new Intent(this.context,NoticiasActivity.class);
+                        NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle("Nov notícia!").setContentText(this.noticias[i].getTitulo());
+                        TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this.context);
+                        taskStackBuilder.addParentStack(NoticiasActivity.class);
+                        taskStackBuilder.addNextIntent(intent);
+                        PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
+                        notificacao.setContentIntent(pendingIntent);
+                        NotificationManager notificationManager = (NotificationManager)this.context.getSystemService(Context.NOTIFICATION_SERVICE);
+                        notificationManager.notify(1,notificacao.build());
                     }
 
                 }
@@ -81,6 +96,8 @@ public class AtualizarNoticias extends Worker {
 
             }
         }
+
+        Log.i("isNoticiasNull",String.valueOf(this.noticias == null));
 
         SharedPreferences.Editor editor = this.sharedṔreferences.edit();
 
@@ -106,6 +123,12 @@ public class AtualizarNoticias extends Worker {
 
         editor.putInt("ultimoId", this.ultimoId);
         editor.putString("noticiasNaoLidasArray", builder.toString());
+
+        editor.commit();
+
+        Log.i("ULTIMOID",String.valueOf(this.ultimoId));
+        Log.i("noticiasNaoLidasArray",builder.toString());
+
 
         return Result.SUCCESS;
 
