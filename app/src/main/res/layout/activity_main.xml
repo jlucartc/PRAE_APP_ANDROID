@@ -19,25 +19,39 @@
                 android:id="@+id/button26"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#0077aa"
+                android:background="#B7CCEF"
+                android:drawablePadding="0dp"
+                android:drawableTop="@drawable/newspaper"
+                android:onClick="noticias"
+                android:paddingTop="10dp"
                 android:text="Noticias"
-                android:textColor="#ffffff"
-                android:onClick="noticias" />
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/button28"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#84EA84"
+                android:drawableTop="@drawable/auxilio"
+                android:paddingTop="10dp"
+                android:text="Bolsas e Auxílios"
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/button27"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#FFFF90"
+                android:drawableTop="@drawable/ru"
+                android:paddingTop="10dp"
+                android:text="Restaurante Universitário"
+                android:textColor="#000066" />
         </TableRow>
 
         <TableRow
@@ -49,49 +63,80 @@
                 android:id="@+id/button31"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#FFFF6b"
+                android:drawableTop="@drawable/ajuda_de_custo"
+                android:paddingTop="10dp"
+                android:text="Ajuda de custo"
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/button30"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#B7CCEF"
+                android:drawableTop="@drawable/acolhimento"
+                android:paddingTop="10dp"
+                android:text="Acolhimento ao estudante"
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/button29"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#84EA84"
+                android:drawableTop="@drawable/calendario"
+                android:paddingTop="10dp"
+                android:text="Calendário de atividades"
+                android:textColor="#000066" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/button34"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#84EA84"
+                android:drawableTop="@drawable/mapa"
+                android:paddingTop="10dp"
+                android:text="Mapa da PRAE"
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/button33"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#B7CCEF"
+                android:drawableTop="@drawable/vocesabia"
+                android:paddingTop="10dp"
+                android:text="Você sabia?"
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/button32"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="#FFFF6b"
+                android:drawableTop="@drawable/faleconosco"
+                android:paddingTop="10dp"
+                android:text="Fale conosco"
+                android:textColor="#000066" />
         </TableRow>
 
     </TableLayout>

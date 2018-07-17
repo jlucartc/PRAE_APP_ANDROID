@@ -23,12 +23,14 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiasAdapter.ViewHo
         public TextView textView;
         public TextView statusNoticia;
         public TextView url;
+        public TextView id;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.textView = (TextView)itemView.findViewById(R.id.mensagemNoticia);
             this.statusNoticia = (TextView)itemView.findViewById(R.id.statusNoticia);
             this.url = (TextView)itemView.findViewById(R.id.url);
+            this.id = (TextView)itemView.findViewById(R.id.id);
         }
     }
 
@@ -56,6 +58,7 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiasAdapter.ViewHo
             viewHolder.statusNoticia.setVisibility(TextView.INVISIBLE);
 
         }
+        viewHolder.id.setText(String.valueOf(this.noticias[i].getId()));
 
     }
 

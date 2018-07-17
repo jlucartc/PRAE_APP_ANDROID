@@ -39,7 +39,13 @@ public class AtualizarNoticias extends Worker {
     public Worker.Result doWork() {
 
     this.context = this.getApplicationContext();
+
     this.dataWebServiceProvider = new DataWebServiceProvider(this.context);
+
+    this.dataWebServiceProvider.getNoticias();
+
+    /*
+
     Log.i("isNull",String.valueOf((boolean)(this.context == null)));
     this.sharedṔreferences = this.context.getSharedPreferences("com.example.luca.prae_app",Context.MODE_PRIVATE);
     this.noticiasNaoLidasArray = new ArrayList<Integer>();
@@ -129,7 +135,7 @@ public class AtualizarNoticias extends Worker {
         Log.i("ULTIMOID",String.valueOf(this.ultimoId));
         Log.i("noticiasNaoLidasArray",builder.toString());
 
-
+        */
         return Result.SUCCESS;
 
     }
