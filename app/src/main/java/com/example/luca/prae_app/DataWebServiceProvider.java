@@ -31,7 +31,7 @@ import java.util.Scanner;
 
 class DataWebServiceProvider extends AsyncTask<Void, Void, Noticia[]> {
 
-    private static final String endereco = "http://192.168.0.104:8000/app/ws/noticias";
+    private static final String endereco = "http://192.168.2.108:8000/app/ws/noticias";
 
     private Noticia[] noticiasArray;
     private Context context;

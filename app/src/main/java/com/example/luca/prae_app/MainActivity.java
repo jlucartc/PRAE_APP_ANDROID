@@ -74,9 +74,60 @@ public class MainActivity extends AppCompatActivity {
 
     public void ajudaDeCusto(View view){
 
-        Intent intent;
+        Intent intent = new Intent(this,AjudaDeCustoActivity.class);
+        startActivity(intent);
 
     }
+
+    public void bolsasAuxilios(View view){
+
+        Intent intent = new Intent(this,BolsasAuxiliosActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void restauranteUniversitario(View view){
+
+        Intent intent = new Intent(this,RestauranteUniversitarioActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void acolhimentoAoEstudante(View view){
+
+        Intent intent = new Intent(this,AcolhimentoAoEstudanteActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void calendarioDeAtividades(View view){
+
+        Intent intent = new Intent(this,CalendarioDeAtividadesActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void mapaDaPrae(View view){
+
+        Intent intent = new Intent(this,MapaDaPraeActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void voceSabia(View view){
+
+        Intent intent = new Intent(this,VoceSabiaActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void faleConosco(View view){
+
+        Intent intent = new Intent(this,FaleConoscoActivity.class);
+        startActivity(intent);
+
+    }
+
 
 
 }

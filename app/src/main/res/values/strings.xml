@@ -2,4 +2,16 @@
     <string name="app_name">PRAE UFC</string>
     <string name="title_activity_noticias">NoticiasActivity</string>
     <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_ajuda_de_custo">AjudaDeCustoActivity</string>
+    <string name="title_activity_acolhimento_ao_estudante">AcolhimentoAoEstudanteActivity</string>
+    <string name="title_activity_bolsas_auxilio">BolsasAuxilioActivity</string>
+    <string name="title_activity_restaurante_universitario">RestauranteUniversitarioActivity
+    </string>
+    <string name="title_activity_calendario_de_atividades">CalendarioDeAtividadesActivity</string>
+    <string name="title_activity_mapa_da_prae">MapaDaPraeActivity</string>
+    <string name="title_activity_voce_sabia">VoceSabiaActivity</string>
+    <string name="title_activity_fale_conosco">FaleConoscoActivity</string>
+    <string name="title_activity_ajuda_de_custo_documentacao_necessaria">
+        AjudaDeCustoDocumentacaoNecessariaActivity
+    </string>
 </resources>
