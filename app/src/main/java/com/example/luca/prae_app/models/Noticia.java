@@ -1,4 +1,4 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.models;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -14,8 +14,6 @@ public class Noticia {
     private String guid;
 
     private boolean isNova;
-
-    Noticia(){}
 
     public int getId() {
         return id;

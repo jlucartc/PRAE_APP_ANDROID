@@ -1,4 +1,4 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.view.listeners;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,7 +6,8 @@ import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.luca.prae_app.NoticiaWebViewActivity;
+import com.example.luca.prae_app.menu_pages.noticias.NoticiaWebViewActivity;
+import com.example.luca.prae_app.R;
 
 import java.util.ArrayList;
 import java.util.Iterator;

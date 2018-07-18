@@ -1,4 +1,4 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.view.adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.luca.prae_app.R;
+import com.example.luca.prae_app.models.Noticia;
+import com.example.luca.prae_app.view.listeners.ItemClickListener;
 
 public class NoticiasAdapter extends RecyclerView.Adapter<NoticiasAdapter.ViewHolder> {
 

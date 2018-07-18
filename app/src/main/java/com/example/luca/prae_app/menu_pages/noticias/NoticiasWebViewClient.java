@@ -1,4 +1,4 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.menu_pages.noticias;
 
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;

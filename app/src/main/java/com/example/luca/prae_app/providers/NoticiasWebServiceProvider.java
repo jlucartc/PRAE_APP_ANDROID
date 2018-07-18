@@ -1,4 +1,4 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.providers;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -6,21 +6,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 
+import com.example.luca.prae_app.models.Noticia;
+import com.example.luca.prae_app.menu_pages.noticias.NoticiasActivity;
+import com.example.luca.prae_app.R;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,17 +28,20 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Scanner;
 
-class DataWebServiceProvider extends AsyncTask<Void, Void, Noticia[]> {
-
-    private static final String endereco = "http://192.168.2.108:8000/app/ws/noticias";
+public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]> {
 
     private Noticia[] noticiasArray;
+    private String NOTICIAS_URI;
     private Context context;
     private Gson gson;
 
-    public DataWebServiceProvider(Context context){
+    public NoticiasWebServiceProvider(Context context){
 
         this.context = context;
+
+        this.NOTICIAS_URI = this.context.getString(R.string.localhost)+"/app/ws/noticias";
+
+        this.gson = new Gson();
 
     }
 
@@ -47,9 +49,7 @@ class DataWebServiceProvider extends AsyncTask<Void, Void, Noticia[]> {
 
         try {
 
-            this.gson = new Gson();
-
-            URL url = new URL(this.endereco);
+            URL url = new URL(this.NOTICIAS_URI);
 
             HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
 

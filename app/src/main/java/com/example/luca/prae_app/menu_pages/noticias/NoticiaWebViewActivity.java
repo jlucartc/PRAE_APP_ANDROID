@@ -1,4 +1,4 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.menu_pages.noticias;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -6,9 +6,8 @@ import android.app.Activity;
 import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
-import java.net.URL;
+import com.example.luca.prae_app.R;
 
 public class NoticiaWebViewActivity extends Activity {
 

@@ -14,4 +14,5 @@
     <string name="title_activity_ajuda_de_custo_documentacao_necessaria">
         AjudaDeCustoDocumentacaoNecessariaActivity
     </string>
+    <string name="localhost">http://192.168.0.104:8000</string>string>
 </resources>

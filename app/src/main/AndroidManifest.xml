@@ -21,38 +21,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NoticiasActivity"
+            android:name=".menu_pages.noticias.NoticiasActivity"
             android:label="@string/title_activity_noticias"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".NoticiaWebViewActivity"
+            android:name=".menu_pages.noticias.NoticiaWebViewActivity"
             android:label="@string/title_activity_web_view" />
         <activity
-            android:name=".AjudaDeCustoActivity"
+            android:name=".menu_pages.ajuda_de_custo.AjudaDeCustoActivity"
             android:label="@string/title_activity_ajuda_de_custo" />
         <activity
-            android:name=".AcolhimentoAoEstudanteActivity"
+            android:name=".menu_pages.acolhimento_ao_estudante.AcolhimentoAoEstudanteActivity"
             android:label="@string/title_activity_acolhimento_ao_estudante" />
         <activity
-            android:name=".BolsasAuxiliosActivity"
+            android:name=".menu_pages.bolsas_auxilios.BolsasAuxiliosActivity"
             android:label="@string/title_activity_bolsas_auxilio" />
         <activity
-            android:name=".RestauranteUniversitarioActivity"
+            android:name=".menu_pages.restaurante_universitario.RestauranteUniversitarioActivity"
             android:label="@string/title_activity_restaurante_universitario" />
         <activity
-            android:name=".CalendarioDeAtividadesActivity"
+            android:name=".menu_pages.calendario_de_atividades.CalendarioDeAtividadesActivity"
             android:label="@string/title_activity_calendario_de_atividades" />
         <activity
-            android:name=".MapaDaPraeActivity"
+            android:name=".menu_pages.mapa_da_prae.MapaDaPraeActivity"
             android:label="@string/title_activity_mapa_da_prae" />
         <activity
-            android:name=".VoceSabiaActivity"
+            android:name=".menu_pages.voce_sabia.VoceSabiaActivity"
             android:label="@string/title_activity_voce_sabia" />
         <activity
-            android:name=".FaleConoscoActivity"
+            android:name=".menu_pages.fale_conosco.FaleConoscoActivity"
             android:label="@string/title_activity_fale_conosco" />
         <activity
-            android:name=".AjudaDeCustoDocumentacaoNecessariaActivity"
+            android:name=".menu_pages.ajuda_de_custo.AjudaDeCustoDocumentacaoNecessariaActivity"
             android:label="@string/title_activity_ajuda_de_custo_documentacao_necessaria"></activity>
     </application>
 

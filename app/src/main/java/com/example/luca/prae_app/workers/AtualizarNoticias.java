@@ -1,27 +1,13 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.workers;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
-import android.util.Log;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
+import com.example.luca.prae_app.models.Noticia;
+import com.example.luca.prae_app.providers.NoticiasWebServiceProvider;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Scanner;
 
 import androidx.work.Worker;
 
@@ -29,7 +15,7 @@ public class AtualizarNoticias extends Worker {
 
     private Context context;
     private Noticia[] noticias;
-    private DataWebServiceProvider dataWebServiceProvider;
+    private NoticiasWebServiceProvider noticiasWebServiceProvider;
     private SharedPreferences sharedṔreferences;
     private int ultimoId;
     private ArrayList<Integer> noticiasNaoLidasArray;
@@ -40,9 +26,9 @@ public class AtualizarNoticias extends Worker {
 
     this.context = this.getApplicationContext();
 
-    this.dataWebServiceProvider = new DataWebServiceProvider(this.context);
+    this.noticiasWebServiceProvider = new NoticiasWebServiceProvider(this.context);
 
-    this.dataWebServiceProvider.getNoticias();
+    this.noticiasWebServiceProvider.getNoticias();
 
     /*
 
@@ -57,7 +43,7 @@ public class AtualizarNoticias extends Worker {
         this.noticiasNaoLidasArray.add(scanner.nextInt());
     }
 
-        this.noticias = this.dataWebServiceProvider.getNoticias();
+        this.noticias = this.noticiasWebServiceProvider.getNoticias();
 
         ArrayList<Integer> oldNoticiasNaoLidas = (ArrayList<Integer>) this.noticiasNaoLidasArray.clone();
 

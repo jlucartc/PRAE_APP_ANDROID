@@ -1,28 +1,21 @@
-package com.example.luca.prae_app;
+package com.example.luca.prae_app.menu_pages.noticias;
 
-import android.app.ActivityManager;
-import android.content.Context;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
+import com.example.luca.prae_app.models.Noticia;
+import com.example.luca.prae_app.view.adapters.NoticiasAdapter;
+import com.example.luca.prae_app.R;
+import com.example.luca.prae_app.providers.NoticiasWebServiceProvider;
+
 import java.util.concurrent.ExecutionException;
 
 public class NoticiasActivity extends AppCompatActivity {
 
     private Noticia[] noticias;
-    private DataWebServiceProvider dataWebServiceProvider;
+    private NoticiasWebServiceProvider noticiasWebServiceProvider;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -33,10 +26,10 @@ public class NoticiasActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Noticias");
 
-        this.dataWebServiceProvider = new DataWebServiceProvider(this.getApplicationContext());
+        this.noticiasWebServiceProvider = new NoticiasWebServiceProvider(this.getApplicationContext());
         try {
 
-            this.noticias = this.dataWebServiceProvider.execute().get();
+            this.noticias = this.noticiasWebServiceProvider.execute().get();
 
             if(this.noticias.length == 0){
 
