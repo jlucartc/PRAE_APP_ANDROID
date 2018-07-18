@@ -10,8 +10,9 @@ import android.widget.TextView;
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.models.Noticia;
 import com.example.luca.prae_app.view.listeners.ItemClickListener;
+import com.example.luca.prae_app.view.view_holders.NoticiaItemViewHolder;
 
-public class NoticiasAdapter extends RecyclerView.Adapter<NoticiasAdapter.ViewHolder> {
+public class NoticiasAdapter extends RecyclerView.Adapter<NoticiaItemViewHolder> {
 
     private Noticia[] noticias;
 
@@ -22,44 +23,28 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiasAdapter.ViewHo
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-
-        public TextView textView;
-        public TextView statusNoticia;
-        public TextView url;
-        public TextView id;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            this.textView = (TextView)itemView.findViewById(R.id.mensagemNoticia);
-            this.statusNoticia = (TextView)itemView.findViewById(R.id.statusNoticia);
-            this.url = (TextView)itemView.findViewById(R.id.url);
-            this.id = (TextView)itemView.findViewById(R.id.id);
-        }
-    }
-
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public NoticiaItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.noticia_item_view,viewGroup,false);
 
         view.setOnClickListener(new ItemClickListener(viewGroup.getContext()));
 
-        ViewHolder vh = new ViewHolder(view);
+        NoticiaItemViewHolder vh = new NoticiaItemViewHolder(view);
 
         return vh;
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull NoticiaItemViewHolder viewHolder, int i) {
 
         viewHolder.textView.setText(this.noticias[i].getTitulo());
         viewHolder.url.setText(this.noticias[i].getGuid());
         if(!this.noticias[i].isNova()){
 
-            viewHolder.statusNoticia.setVisibility(TextView.INVISIBLE);
+            viewHolder.statusNoticia.setVisibility(TextView.GONE);
 
         }
         viewHolder.id.setText(String.valueOf(this.noticias[i].getId()));

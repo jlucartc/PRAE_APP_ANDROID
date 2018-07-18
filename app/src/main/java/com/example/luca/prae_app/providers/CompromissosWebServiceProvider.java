@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.luca.prae_app.R;
-import com.example.luca.prae_app.models.Categoria;
+import com.example.luca.prae_app.models.Compromisso;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -15,28 +15,29 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class ListaCategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[]> {
 
-    private Categoria[] categoriasArray;
-    private String CATEGORIAS_URI;
-    private Context context;
+public class CompromissosWebServiceProvider extends AsyncTask<Void,Void,Compromisso[]> {
+
+    private Compromisso[] compromissosArray;
+    private String COMPROMISSOS_URI;
     private Gson gson;
+    private Context context;
 
-    public ListaCategoriasWebServiceProvider(Context context){
+    public CompromissosWebServiceProvider(Context context){
 
         this.context = context;
 
-        this.CATEGORIAS_URI = this.context.getString(R.string.localhost)+"/app/ws/listaCategorias";
-
         this.gson = new Gson();
+
+        this.COMPROMISSOS_URI = this.context.getString(R.string.localhost)+"/app/ws/listaCompromissos";
 
     }
 
-    public Categoria[] getCategoria(){
+    public Compromisso[] getCompromissos(){
 
         try {
 
-            URL url = new URL(this.CATEGORIAS_URI);
+            URL url = new URL(this.COMPROMISSOS_URI);
 
             HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
 
@@ -50,13 +51,13 @@ public class ListaCategoriasWebServiceProvider extends AsyncTask<Void,Void,Categ
 
             String response = bufferedReader.readLine();
 
-            Log.i("LISTACATEGORIAS",response);
+            Log.i("LISTACOMPROMISSOS",response);
 
-            this.categoriasArray = gson.fromJson(response,Categoria[].class);
+            this.compromissosArray = gson.fromJson(response,Compromisso[].class);
 
-            if(this.categoriasArray == null){
+            if(this.compromissosArray == null){
 
-                this.categoriasArray = new Categoria[0];
+                this.compromissosArray = new Compromisso[0];
 
             }
 
@@ -71,20 +72,18 @@ public class ListaCategoriasWebServiceProvider extends AsyncTask<Void,Void,Categ
         } catch (IOException e) {
             e.printStackTrace();
 
-            this.categoriasArray = new Categoria[0];
+            this.compromissosArray = new Compromisso[0];
 
 
         }
 
 
-        return this.categoriasArray;
+        return this.compromissosArray;
 
     }
 
     @Override
-    protected  Categoria[] doInBackground(Void... voids) {
-
-        return this.getCategoria();
-
+    protected Compromisso[] doInBackground(Void... voids) {
+        return this.getCompromissos();
     }
 }
