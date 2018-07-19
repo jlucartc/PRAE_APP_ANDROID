@@ -115,10 +115,10 @@
                 android:layout_weight="1"
                 android:background="#84EA84"
                 android:drawableTop="@drawable/mapa"
+                android:onClick="mapaDaPrae"
                 android:paddingTop="10dp"
-                android:text="Mapa da PRAE"
-                android:textColor="#000066"
-                android:onClick="mapaDaPrae"/>
+                android:text="Mapas da PRAE"
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/voce_sabia"

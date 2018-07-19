@@ -33,7 +33,7 @@ public class NoticiasActivity extends AppCompatActivity {
 
             if(this.noticias.length == 0){
 
-                setContentView(R.layout.sem_noticias_layout);
+                setContentView(R.layout.nao_encontrado);
 
             }else{
 

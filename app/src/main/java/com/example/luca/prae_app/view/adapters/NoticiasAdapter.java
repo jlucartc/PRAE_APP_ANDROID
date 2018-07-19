@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.models.Noticia;
-import com.example.luca.prae_app.view.listeners.ItemClickListener;
+import com.example.luca.prae_app.view.listeners.NoticiaItemClickListener;
 import com.example.luca.prae_app.view.view_holders.NoticiaItemViewHolder;
 
 public class NoticiasAdapter extends RecyclerView.Adapter<NoticiaItemViewHolder> {
@@ -29,7 +29,7 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiaItemViewHolder>
 
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.noticia_item_view,viewGroup,false);
 
-        view.setOnClickListener(new ItemClickListener(viewGroup.getContext()));
+        view.setOnClickListener(new NoticiaItemClickListener(viewGroup.getContext()));
 
         NoticiaItemViewHolder vh = new NoticiaItemViewHolder(view);
 

@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class ItemClickListener implements View.OnClickListener {
+public class NoticiaItemClickListener implements View.OnClickListener {
 
     private Context context;
     private TextView url;
     private int id;
 
-    public ItemClickListener(Context context){
+    public NoticiaItemClickListener(Context context){
 
         this.context= context;
 

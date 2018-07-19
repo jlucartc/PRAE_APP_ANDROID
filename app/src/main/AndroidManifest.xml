@@ -53,7 +53,10 @@
             android:label="@string/title_activity_fale_conosco" />
         <activity
             android:name=".menu_pages.ajuda_de_custo.AjudaDeCustoDocumentacaoNecessariaActivity"
-            android:label="@string/title_activity_ajuda_de_custo_documentacao_necessaria"></activity>
+            android:label="@string/title_activity_ajuda_de_custo_documentacao_necessaria" />
+        <activity
+            android:name=".menu_pages.mapa_da_prae.MostrarMapaActivity"
+            android:label="@string/title_activity_mostrar_mapa"></activity>
     </application>
 
 </manifest>

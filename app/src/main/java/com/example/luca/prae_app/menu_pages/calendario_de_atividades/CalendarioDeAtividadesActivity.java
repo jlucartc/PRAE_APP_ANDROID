@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.widget.TextView;
 
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.models.Compromisso;
@@ -24,7 +25,6 @@ public class CalendarioDeAtividadesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendario_de_atividades);
 
         getSupportActionBar().setTitle("Calendário de atividades");
 
@@ -36,17 +36,31 @@ public class CalendarioDeAtividadesActivity extends AppCompatActivity {
 
             Log.i("COMPROMISSOS",String.valueOf(this.compromissos == null));
 
-            this.calendarioRecyclerView = (RecyclerView)findViewById(R.id.calendarioRecyclerView);
+            if(this.compromissos == null || this.compromissos.length == 0){
 
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+                setContentView(R.layout.nao_encontrado);
 
-            //layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+                TextView aviso =  findViewById(R.id.aviso);
 
-            this.calendarioRecyclerView.setHasFixedSize(true);
+                aviso.setText("Não há atividades no momento");
 
-            this.calendarioRecyclerView.setLayoutManager(layoutManager);
+            }else{
 
-            this.calendarioRecyclerView.setAdapter(new CompromissosAdapter(this.compromissos));
+                setContentView(R.layout.activity_calendario_de_atividades);
+
+                this.calendarioRecyclerView = (RecyclerView)findViewById(R.id.calendarioRecyclerView);
+
+                LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+
+                //layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+                this.calendarioRecyclerView.setHasFixedSize(true);
+
+                this.calendarioRecyclerView.setLayoutManager(layoutManager);
+
+                this.calendarioRecyclerView.setAdapter(new CompromissosAdapter(this.compromissos));
+
+            }
 
         } catch (InterruptedException e) {
             e.printStackTrace();
