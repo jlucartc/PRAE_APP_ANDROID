@@ -37,7 +37,7 @@ public class CompromissosAdapter extends RecyclerView.Adapter<CompromissoItemVie
 
         viewHolder.getTitulo().setText(this.compromissos[i].getTitulo());
         viewHolder.getHorario().setText(this.compromissos[i].getData());
-        viewHolder.getLocal().setText("Local indefinido");
+        viewHolder.getLocal().setText(this.compromissos[i].getLocal());
 
     }
 

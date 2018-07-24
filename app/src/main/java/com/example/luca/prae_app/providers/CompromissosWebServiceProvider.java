@@ -29,7 +29,7 @@ public class CompromissosWebServiceProvider extends AsyncTask<Void,Void,Compromi
 
         this.gson = new Gson();
 
-        this.COMPROMISSOS_URI = this.context.getString(R.string.localhost)+"/app/ws/listaCompromissos";
+        this.COMPROMISSOS_URI = this.context.getString(R.string.localhost)+"/app/ws/compromissos";
 
     }
 

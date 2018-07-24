@@ -7,6 +7,9 @@ import android.util.Log;
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.models.Categoria;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,10 +18,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[]> {
+public abstract class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[]> {
 
     private Categoria[] categoriasArray;
-    private String CATEGORIAS_URI;
+    private String categoriasUri;
     private Context context;
     private Gson gson;
 
@@ -26,7 +29,7 @@ public class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[
 
         this.context = context;
 
-        this.CATEGORIAS_URI = this.context.getString(R.string.localhost)+"/app/ws/listaCategorias";
+        this.categoriasUri = this.context.getString(R.string.localhost)+"/app/ws/listaCategorias";
 
         this.gson = new Gson();
 
@@ -36,7 +39,7 @@ public class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[
 
         try {
 
-            URL url = new URL(this.CATEGORIAS_URI);
+            URL url = new URL(this.categoriasUri);
 
             HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
 
@@ -53,6 +56,8 @@ public class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[
             Log.i("LISTACATEGORIAS",response);
 
             this.categoriasArray = gson.fromJson(response,Categoria[].class);
+
+            //JSONObject responseJson = new JSONObject(response);
 
             if(this.categoriasArray == null){
 
@@ -86,5 +91,37 @@ public class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[
 
         return this.getCategoria();
 
+    }
+
+    public String getCategoriasUri() {
+        return categoriasUri;
+    }
+
+    public void setCategoriasUri(String categoriasUri) {
+        this.categoriasUri = categoriasUri;
+    }
+
+    public Categoria[] getCategoriasArray() {
+        return categoriasArray;
+    }
+
+    public void setCategoriasArray(Categoria[] categoriasArray) {
+        this.categoriasArray = categoriasArray;
+    }
+
+    public Context getContext() {
+        return context;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+    public Gson getGson() {
+        return gson;
+    }
+
+    public void setGson(Gson gson) {
+        this.gson = gson;
     }
 }

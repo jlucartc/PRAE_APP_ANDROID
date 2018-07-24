@@ -28,6 +28,10 @@ public class Categoria {
     @SerializedName("bairro")
     private String bairro;
 
+    private Secao[] secoes;
+
+    private Documento[] documentos;
+
     public String getNome() {
         return nome;
     }
@@ -90,5 +94,21 @@ public class Categoria {
 
     public void setBairro(String bairro) {
         this.bairro = bairro;
+    }
+
+    public Secao[] getSecoes() {
+        return secoes;
+    }
+
+    public void setSecoes(Secao[] secoes) {
+        this.secoes = secoes;
+    }
+
+    public Documento[] getDocumentos() {
+        return documentos;
+    }
+
+    public void setDocumentos(Documento[] documentos) {
+        this.documentos = documentos;
     }
 }

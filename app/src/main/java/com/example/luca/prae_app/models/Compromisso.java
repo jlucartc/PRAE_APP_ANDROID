@@ -10,6 +10,9 @@ public class Compromisso {
     @SerializedName("data")
     private String data;
 
+    @SerializedName("local")
+    private String local;
+
     public String getTitulo() {
         return titulo;
     }
@@ -24,5 +27,13 @@ public class Compromisso {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
     }
 }
