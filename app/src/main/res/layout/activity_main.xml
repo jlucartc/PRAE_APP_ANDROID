@@ -21,71 +21,13 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#B7CCEF"
+                android:background="#84EA84"
                 android:drawablePadding="0dp"
                 android:drawableTop="@drawable/newspaper"
                 android:onClick="noticias"
                 android:paddingTop="10dp"
                 android:text="Noticias"
                 android:textColor="#000066" />
-
-            <Button
-                android:id="@+id/bolsas_e_auxilios"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#84EA84"
-                android:drawableTop="@drawable/auxilio"
-                android:paddingTop="10dp"
-                android:text="Bolsas e Auxílios"
-                android:textColor="#000066"
-                android:onClick="bolsasAuxilios"/>
-
-            <Button
-                android:id="@+id/restaurante_universitario"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#FFFF90"
-                android:drawableTop="@drawable/ru"
-                android:paddingTop="10dp"
-                android:text="Restaurante Universitário"
-                android:textColor="#000066"
-                android:onClick="restauranteUniversitario"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <Button
-                android:id="@+id/ajuda_de_custo"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#FFFF6b"
-                android:drawableTop="@drawable/ajuda_de_custo"
-                android:paddingTop="10dp"
-                android:text="Ajuda de custo"
-                android:textColor="#000066"
-                android:onClick="ajudaDeCusto"/>
-
-            <Button
-                android:id="@+id/acolhimento_ao_estudante"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#B7CCEF"
-                android:drawableTop="@drawable/acolhimento"
-                android:paddingTop="10dp"
-                android:text="Acolhimento ao estudante"
-                android:textColor="#000066"
-                android:onClick="acolhimentoAoEstudante"/>
 
             <Button
                 android:id="@+id/calendario_de_atividades"
@@ -95,17 +37,10 @@
                 android:layout_weight="1"
                 android:background="#84EA84"
                 android:drawableTop="@drawable/calendario"
+                android:onClick="calendarioDeAtividades"
                 android:paddingTop="10dp"
                 android:text="Calendário de atividades"
-                android:textColor="#000066"
-                android:onClick="calendarioDeAtividades"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/mapa_da_prae"
@@ -120,18 +55,72 @@
                 android:text="Mapas da PRAE"
                 android:textColor="#000066" />
 
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bolsas"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#B7CCEF"
+                android:drawableTop="@drawable/auxilio"
+                android:onClick="bolsasAuxilios"
+                android:paddingTop="10dp"
+                android:text="Bolsas"
+                android:textColor="#000066" />
+
+            <Button
+                android:id="@+id/auxilios"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#B7CCEF"
+                android:drawableTop="@drawable/ru"
+                android:onClick="restauranteUniversitario"
+                android:paddingTop="10dp"
+                android:text="Auxílios"
+                android:textColor="#000066" />
+
+            <Button
+                android:id="@+id/servicos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#B7CCEF"
+                android:drawableTop="@drawable/ajuda_de_custo"
+                android:onClick="ajudaDeCusto"
+                android:paddingTop="10dp"
+                android:text="Serviços"
+                android:textColor="#000066" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <Button
                 android:id="@+id/voce_sabia"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#B7CCEF"
+                android:background="#FFFF8b"
                 android:drawableTop="@drawable/vocesabia"
+                android:onClick="voceSabia"
                 android:paddingTop="10dp"
                 android:text="Você sabia?"
-                android:textColor="#000066"
-                android:onClick="voceSabia"/>
+                android:textColor="#000066" />
 
             <Button
                 android:id="@+id/fale_conosco"
@@ -139,12 +128,25 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FFFF6b"
+                android:background="#FFFF8b"
                 android:drawableTop="@drawable/faleconosco"
+                android:onClick="faleConosco"
                 android:paddingTop="10dp"
                 android:text="Fale conosco"
-                android:textColor="#000066"
-                android:onClick="faleConosco"/>
+                android:textColor="#000066" />
+
+            <Button
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#FFFF8b"
+                android:drawableTop="@drawable/acolhimento"
+                android:onClick="acolhimentoAoEstudante"
+                android:paddingTop="10dp"
+                android:text="Notificacoes por email"
+                android:textColor="#000066" />
         </TableRow>
 
     </TableLayout>

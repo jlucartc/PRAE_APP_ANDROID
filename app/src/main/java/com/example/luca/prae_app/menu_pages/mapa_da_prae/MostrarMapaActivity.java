@@ -25,7 +25,7 @@ public class MostrarMapaActivity extends AppCompatActivity {
 
         this.mapaImageView = findViewById(R.id.mapaImageView);
 
-        this.mapaImageView.crea
+        //this.mapaImageView.crea
 
         Picasso.with(this.getApplicationContext()).load(this.rota).fit().into(this.mapaImageView);
 
