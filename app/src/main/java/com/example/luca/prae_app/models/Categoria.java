@@ -2,6 +2,9 @@ package com.example.luca.prae_app.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class Categoria {
 
     @SerializedName("nome")
@@ -28,9 +31,9 @@ public class Categoria {
     @SerializedName("bairro")
     private String bairro;
 
-    private Secao[] secoes;
+    private JSONArray secoes;
 
-    private Documento[] documentos;
+    private JSONArray documentos;
 
     public String getNome() {
         return nome;
@@ -96,19 +99,19 @@ public class Categoria {
         this.bairro = bairro;
     }
 
-    public Secao[] getSecoes() {
+    public JSONArray getSecoes() {
         return secoes;
     }
 
-    public void setSecoes(Secao[] secoes) {
+    public void setSecoes(JSONArray secoes) {
         this.secoes = secoes;
     }
 
-    public Documento[] getDocumentos() {
+    public JSONArray getDocumentos() {
         return documentos;
     }
 
-    public void setDocumentos(Documento[] documentos) {
+    public void setDocumentos(JSONArray documentos) {
         this.documentos = documentos;
     }
 }

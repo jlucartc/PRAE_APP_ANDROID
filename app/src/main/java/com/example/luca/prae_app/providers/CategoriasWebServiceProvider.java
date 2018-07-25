@@ -9,6 +9,8 @@ import com.example.luca.prae_app.models.Categoria;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -17,6 +19,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Iterator;
 
 public abstract class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[]> {
 
@@ -57,7 +60,23 @@ public abstract class CategoriasWebServiceProvider extends AsyncTask<Void,Void,C
 
             this.categoriasArray = gson.fromJson(response,Categoria[].class);
 
-            //JSONObject responseJson = new JSONObject(response);
+
+            JSONArray array = new JSONArray(response);
+            Categoria[] categorias = new Categoria[array.length()];
+
+            for(int i = 0; i < array.length(); i++){
+
+                categorias[i] = this.getGson().fromJson(array.getJSONObject(i).toString(),Categoria.class);
+
+                JSONObject objeto = array.getJSONObject(i);
+
+                JSONArray secoes = objeto.getJSONArray("secoes");
+                JSONArray documentos = objeto.getJSONArray("documentos");
+
+                categorias[i].setDocumentos(documentos);
+                categorias[i].setSecoes(secoes);
+
+            }
 
             if(this.categoriasArray == null){
 
@@ -79,6 +98,8 @@ public abstract class CategoriasWebServiceProvider extends AsyncTask<Void,Void,C
             this.categoriasArray = new Categoria[0];
 
 
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
 

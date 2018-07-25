@@ -27,7 +27,7 @@ public class BolsasAdapter extends RecyclerView.Adapter<BolsasViewHolder> {
 
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.bolsa_item_layout,viewGroup,false);
 
-        v.setOnClickListener(new BolsaClickListener(viewGroup.getContext()));
+        v.setOnClickListener(new BolsaClickListener(viewGroup.getContext(),this.bolsas[i]));
 
         return new BolsasViewHolder(v);
 
