@@ -9,7 +9,7 @@ public class BolsasWebServiceProvider extends CategoriasWebServiceProvider {
     public BolsasWebServiceProvider(Context context) {
         super(context);
 
-        setCategoriasUri(this.getContext().getResources().getString(R.string.localhost)+"/app/ws/bolsas");
+        setCategoriasUri(this.getContext().getResources().getString(R.string.localhost)+"/app/ws/categorias/1");
 
     }
 

@@ -10,8 +10,6 @@ public class Lista {
     @SerializedName("paragrafo_id")
     private int paragrafoId;
 
-    private Item[] itens;
-
     public String getNome() {
         return nome;
     }
@@ -26,13 +24,5 @@ public class Lista {
 
     public void setParagrafoId(int paragrafoId) {
         this.paragrafoId = paragrafoId;
-    }
-
-    public Item[] getItens() {
-        return itens;
-    }
-
-    public void setItens(Item[] itens) {
-        this.itens = itens;
     }
 }

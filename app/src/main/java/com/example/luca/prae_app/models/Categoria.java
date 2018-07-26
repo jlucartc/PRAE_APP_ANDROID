@@ -31,10 +31,6 @@ public class Categoria {
     @SerializedName("bairro")
     private String bairro;
 
-    private JSONArray secoes;
-
-    private JSONArray documentos;
-
     public String getNome() {
         return nome;
     }
@@ -99,19 +95,4 @@ public class Categoria {
         this.bairro = bairro;
     }
 
-    public JSONArray getSecoes() {
-        return secoes;
-    }
-
-    public void setSecoes(JSONArray secoes) {
-        this.secoes = secoes;
-    }
-
-    public JSONArray getDocumentos() {
-        return documentos;
-    }
-
-    public void setDocumentos(JSONArray documentos) {
-        this.documentos = documentos;
-    }
 }
