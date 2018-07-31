@@ -28,15 +28,15 @@ public class MapasAdapter extends RecyclerView.Adapter<MapaItemViewHolder> {
 
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_mapa_item,viewGroup,false);
 
-        v.setOnClickListener(new MapaItemClickListener(viewGroup.getContext()));
+        v.setOnClickListener(new MapaItemClickListener(viewGroup.getContext(),this.mapas[i].getId()));
 
         MapaItemViewHolder vh = new MapaItemViewHolder(v);
 
-        TextView t = new TextView(viewGroup.getContext());
+        //TextView t = new TextView(viewGroup.getContext());
 
-        t.setText(viewGroup.getContext().getResources().getString(R.string.localhost));
+        //t.setText(viewGroup.getContext().getResources().getString(R.string.localhost));
 
-        vh.setRota(t);
+        //vh.setRota(t);
 
         return vh;
 
@@ -47,7 +47,7 @@ public class MapasAdapter extends RecyclerView.Adapter<MapaItemViewHolder> {
     public void onBindViewHolder(@NonNull MapaItemViewHolder mapaItemViewHolder, int i) {
 
         mapaItemViewHolder.getNome().setText(this.mapas[i].getNome());
-        mapaItemViewHolder.getRota().setText(mapaItemViewHolder.getRota().getText().toString()+"/mostrarMapa/"+this.mapas[i].getRota());
+        mapaItemViewHolder.getRota().setText("/mostrarMapa/"+this.mapas[i].getId());
 
     }
 

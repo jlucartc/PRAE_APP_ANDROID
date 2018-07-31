@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableLeft="@android:drawable/arrow_down_float"
+        android:drawablePadding="10dp"
+        android:drawableTint="#888888"
+        android:gravity="left"
+        android:text="Título do item"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/descricaoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_weight="1"
+        android:background="#3333dd"
+        android:padding="5dp"
+        android:text="Essa é a descrição do item acima"
+        android:textColor="#eeeeee" />
+
+</LinearLayout>

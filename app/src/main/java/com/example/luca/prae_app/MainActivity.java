@@ -10,12 +10,12 @@ import android.view.View;
 import android.widget.Button;
 
 
-
-import com.example.luca.prae_app.menu_pages.bolsas.BolsasActivity;
 import com.example.luca.prae_app.menu_pages.calendario_de_atividades.CalendarioDeAtividadesActivity;
+import com.example.luca.prae_app.menu_pages.categorias.CategoriasActivity;
 import com.example.luca.prae_app.menu_pages.fale_conosco.FaleConoscoActivity;
 import com.example.luca.prae_app.menu_pages.mapa_da_prae.MapaDaPraeActivity;
 import com.example.luca.prae_app.menu_pages.noticias.NoticiasActivity;
+import com.example.luca.prae_app.menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity;
 import com.example.luca.prae_app.menu_pages.voce_sabia.VoceSabiaActivity;
 import com.example.luca.prae_app.workers.AtualizarNoticias;
 import com.google.gson.Gson;
@@ -71,31 +71,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void ajudaDeCusto(View view){
+    public void bolsas(View view){
 
-        //Intent intent = new Intent(this,AjudaDeCustoActivity.class);
-        //startActivity(intent);
-
-    }
-
-    public void bolsasAuxilios(View view){
-
-        Intent intent = new Intent(this,BolsasActivity.class);
+        Intent intent = new Intent(this,CategoriasActivity.class);
+        intent.putExtra("tipo",1);
         startActivity(intent);
 
     }
 
-    public void restauranteUniversitario(View view){
+    public void auxilios(View view){
 
-        //Intent intent = new Intent(this,RestauranteUniversitarioActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this,CategoriasActivity.class);
+        intent.putExtra("tipo",2);
+        startActivity(intent);
 
     }
 
-    public void acolhimentoAoEstudante(View view){
+    public void servicos(View view){
 
-        //Intent intent = new Intent(this,AcolhimentoAoEstudanteActivity.class);
-        ///startActivity(intent);
+        Intent intent = new Intent(this,CategoriasActivity.class);
+        intent.putExtra("tipo",3);
+        startActivity(intent);
 
     }
 
@@ -123,6 +119,13 @@ public class MainActivity extends AppCompatActivity {
     public void faleConosco(View view){
 
         Intent intent = new Intent(this,FaleConoscoActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void notificacoesPorEmail(View view){
+
+        Intent intent = new Intent(this,NotificacoesPorEmailActivity.class);
         startActivity(intent);
 
     }

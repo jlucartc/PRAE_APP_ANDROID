@@ -1,18 +1,17 @@
-package com.example.luca.prae_app.menu_pages.bolsas;
+package com.example.luca.prae_app.menu_pages.servicos;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.menu_pages.categorias.CategoriaDetalhesActivity;
 import com.example.luca.prae_app.providers.DocumentosWebServiceProvider;
 import com.example.luca.prae_app.providers.SecoesWebServiceProvider;
-import com.example.luca.prae_app.view.listeners.SecaoClickListener;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+public class ServicoDetalhesActivity extends CategoriaDetalhesActivity {
 
-public class BolsaDetalhesActivity extends CategoriaDetalhesActivity {
-
-    public void onCreate(Bundle savedInstanceState){
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_categoria);
@@ -24,8 +23,5 @@ public class BolsaDetalhesActivity extends CategoriaDetalhesActivity {
         this.setDocumentosWebServiceProvider(new DocumentosWebServiceProvider(this.getApplicationContext(),this.getCategoriaId()));
 
         this.construirActivity();
-
-
     }
-
 }

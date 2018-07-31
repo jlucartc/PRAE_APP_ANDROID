@@ -5,8 +5,14 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.luca.prae_app.R;
+import com.example.luca.prae_app.models.Item;
+import com.example.luca.prae_app.models.Lista;
 import com.example.luca.prae_app.models.Paragrafo;
 import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,15 +27,19 @@ import java.util.Collections;
 public class ParagrafosWebServiceProvider extends AsyncTask<Void,Void,Paragrafo[]> {
 
     private Context context;
-    private String paragrafos_uri;
+    private String paragrafosUri;
     private Paragrafo[] paragrafos;
     private Gson gson;
+    private int secaoId;
 
-    public ParagrafosWebServiceProvider(Context context, int id){
+    public ParagrafosWebServiceProvider(Context context, int secaoId){
 
+        this.secaoId = secaoId;
         this.context = context;
-        this.paragrafos_uri = this.context.getString(R.string.localhost)+"/app/ws/paragrafos/"+String.valueOf(id);
+        this.paragrafosUri = this.context.getString(R.string.localhost)+"/app/ws/paragrafos/"+String.valueOf(this.secaoId);
         this.gson = new Gson();
+        this.paragrafos = new Paragrafo[0];
+
 
     }
 
@@ -42,7 +52,7 @@ public class ParagrafosWebServiceProvider extends AsyncTask<Void,Void,Paragrafo[
 
         try {
 
-            URL url = new URL(this.paragrafos_uri);
+            URL url = new URL(this.paragrafosUri);
 
             HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
 
@@ -56,17 +66,44 @@ public class ParagrafosWebServiceProvider extends AsyncTask<Void,Void,Paragrafo[
 
             String response = bufferedReader.readLine();
 
-            Log.i("DATAWEBSERVICEPROVIDER",response);
+            JSONArray responseJSON = new JSONArray(response);
 
-            this.paragrafos = gson.fromJson(response,Paragrafo[].class);
+            this.paragrafos = new Paragrafo[responseJSON.length()];
+
+            if(responseJSON.length() > 0){
+
+                for(int i = 0; i < responseJSON.length(); i++){
+
+                    JSONObject paragrafo = responseJSON.getJSONObject(i);
+
+                    this.paragrafos[i] = this.gson.fromJson(paragrafo.toString(),Paragrafo.class);
+
+                    JSONArray listas = paragrafo.getJSONArray("listas");
+
+                    Log.i("resopnseJSON",paragrafo.toString());
+
+                    this.paragrafos[i].setListas(this.gson.fromJson(listas.toString(),Lista[].class));
+
+                    for(int j = 0; j < this.paragrafos[i].getListas().length; j++){
+
+                        JSONArray itens = listas.getJSONObject(j).getJSONArray("itens");
+                        this.paragrafos[i].getListas()[j].setItens(this.gson.fromJson(itens.toString(),Item[].class));
+
+                    }
+
+                }
+
+            }
+
+            /*this.paragrafos = gson.fromJson(response,Paragrafo[].class);
 
             Log.i("isNoticiasArrayNull",String.valueOf(this.paragrafos == null));
 
-            if(this.paragrafos_uri == null){
+            if(this.paragrafosUri == null){
 
                 this.paragrafos = new Paragrafo[0];
 
-            }
+            }*/
 
             httpCon.disconnect();
 
@@ -76,13 +113,14 @@ public class ParagrafosWebServiceProvider extends AsyncTask<Void,Void,Paragrafo[
 
             bufferedReader.close();
 
+            return this.paragrafos;
+
         } catch (IOException e) {
             e.printStackTrace();
 
-            this.paragrafos = new Paragrafo[0];
-
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-
 
         return this.paragrafos;
 

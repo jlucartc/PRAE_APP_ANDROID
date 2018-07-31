@@ -27,7 +27,8 @@
                 android:onClick="noticias"
                 android:paddingTop="10dp"
                 android:text="Noticias"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/calendario_de_atividades"
@@ -40,7 +41,8 @@
                 android:onClick="calendarioDeAtividades"
                 android:paddingTop="10dp"
                 android:text="Calendário de atividades"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/mapa_da_prae"
@@ -53,7 +55,8 @@
                 android:onClick="mapaDaPrae"
                 android:paddingTop="10dp"
                 android:text="Mapas da PRAE"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
         </TableRow>
 
@@ -70,10 +73,11 @@
                 android:layout_weight="1"
                 android:background="#B7CCEF"
                 android:drawableTop="@drawable/auxilio"
-                android:onClick="bolsasAuxilios"
+                android:onClick="bolsas"
                 android:paddingTop="10dp"
                 android:text="Bolsas"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/auxilios"
@@ -83,10 +87,11 @@
                 android:layout_weight="1"
                 android:background="#B7CCEF"
                 android:drawableTop="@drawable/ru"
-                android:onClick="restauranteUniversitario"
+                android:onClick="auxilios"
                 android:paddingTop="10dp"
                 android:text="Auxílios"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/servicos"
@@ -96,10 +101,11 @@
                 android:layout_weight="1"
                 android:background="#B7CCEF"
                 android:drawableTop="@drawable/ajuda_de_custo"
-                android:onClick="ajudaDeCusto"
+                android:onClick="servicos"
                 android:paddingTop="10dp"
                 android:text="Serviços"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
         </TableRow>
 
@@ -120,7 +126,8 @@
                 android:onClick="voceSabia"
                 android:paddingTop="10dp"
                 android:text="Você sabia?"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/fale_conosco"
@@ -133,7 +140,8 @@
                 android:onClick="faleConosco"
                 android:paddingTop="10dp"
                 android:text="Fale conosco"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/email"
@@ -143,10 +151,11 @@
                 android:layout_weight="1"
                 android:background="#FFFF8b"
                 android:drawableTop="@drawable/acolhimento"
-                android:onClick="acolhimentoAoEstudante"
+                android:onClick="notificacoesPorEmail"
                 android:paddingTop="10dp"
                 android:text="Notificacoes por email"
-                android:textColor="#000066" />
+                android:textColor="#000066"
+                android:textSize="12sp" />
         </TableRow>
 
     </TableLayout>

@@ -2,7 +2,9 @@ package com.example.luca.prae_app.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Documento {
+import java.io.Serializable;
+
+public class Documento{
 
     @SerializedName("nome")
     private String nome;
@@ -12,6 +14,9 @@ public class Documento {
 
     @SerializedName("categoria_id")
     private int categoriaId;
+
+    @SerializedName("id")
+    private int id;
 
     public String getNome() {
         return nome;
@@ -35,5 +40,13 @@ public class Documento {
 
     public void setCategoriaId(int categoriaId) {
         this.categoriaId = categoriaId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

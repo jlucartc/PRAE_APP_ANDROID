@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_pages.categorias.CategoriaDetalhesActivity">
+    tools:context=".menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity">
 
 </android.support.constraint.ConstraintLayout>

@@ -4,10 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_pages.bolsas.BolsasActivity">
+    tools:context=".menu_pages.servicos.ServicoDetalhesActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/bolsasRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>

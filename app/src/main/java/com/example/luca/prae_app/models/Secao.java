@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Secao {
 
+    @SerializedName("id")
+    private int id;
+
     @SerializedName("nome")
     private String nome;
 
@@ -26,4 +29,11 @@ public class Secao {
         this.categoriaId = categoriaId;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

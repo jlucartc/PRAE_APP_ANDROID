@@ -5,8 +5,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.luca.prae_app.R;
-import com.example.luca.prae_app.models.Compromisso;
-import com.example.luca.prae_app.models.Secao;
+import com.example.luca.prae_app.models.Documento;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -15,39 +14,33 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
-public class SecoesWebServiceProvider extends AsyncTask<Void,Void,Secao[]> {
+public class DocumentosWebServiceProvider extends AsyncTask<Void,Void,Documento[]> {
 
-    private Secao[] secoesArray;
-    private String secoesUri;
-    private Gson gson;
+    private String documentosUri;
     private Context context;
-    private int categoriaId;
+    private Documento[] documentos;
+    private Gson gson;
 
-    public SecoesWebServiceProvider(Context context,int categoriaId){
+    @Override
+    protected Documento[] doInBackground(Void... voids) {
+        return this.getDocumentos();
+    }
 
-        this.categoriaId = categoriaId;
+    public DocumentosWebServiceProvider(Context context,int id){
+
         this.context = context;
-        this.secoesArray = null;
-        this.secoesUri = this.context.getString(R.string.localhost)+"/app/ws/secoes/"+String.valueOf(this.categoriaId);
+        this.documentosUri = this.context.getString(R.string.localhost)+"/app/ws/documentos/"+String.valueOf(id);
         this.gson = new Gson();
 
     }
 
 
-    @Override
-    protected Secao[] doInBackground(Void... voids) {
-        return this.getSecoes();
-    }
-
-    public Secao[] getSecoes(){
+    public Documento[] getDocumentos(){
 
         try {
 
-            URL url = new URL(this.secoesUri);
+            URL url = new URL(this.documentosUri);
 
             HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
 
@@ -63,11 +56,11 @@ public class SecoesWebServiceProvider extends AsyncTask<Void,Void,Secao[]> {
 
             Log.i("LISTACOMPROMISSOS",response);
 
-            this.secoesArray = gson.fromJson(response,Secao[].class);
+            this.documentos = gson.fromJson(response,Documento[].class);
 
-            if(this.secoesArray == null){
+            if(this.documentos == null){
 
-                this.secoesArray = new Secao[0];
+                this.documentos = new Documento[0];
 
             }
 
@@ -82,15 +75,14 @@ public class SecoesWebServiceProvider extends AsyncTask<Void,Void,Secao[]> {
         } catch (IOException e) {
             e.printStackTrace();
 
-            this.secoesArray = new Secao[0];
+            this.documentos = new Documento[0];
 
 
         }
 
 
-        return this.secoesArray;
+        return this.documentos;
+
 
     }
-
-
 }

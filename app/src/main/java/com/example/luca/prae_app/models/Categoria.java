@@ -7,6 +7,9 @@ import org.json.JSONObject;
 
 public class Categoria {
 
+    @SerializedName("id")
+    private int id;
+
     @SerializedName("nome")
     private String nome;
 
@@ -30,6 +33,9 @@ public class Categoria {
 
     @SerializedName("bairro")
     private String bairro;
+
+    @SerializedName("descricao")
+    private String descricao;
 
     public String getNome() {
         return nome;
@@ -95,4 +101,19 @@ public class Categoria {
         this.bairro = bairro;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }

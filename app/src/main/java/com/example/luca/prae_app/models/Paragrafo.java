@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Paragrafo {
 
+    @SerializedName("id")
+    private int id;
+
     @SerializedName("titulo")
     private String titulo;
 
@@ -12,6 +15,8 @@ public class Paragrafo {
 
     @SerializedName("secao_id")
     private int secaoId;
+
+    private Lista[] listas;
 
     public String getTitulo() {
         return titulo;
@@ -35,5 +40,21 @@ public class Paragrafo {
 
     public void setSecaoId(int secaoId) {
         this.secaoId = secaoId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Lista[] getListas() {
+        return listas;
+    }
+
+    public void setListas(Lista[] listas) {
+        this.listas = listas;
     }
 }

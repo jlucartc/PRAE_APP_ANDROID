@@ -21,20 +21,20 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Iterator;
 
-public abstract class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[]> {
+public class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[]> {
 
     private Categoria[] categoriasArray;
     private String categoriasUri;
     private Context context;
     private Gson gson;
 
-    public CategoriasWebServiceProvider(Context context){
+    public CategoriasWebServiceProvider(Context context,int tipo){
 
-        this.context = context;
+        this.setContext(context);
 
-        this.categoriasUri = this.context.getString(R.string.localhost)+"/app/ws/listaCategorias";
+        this.setCategoriasUri(this.context.getString(R.string.localhost)+"/app/ws/categorias/"+String.valueOf(tipo));
 
-        this.gson = new Gson();
+        this.setGson(new Gson());
 
     }
 
@@ -67,14 +67,6 @@ public abstract class CategoriasWebServiceProvider extends AsyncTask<Void,Void,C
             for(int i = 0; i < array.length(); i++){
 
                 categorias[i] = this.getGson().fromJson(array.getJSONObject(i).toString(),Categoria.class);
-
-                JSONObject objeto = array.getJSONObject(i);
-
-                JSONArray secoes = objeto.getJSONArray("secoes");
-                JSONArray documentos = objeto.getJSONArray("documentos");
-
-                categorias[i].setDocumentos(documentos);
-                categorias[i].setSecoes(secoes);
 
             }
 

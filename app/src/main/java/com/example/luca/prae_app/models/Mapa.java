@@ -10,6 +10,9 @@ public class Mapa {
     @SerializedName("rota")
     private String rota;
 
+    @SerializedName("id")
+    private int id;
+
     public String getNome() {
         return nome;
     }
@@ -26,4 +29,11 @@ public class Mapa {
         this.rota = rota;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
