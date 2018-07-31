@@ -28,18 +28,6 @@
             android:name=".menu_pages.noticias.NoticiaWebViewActivity"
             android:label="@string/title_activity_web_view" />
         <activity
-            android:name=".menu_pages.ajuda_de_custo.AjudaDeCustoActivity"
-            android:label="@string/title_activity_ajuda_de_custo" />
-        <activity
-            android:name=".menu_pages.acolhimento_ao_estudante.AcolhimentoAoEstudanteActivity"
-            android:label="@string/title_activity_acolhimento_ao_estudante" />
-        <activity
-            android:name=".menu_pages.bolsas_auxilios.BolsasAuxiliosActivity"
-            android:label="@string/title_activity_bolsas_auxilio" />
-        <activity
-            android:name=".menu_pages.restaurante_universitario.RestauranteUniversitarioActivity"
-            android:label="@string/title_activity_restaurante_universitario" />
-        <activity
             android:name=".menu_pages.calendario_de_atividades.CalendarioDeAtividadesActivity"
             android:label="@string/title_activity_calendario_de_atividades" />
         <activity
@@ -52,19 +40,15 @@
             android:name=".menu_pages.fale_conosco.FaleConoscoActivity"
             android:label="@string/title_activity_fale_conosco" />
         <activity
-            android:name=".menu_pages.ajuda_de_custo.AjudaDeCustoDocumentacaoNecessariaActivity"
-            android:label="@string/title_activity_ajuda_de_custo_documentacao_necessaria" />
-        <activity
             android:name=".menu_pages.mapa_da_prae.MostrarMapaActivity"
             android:label="@string/title_activity_mostrar_mapa" />
-        <activity android:name=".menu_pages.bolsas.BolsasActivity" />
         <activity android:name=".menu_pages.categorias.CategoriaDetalhesActivity" />
         <activity android:name=".menu_pages.categorias.SecaoActivity" />
         <activity android:name=".menu_pages.bolsas.BolsaDetalhesActivity" />
         <activity android:name=".menu_pages.auxilios.AuxilioDetalhesActivity" />
         <activity android:name=".menu_pages.servicos.ServicoDetalhesActivity" />
         <activity android:name=".menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity" />
-        <activity android:name=".menu_pages.categorias.CategoriasActivity"></activity>
+        <activity android:name=".menu_pages.categorias.CategoriasActivity" />
     </application>
 
 </manifest>

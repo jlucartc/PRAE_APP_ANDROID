@@ -6,4 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Prefere receber as notificações por email? Basta enviar o seu endereço pra gente! OBS: Caso não esteja recebendo as atualizações, cheque a sua caixa de spams"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Digite seu email aqui"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/enviarEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar email " />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

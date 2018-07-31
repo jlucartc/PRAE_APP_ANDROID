@@ -41,7 +41,7 @@ public class CategoriaDetalhesActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_categoria);
+        setContentView(R.layout.activity_categoria_detalhes);
 
         this.setCategoriaId(getIntent().getIntExtra("categoriaId",0));
         this.setCategoriaNome(getIntent().getStringExtra("nome"));
@@ -97,14 +97,24 @@ public class CategoriaDetalhesActivity extends AppCompatActivity {
                     this.listaDocumentos.addView(v);
                 }
 
+                if(this.documentos == null || this.documentos.length == 0){
+
+                    this.documentosTextView = findViewById(R.id.documentos);
+                    this.listaDocumentos = findViewById(R.id.listaDocumentos);
+
+                    this.documentosTextView.setVisibility(View.GONE);
+                    this.listaDocumentos.setVisibility(View.GONE);
+
+                }
+
+
+
             } else {
 
-                this.secoesTextView = findViewById(R.id.secoes);
                 this.documentosTextView = findViewById(R.id.documentos);
                 this.listaSecoes = findViewById(R.id.listaSecoes);
                 this.listaDocumentos = findViewById(R.id.listaDocumentos);
 
-                this.secoesTextView.setVisibility(View.GONE);
                 this.documentosTextView.setVisibility(View.GONE);
                 this.listaSecoes.setVisibility(View.GONE);
                 this.listaDocumentos.setVisibility(View.GONE);

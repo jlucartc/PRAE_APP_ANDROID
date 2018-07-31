@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#dddddd"
     android:orientation="vertical"
     android:paddingBottom="10dp">
 
@@ -10,10 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="#cccccc"
         android:drawableLeft="@android:drawable/arrow_down_float"
         android:drawablePadding="10dp"
         android:drawableTint="#888888"
         android:gravity="left"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
         android:text="Título do item"
         android:textColor="#000000" />
 
@@ -21,8 +26,6 @@
         android:id="@+id/descricaoItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_weight="1"
         android:background="#3333dd"
         android:padding="5dp"

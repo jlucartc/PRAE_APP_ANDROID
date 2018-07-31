@@ -4,9 +4,7 @@ import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.menu_pages.categorias.CategoriaDetalhesActivity;
 import com.example.luca.prae_app.providers.DocumentosWebServiceProvider;
 import com.example.luca.prae_app.providers.SecoesWebServiceProvider;
-import com.example.luca.prae_app.view.listeners.SecaoClickListener;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class BolsaDetalhesActivity extends CategoriaDetalhesActivity {
@@ -15,7 +13,7 @@ public class BolsaDetalhesActivity extends CategoriaDetalhesActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_categoria);
+        setContentView(R.layout.activity_categoria_detalhes);
 
         this.setCategoriaId(getIntent().getIntExtra("categoriaId",0));
         this.setCategoriaNome(getIntent().getStringExtra("nome"));
