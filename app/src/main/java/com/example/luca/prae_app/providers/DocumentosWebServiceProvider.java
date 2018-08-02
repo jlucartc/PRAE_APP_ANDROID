@@ -54,8 +54,6 @@ public class DocumentosWebServiceProvider extends AsyncTask<Void,Void,Documento[
 
             String response = bufferedReader.readLine();
 
-            Log.i("LISTACOMPROMISSOS",response);
-
             this.documentos = gson.fromJson(response,Documento[].class);
 
             if(this.documentos == null){

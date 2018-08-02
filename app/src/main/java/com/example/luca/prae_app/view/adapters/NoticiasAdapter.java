@@ -46,6 +46,10 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiaItemViewHolder>
 
             viewHolder.statusNoticia.setVisibility(TextView.GONE);
 
+        }else{
+
+            viewHolder.statusNoticia.setVisibility(TextView.VISIBLE);
+
         }
         viewHolder.id.setText(String.valueOf(this.noticias[i].getId()));
 

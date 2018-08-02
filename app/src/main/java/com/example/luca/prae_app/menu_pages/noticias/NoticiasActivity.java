@@ -41,7 +41,6 @@ public class NoticiasActivity extends AppCompatActivity {
 
                 this.recyclerView = (RecyclerView)findViewById(R.id.noticiasRecyclerView);
                 this.layoutManager = new LinearLayoutManager(this);
-                //Log.i("qNews",String.valueOf(this.noticias.length));
                 this.adapter = new NoticiasAdapter(this.noticias);
                 this.recyclerView.setLayoutManager(this.layoutManager);
                 this.recyclerView.setAdapter(this.adapter);

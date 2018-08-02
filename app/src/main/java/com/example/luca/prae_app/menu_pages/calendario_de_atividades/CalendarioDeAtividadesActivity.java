@@ -34,8 +34,6 @@ public class CalendarioDeAtividadesActivity extends AppCompatActivity {
 
             this.compromissos = this.compromissosWebServiceProvider.execute().get();
 
-            Log.i("COMPROMISSOS",String.valueOf(this.compromissos == null));
-
             if(this.compromissos == null || this.compromissos.length == 0){
 
                 setContentView(R.layout.nao_encontrado);

@@ -29,8 +29,6 @@ public class ItemClickListener implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        Log.i("itemclicklistener",((TextView)view.findViewById(R.id.descricaoItem)).getText().toString());
-
         if(this.getHasDescricao()){
             if(this.getAberto() == false){
 

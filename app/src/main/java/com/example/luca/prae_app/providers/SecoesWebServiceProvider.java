@@ -61,8 +61,6 @@ public class SecoesWebServiceProvider extends AsyncTask<Void,Void,Secao[]> {
 
             String response = bufferedReader.readLine();
 
-            Log.i("LISTACOMPROMISSOS",response);
-
             this.secoesArray = gson.fromJson(response,Secao[].class);
 
             if(this.secoesArray == null){

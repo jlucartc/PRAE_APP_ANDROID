@@ -55,8 +55,6 @@ public class SecaoAdapter extends RecyclerView.Adapter<ParagrafoViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ParagrafoViewHolder paragrafoViewHolder, int i) {
 
-        Log.i("paragrafo.null",String.valueOf(paragrafoViewHolder.getTexto() == null));
-
         paragrafoViewHolder.getTexto().setText(this.getParagrafos()[i].getTexto());
         paragrafoViewHolder.getTitulo().setText(this.getParagrafos()[i].getTitulo());
 

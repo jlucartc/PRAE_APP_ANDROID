@@ -33,8 +33,6 @@ public class MapaItemClickListener implements View.OnClickListener {
 
         Intent intent = new Intent(this.context,MostrarMapaActivity.class);
 
-        Log.i("mapaonclicklistener",url);
-
         intent.putExtra("rota",url);
 
         intent.putExtra("mapaId",this.mapaId);

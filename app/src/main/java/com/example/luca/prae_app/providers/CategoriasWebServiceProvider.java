@@ -56,8 +56,6 @@ public class CategoriasWebServiceProvider extends AsyncTask<Void,Void,Categoria[
 
             String response = bufferedReader.readLine();
 
-            Log.i("LISTACATEGORIAS",response);
-
             this.categoriasArray = gson.fromJson(response,Categoria[].class);
 
 

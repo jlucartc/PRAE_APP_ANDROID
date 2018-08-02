@@ -56,8 +56,6 @@ public class MapasWebServiceProvider extends AsyncTask<Void,Void,Mapa[]> {
 
             String response = bufferedReader.readLine();
 
-            Log.i("MAPAS",response);
-
             this.mapasArray = gson.fromJson(response,Mapa[].class);
 
             if(this.mapasArray == null){

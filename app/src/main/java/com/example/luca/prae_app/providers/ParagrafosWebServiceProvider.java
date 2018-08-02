@@ -80,8 +80,6 @@ public class ParagrafosWebServiceProvider extends AsyncTask<Void,Void,Paragrafo[
 
                     JSONArray listas = paragrafo.getJSONArray("listas");
 
-                    Log.i("resopnseJSON",paragrafo.toString());
-
                     this.paragrafos[i].setListas(this.gson.fromJson(listas.toString(),Lista[].class));
 
                     for(int j = 0; j < this.paragrafos[i].getListas().length; j++){
@@ -94,16 +92,6 @@ public class ParagrafosWebServiceProvider extends AsyncTask<Void,Void,Paragrafo[
                 }
 
             }
-
-            /*this.paragrafos = gson.fromJson(response,Paragrafo[].class);
-
-            Log.i("isNoticiasArrayNull",String.valueOf(this.paragrafos == null));
-
-            if(this.paragrafosUri == null){
-
-                this.paragrafos = new Paragrafo[0];
-
-            }*/
 
             httpCon.disconnect();
 

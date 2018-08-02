@@ -20,8 +20,6 @@ public class NoticiaWebViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
 
-        Log.i("webView","abrindo url...");
-
         this.url = getIntent().getStringExtra("url");
 
         this.webView = (WebView)findViewById(R.id.noticiaWebView);

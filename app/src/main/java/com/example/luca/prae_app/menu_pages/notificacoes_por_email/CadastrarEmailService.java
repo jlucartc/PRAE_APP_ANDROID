@@ -2,14 +2,16 @@ package com.example.luca.prae_app.menu_pages.notificacoes_por_email;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.example.luca.prae_app.R;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class CadastrarEmailService extends AsyncTask<Void,Void,Void> {
+public class CadastrarEmailService extends AsyncTask<Void,Void,Boolean> {
 
     private String cadastrarEmailUrl;
     private String email;
@@ -21,16 +23,16 @@ public class CadastrarEmailService extends AsyncTask<Void,Void,Void> {
 
         this.email = email;
 
-        this.cadastrarEmailUrl = this.context.getString(R.string.localhost)+"app/ws/cadastrarEmail";
+        this.cadastrarEmailUrl = this.context.getString(R.string.localhost)+"/app/ws/cadastrarEmail";
 
     }
 
     @Override
-    protected Void doInBackground(Void... strings) {
+    protected Boolean doInBackground(Void... strings) {
         return this.cadastrarEmail(this.email);
     }
 
-    public Void cadastrarEmail(String email){
+    public Boolean cadastrarEmail(String email){
 
         try {
 
@@ -38,9 +40,9 @@ public class CadastrarEmailService extends AsyncTask<Void,Void,Void> {
 
             HttpURLConnection httpCon = (HttpURLConnection)url.openConnection();
 
-            //httpCon.setRequestMethod("GET");
+            httpCon.setRequestMethod("GET");
 
-            //InputStream inputStream = httpCon.getInputStream();
+            InputStream inputStream = httpCon.getInputStream();
 
             //InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
 
@@ -48,7 +50,6 @@ public class CadastrarEmailService extends AsyncTask<Void,Void,Void> {
 
             //String response = bufferedReader.readLine();
 
-            //Log.i("LISTACATEGORIAS",response);
 
 
 
@@ -56,16 +57,17 @@ public class CadastrarEmailService extends AsyncTask<Void,Void,Void> {
 
             //inputStreamReader.close();
 
-            //inputStream.close();
+            inputStream.close();
 
             //bufferedReader.close();
 
         } catch (IOException e) {
             e.printStackTrace();
 
+            return false;
         }
 
-        return null;
+        return true;
 
     }
 

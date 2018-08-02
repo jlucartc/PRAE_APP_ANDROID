@@ -39,15 +39,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("MainActivity","MainActivity foi executada");
 
         this.gson = new Gson();
 
         this.sharedPreferences = this.getSharedPreferences("com.example.luca.prae_app",Context.MODE_PRIVATE);
 
         this.atualizarNoticiasId = gson.fromJson(this.sharedPreferences.getString("atualizarNoticiasUUID",""),UUID.class);
-
-        Log.i("isJsonNull",String.valueOf(this.atualizarNoticiasId == null));
 
         if(this.atualizarNoticiasId == null){
 
@@ -63,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 
     public void noticias(View view){
 

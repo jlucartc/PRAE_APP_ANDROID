@@ -63,11 +63,7 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
             String response = bufferedReader.readLine();
 
-            Log.i("DATAWEBSERVICEPROVIDER",response);
-
             this.noticiasArray = gson.fromJson(response,Noticia[].class);
-
-            Log.i("isNoticiasArrayNull",String.valueOf(this.noticiasArray == null));
 
             if(this.noticiasArray != null){
 
@@ -134,7 +130,6 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
         while(s.hasNextInt()){
 
             noticiasNaoLidasArrayList.add(s.nextInt());
-            Log.i("naoLidas",String.valueOf(noticiasNaoLidasArrayList.get(noticiasNaoLidasArrayList.size()-1)));
 
         }
 
@@ -171,8 +166,6 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
             }
 
-            Log.i("noticiaIsNova",String.valueOf(n.isNova()));
-
         }
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -191,8 +184,10 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
         editor.putInt("ultimoId",ultimoId);
 
-        editor.commit();
+        editor.remove("ultimoId");
+        editor.remove("noticiasNaoLidasArray");
 
+        editor.commit();
 
         this.noticiasArray = noticias;
 

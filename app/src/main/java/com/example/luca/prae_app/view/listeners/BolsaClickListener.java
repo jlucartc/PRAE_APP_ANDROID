@@ -25,8 +25,6 @@ public class BolsaClickListener implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        Log.i("bolsaClickListener","clicou");
-
         Intent i = new Intent(this.context,BolsaDetalhesActivity.class);
 
         i.putExtra("categoriaId",this.bolsaId);

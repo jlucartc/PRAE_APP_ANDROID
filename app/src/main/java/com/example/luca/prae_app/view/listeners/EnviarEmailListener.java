@@ -6,6 +6,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.luca.prae_app.R;
+import com.example.luca.prae_app.menu_pages.notificacoes_por_email.CadastrarEmailService;
+
+import java.util.concurrent.ExecutionException;
 
 public class EnviarEmailListener implements View.OnClickListener {
     @Override
@@ -17,9 +20,49 @@ public class EnviarEmailListener implements View.OnClickListener {
 
         emailEdit.setText("");
 
-        Toast toast = Toast.makeText(view.getContext(),"Email enviado",Toast.LENGTH_SHORT);
+        CadastrarEmailService service = new CadastrarEmailService(view.getContext(),email);
 
-        toast.show();
+        try {
+
+            Boolean cadastro = service.execute().get();
+
+            if(!cadastro){
+
+                Toast toast = Toast.makeText(view.getContext()
+                        ,"Erro no cadastro do email. Tente novamente dentro de alguns segundos",Toast.LENGTH_SHORT);
+
+                toast.show();
+
+            }else{
+
+                Toast toast = Toast.makeText(view.getContext()
+                        ,"Email cadastrado com sucesso!",Toast.LENGTH_SHORT);
+
+                toast.show();
+
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+
+            Toast toast = Toast.makeText(view.getContext()
+                    ,"Erro no cadastro do email. Tente novamente dentro de alguns segundos",Toast.LENGTH_SHORT);
+
+            toast.show();
+
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+
+            Toast toast = Toast.makeText(view.getContext()
+                    ,"Erro no cadastro do email. Tente novamente dentro de alguns segundos",Toast.LENGTH_SHORT);
+
+            toast.show();
+
+        }
+
+        //Toast toast = Toast.makeText(view.getContext(),"Email enviado",Toast.LENGTH_SHORT);
+
+        //toast.show();
 
 
     }

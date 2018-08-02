@@ -39,8 +39,6 @@ public class SecaoActivity extends AppCompatActivity {
 
             this.paragrafos = this.paragrafosWebServiceProvider.execute().get();
 
-            Log.i("paragrafos.length", String.valueOf(this.paragrafos.length));
-
             if(this.paragrafos != null && this.paragrafos.length > 0){
 
                 setContentView(R.layout.activity_secao);

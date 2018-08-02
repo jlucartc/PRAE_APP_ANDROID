@@ -51,8 +51,6 @@ public class CompromissosWebServiceProvider extends AsyncTask<Void,Void,Compromi
 
             String response = bufferedReader.readLine();
 
-            Log.i("LISTACOMPROMISSOS",response);
-
             this.compromissosArray = gson.fromJson(response,Compromisso[].class);
 
             if(this.compromissosArray == null){
