@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.i("MainActivity","onCreate");
+
         this.gson = new Gson();
 
         this.sharedPreferences = this.getSharedPreferences("com.example.luca.prae_app",Context.MODE_PRIVATE);

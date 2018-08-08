@@ -123,18 +123,43 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
         int ultimoId = sp.getInt("ultimoId",0);
 
-        Scanner s = new Scanner(noticiasNaoLidasArray);
+        int qNotificacoes = sp.getInt("qNotificacoes",0);
+
+        Log.i("NoticiasWSProvider","ultimoId: "+String.valueOf(ultimoId));
+
+        Log.i("NoticiasWSProvider","noticiasNaoLidasArray: "+String.valueOf(noticiasNaoLidasArray));
+
+        Log.i("NoticiasWSProvider","noticias.length: "+String.valueOf(noticias.length));
 
         ArrayList<Integer> noticiasNaoLidasArrayList = new ArrayList<Integer>();
 
+        Scanner s = new Scanner(noticiasNaoLidasArray);
+
+        // ArrayList<Integer> noticiasNaoLidasArrayList = new ArrayList<Integer>();
+
+        // Montando o ArrayList com as noticias não lidas
+
         while(s.hasNextInt()){
 
-            noticiasNaoLidasArrayList.add(s.nextInt());
+            int i = s.nextInt();
+
+            Log.i("NoticiasWSProvider","Noticia não lida: "+String.valueOf(i));
+
+            noticiasNaoLidasArrayList.add(i);
 
         }
 
+        /*
+        * Checando cada item no array de notícias não lidas.
+        * */
+
+        int tempId = 0;
+
+        ArrayList<Integer> notificarApos = new ArrayList<Integer>();
 
         for(Noticia n : noticias){
+
+            Log.i("NoticiasWSProvider","n.getId(): "+String.valueOf(n.getId()));
 
             if(noticiasNaoLidasArrayList.indexOf(n.getId()) >= 0){
 
@@ -146,17 +171,14 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
                     noticiasNaoLidasArrayList.add(n.getId());
                     n.setNova(true);
-                    ultimoId = n.getId();
 
-                    Intent intent = new Intent(this.context,NoticiasActivity.class);
-                    NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle("Nov notícia!").setContentText(n.getTitulo());
-                    TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this.context);
-                    taskStackBuilder.addParentStack(NoticiasActivity.class);
-                    taskStackBuilder.addNextIntent(intent);
-                    PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
-                    notificacao.setContentIntent(pendingIntent);
-                    NotificationManager notificationManager = (NotificationManager)this.context.getSystemService(Context.NOTIFICATION_SERVICE);
-                    notificationManager.notify(1,notificacao.build());
+                    if(n.getId() > tempId){
+
+                        tempId = n.getId();
+
+                    }
+
+                    notificarApos.add(n.getId());
 
                 }else{
 
@@ -167,6 +189,25 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
             }
 
         }
+
+        for(int i = notificarApos.size()-1 ; i >= 0; i-- ){
+
+            Intent intent = new Intent(this.context,NoticiasActivity.class);
+            NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle("Nova notícia!").setContentText(noticias[noticias.length - notificarApos.get(i)].getTitulo());
+            TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this.context);
+            taskStackBuilder.addParentStack(NoticiasActivity.class);
+            taskStackBuilder.addNextIntent(intent);
+            PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
+            notificacao.setContentIntent(pendingIntent);
+            NotificationManager notificationManager = (NotificationManager)this.context.getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.notify("prae.noticias",1,notificacao.build());
+
+            Log.i("NoticiasWSProvider","noticia.getId(): "+noticias[notificarApos.get(i)-1].getTitulo());
+
+        }
+
+
+        ultimoId = tempId;
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -180,12 +221,15 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
         SharedPreferences.Editor editor = sp.edit();
 
+
+        editor.putInt("qNotificacoes",qNotificacoes);
+
         editor.putString("noticiasNaoLidasArray",stringBuilder.toString());
 
         editor.putInt("ultimoId",ultimoId);
 
-        editor.remove("ultimoId");
-        editor.remove("noticiasNaoLidasArray");
+        editor.remove("ultimoId").commit();
+        editor.remove("noticiasNaoLidasArray").commit();
 
         editor.commit();
 
