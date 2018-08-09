@@ -228,9 +228,6 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
         editor.putInt("ultimoId",ultimoId);
 
-        editor.remove("ultimoId").commit();
-        editor.remove("noticiasNaoLidasArray").commit();
-
         editor.commit();
 
         this.noticiasArray = noticias;
