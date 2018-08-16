@@ -88,7 +88,7 @@ public class SecaoAdapter extends RecyclerView.Adapter<ParagrafoViewHolder> {
                 TextView tv = iv.findViewById(R.id.item);
                 TextView tvD = iv.findViewById(R.id.descricaoItem);
 
-                iv.setOnClickListener(new ItemClickListener(tvD.getText().toString() == null || tvD.getText().toString().isEmpty(),this.getContext()));
+                iv.setOnClickListener(new ItemClickListener(tvD.getText().toString() == null || tvD.getText().toString().isEmpty(),this.getContext(),li));
 
                 ItemViewHolder ivh = new ItemViewHolder(iv);
 
