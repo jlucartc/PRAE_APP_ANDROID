@@ -153,7 +153,7 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
         * Checando cada item no array de notícias não lidas.
         * */
 
-        int tempId = 0;
+        int tempId = ultimoId;
 
         ArrayList<Integer> notificarApos = new ArrayList<Integer>();
 
