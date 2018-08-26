@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,18 +17,21 @@ public class ItemClickListener implements View.OnClickListener {
     private Boolean hasDescricao;
     private Boolean aberto;
     private Context context;
+    private View parent;
 
 
-
-    public ItemClickListener(Boolean hasDescricao, Context context){
+    public ItemClickListener(Boolean hasDescricao, Context context, View parent){
 
         this.setHasDescricao(hasDescricao);
         this.aberto = false;
+        this.parent = parent;
 
     }
 
     @Override
     public void onClick(View view) {
+
+        Log.i("ItemClickListener","getHasDescricao(): "+String.valueOf(this.getHasDescricao()));
 
         if(this.getHasDescricao()){
             if(this.getAberto() == false){
@@ -55,7 +59,13 @@ public class ItemClickListener implements View.OnClickListener {
 
             }
 
+            if(this.parent.getParent() instanceof View){
 
+                ((View) this.parent.getParent()).invalidate();
+
+            }
+
+            Log.i("ItemCLickListener","adapter notificado");
 
         }
 
