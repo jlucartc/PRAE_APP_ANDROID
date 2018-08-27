@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import androidx.work.Worker;
 
-public class AtualizarNoticias extends Worker {
+public class AtualizarDados extends Worker {
 
     private Context context;
     private Noticia[] noticias;

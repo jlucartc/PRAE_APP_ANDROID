@@ -19,12 +19,12 @@ public class ItemClickListener implements View.OnClickListener {
     private Context context;
     private View parent;
 
-
     public ItemClickListener(Boolean hasDescricao, Context context, View parent){
 
         this.setHasDescricao(hasDescricao);
-        this.aberto = false;
-        this.parent = parent;
+        this.setAberto(false);
+        this.setParent(parent);
+        this.setContext(context);
 
     }
 
@@ -42,7 +42,7 @@ public class ItemClickListener implements View.OnClickListener {
                 descricao.setVisibility(View.VISIBLE);
                 Drawable drawable = this.getContext().getResources().getDrawable(android.R.drawable.arrow_up_float);
                 drawable.setColorFilter(this.getContext().getResources().getColor(android.R.color.black), PorterDuff.Mode.SRC_ATOP);
-                drawable.setBounds(0, 0, 50, 50);
+                drawable.setBounds(0, 0, 30, 30);
                 item.setCompoundDrawables(drawable, null, null, null);
 
 
@@ -54,14 +54,8 @@ public class ItemClickListener implements View.OnClickListener {
                 descricao.setVisibility(View.GONE);
                 Drawable drawable = this.getContext().getResources().getDrawable(android.R.drawable.arrow_down_float);
                 drawable.setColorFilter(this.getContext().getResources().getColor(android.R.color.holo_blue_dark), PorterDuff.Mode.SRC_ATOP);
-                drawable.setBounds(0, 0, 50, 50);
+                drawable.setBounds(0, 0, 30, 30);
                 item.setCompoundDrawables(drawable, null, null, null);
-
-            }
-
-            if(this.parent.getParent() instanceof View){
-
-                ((View) this.parent.getParent()).invalidate();
 
             }
 
@@ -93,5 +87,13 @@ public class ItemClickListener implements View.OnClickListener {
 
     public void setContext(Context context) {
         this.context = context;
+    }
+
+    public View getParent() {
+        return parent;
+    }
+
+    public void setParent(View parent) {
+        this.parent = parent;
     }
 }

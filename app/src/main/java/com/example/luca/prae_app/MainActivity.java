@@ -17,7 +17,7 @@ import com.example.luca.prae_app.menu_pages.mapa_da_prae.MapaDaPraeActivity;
 import com.example.luca.prae_app.menu_pages.noticias.NoticiasActivity;
 import com.example.luca.prae_app.menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity;
 import com.example.luca.prae_app.menu_pages.voce_sabia.VoceSabiaActivity;
-import com.example.luca.prae_app.workers.AtualizarNoticias;
+import com.example.luca.prae_app.workers.AtualizarDados;
 import com.google.gson.Gson;
 
 import java.util.UUID;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(this.atualizarNoticiasId == null){
 
-            this.atualizarNoticias = new PeriodicWorkRequest.Builder(AtualizarNoticias.class,15,TimeUnit.MINUTES).build();
+            this.atualizarNoticias = new PeriodicWorkRequest.Builder(AtualizarDados.class,15,TimeUnit.MINUTES).build();
 
             WorkManager.getInstance().enqueue(atualizarNoticias);
 
