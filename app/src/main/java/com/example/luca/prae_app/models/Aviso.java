@@ -13,6 +13,8 @@ public class Aviso {
     @SerializedName("id")
     private int id;
 
+    private Boolean isNovo;
+
     public String getTitulo() {
         return titulo;
     }
@@ -35,5 +37,13 @@ public class Aviso {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Boolean getNovo() {
+        return isNovo;
+    }
+
+    public void setNovo(Boolean novo) {
+        isNovo = novo;
     }
 }

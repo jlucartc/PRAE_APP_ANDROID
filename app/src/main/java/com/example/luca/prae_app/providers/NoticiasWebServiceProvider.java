@@ -155,7 +155,7 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
         int tempId = ultimoId;
 
-        ArrayList<Integer> notificarApos = new ArrayList<Integer>();
+        //ArrayList<Integer> notificarApos = new ArrayList<Integer>();
 
         for(Noticia n : noticias){
 
@@ -178,7 +178,7 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
                     }
 
-                    notificarApos.add(n.getId());
+                    //notificarApos.add(n.getId());
 
                 }else{
 
@@ -190,7 +190,7 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
         }
 
-        for(int i = notificarApos.size()-1 ; i >= 0; i-- ){
+        /*for(int i = notificarApos.size()-1 ; i >= 0; i-- ){
 
             Intent intent = new Intent(this.context,NoticiasActivity.class);
             NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle("Nova notícia!").setContentText(noticias[noticias.length - notificarApos.get(i)].getTitulo());
@@ -204,7 +204,7 @@ public class NoticiasWebServiceProvider extends AsyncTask<Void, Void, Noticia[]>
 
             Log.i("NoticiasWSProvider","noticia.getId(): "+noticias[notificarApos.get(i)-1].getTitulo());
 
-        }
+        }*/
 
 
         ultimoId = tempId;

@@ -50,6 +50,7 @@
         <activity android:name=".menu_pages.servicos.ServicoDetalhesActivity" />
         <activity android:name=".menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity" />
         <activity android:name=".menu_pages.categorias.CategoriasActivity" />
+        <activity android:name=".menu_pages.avisos.AvisosActivity"></activity>
     </application>
 
 </manifest>
