@@ -8,26 +8,37 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="#cceecc">
 
             <Button
                 android:id="@+id/noticias"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:background="#84EA84"
-                android:drawablePadding="0dp"
-                android:drawableTop="@drawable/newspaper"
+                android:background="@drawable/green_button_selector"
+                android:drawablePadding="-140dp"
+                android:drawableTop="@drawable/noticias"
+                android:gravity="bottom|center_horizontal"
                 android:onClick="noticias"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="10dp"
                 android:text="Noticias"
-                android:textColor="#000066"
+                android:textColor="#119911"
                 android:textSize="12sp" />
 
             <Button
@@ -36,12 +47,17 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#84EA84"
-                android:drawableTop="@drawable/calendario"
+                android:background="@drawable/green_button_selector"
+                android:drawablePadding="-140dp"
+                android:drawableTop="@drawable/calendario2"
+                android:gravity="bottom|center_horizontal"
                 android:onClick="calendarioDeAtividades"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="10dp"
-                android:text="Calendário de atividades"
-                android:textColor="#000066"
+                android:text="Atividades"
+                android:textColor="#119911"
                 android:textSize="12sp" />
 
             <Button
@@ -50,61 +66,17 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#84EA84"
-                android:drawableTop="@drawable/mapa"
+                android:background="@drawable/green_button_selector"
+                android:drawablePadding="-140dp"
+                android:drawableTop="@drawable/mapa2"
+                android:gravity="bottom|center_horizontal"
                 android:onClick="mapaDaPrae"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="10dp"
                 android:text="Mapas da PRAE"
-                android:textColor="#000066"
-                android:textSize="12sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <Button
-                android:id="@+id/bolsas"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#B7CCEF"
-                android:drawableTop="@drawable/auxilio"
-                android:onClick="bolsas"
-                android:paddingTop="10dp"
-                android:text="Bolsas"
-                android:textColor="#000066"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/auxilios"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#B7CCEF"
-                android:drawableTop="@drawable/ru"
-                android:onClick="auxilios"
-                android:paddingTop="10dp"
-                android:text="Auxílios"
-                android:textColor="#000066"
-                android:textSize="12sp" />
-
-            <Button
-                android:id="@+id/servicos"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="#B7CCEF"
-                android:drawableTop="@drawable/ajuda_de_custo"
-                android:onClick="servicos"
-                android:paddingTop="10dp"
-                android:text="Serviços"
-                android:textColor="#000066"
+                android:textColor="#119911"
                 android:textSize="12sp" />
 
         </TableRow>
@@ -113,6 +85,63 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#cceeff">
+
+            <Button
+                android:id="@+id/bolsas"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_button_selector"
+                android:drawablePadding="-60dp"
+                android:drawableTop="@drawable/auxilio"
+                android:gravity="bottom|center_horizontal"
+                android:onClick="bolsas"
+                android:padding="10dp"
+                android:text="Bolsas"
+                android:textColor="#1155ff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/auxilios"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_button_selector"
+                android:drawablePadding="-60dp"
+                android:drawableTop="@drawable/ru"
+                android:gravity="bottom|center_horizontal"
+                android:onClick="auxilios"
+                android:padding="10dp"
+                android:text="Auxílios"
+                android:textColor="#1155ff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/servicos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_button_selector"
+                android:drawablePadding="-60dp"
+                android:drawableTop="@drawable/ajuda_de_custo"
+                android:gravity="bottom|center_horizontal"
+                android:onClick="servicos"
+                android:padding="10dp"
+                android:text="Serviços"
+                android:textColor="#1155ff"
+                android:textSize="12dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffeecc"
             android:orientation="vertical">
 
             <Button
@@ -121,13 +150,15 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FFFF8b"
+                android:background="@drawable/yellow_button_selector"
+                android:drawablePadding="-60dp"
                 android:drawableTop="@drawable/vocesabia"
+                android:gravity="bottom|center_horizontal"
                 android:onClick="voceSabia"
-                android:paddingTop="10dp"
+                android:padding="10dp"
                 android:text="Você sabia?"
-                android:textColor="#000066"
-                android:textSize="12sp" />
+                android:textColor="#ff7711"
+                android:textSize="12dp" />
 
             <Button
                 android:id="@+id/fale_conosco"
@@ -135,13 +166,15 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FFFF8b"
+                android:background="@drawable/yellow_button_selector"
+                android:drawablePadding="-60dp"
                 android:drawableTop="@drawable/faleconosco"
+                android:gravity="bottom|center_horizontal"
                 android:onClick="faleConosco"
-                android:paddingTop="10dp"
+                android:padding="10dp"
                 android:text="Fale conosco"
-                android:textColor="#000066"
-                android:textSize="12sp" />
+                android:textColor="#ff7711"
+                android:textSize="12dp" />
 
             <Button
                 android:id="@+id/email"
@@ -149,13 +182,15 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FFFF8b"
+                android:background="@drawable/yellow_button_selector"
+                android:drawablePadding="-60dp"
                 android:drawableTop="@drawable/acolhimento"
+                android:gravity="bottom|center_horizontal"
                 android:onClick="notificacoesPorEmail"
-                android:paddingTop="10dp"
+                android:padding="10dp"
                 android:text="Notificacoes por email"
-                android:textColor="#000066"
-                android:textSize="12sp" />
+                android:textColor="#ff7711"
+                android:textSize="12dp" />
         </TableRow>
 
     </TableLayout>

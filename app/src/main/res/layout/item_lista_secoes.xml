@@ -8,5 +8,7 @@
         android:id="@+id/botaoSecao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Título da seção" />
+        android:background="@drawable/blue_button_selector"
+        android:text="Título da seção"
+        android:textColor="#1155ff" />
 </LinearLayout>

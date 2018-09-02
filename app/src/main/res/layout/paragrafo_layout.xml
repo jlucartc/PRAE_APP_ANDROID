@@ -13,8 +13,9 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Título"
-        android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textColor="#1133ff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/texto"
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Texto do parágrafo"
-        android:textColor="#000000"
+        android:textColor="#1155ff"
         android:textSize="14sp" />
 
     <LinearLayout
