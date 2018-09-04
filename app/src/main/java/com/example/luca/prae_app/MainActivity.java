@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 
+import com.example.luca.prae_app.menu_pages.avisos.AvisosActivity;
 import com.example.luca.prae_app.menu_pages.calendario_de_atividades.CalendarioDeAtividadesActivity;
 import com.example.luca.prae_app.menu_pages.categorias.CategoriasActivity;
 import com.example.luca.prae_app.menu_pages.fale_conosco.FaleConoscoActivity;
@@ -126,6 +127,13 @@ public class MainActivity extends AppCompatActivity {
     public void notificacoesPorEmail(View view){
 
         Intent intent = new Intent(this,NotificacoesPorEmailActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void avisos(View v){
+
+        Intent intent = new Intent(this, AvisosActivity.class);
         startActivity(intent);
 
     }

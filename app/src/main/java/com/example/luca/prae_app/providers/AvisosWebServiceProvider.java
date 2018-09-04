@@ -109,6 +109,7 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
         }
 
+        Log.i("AvisosWSProvider","Terminando de checar avisos...");
 
         return this.avisosArray;
 
@@ -150,7 +151,12 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
         ArrayList<Integer> notificarApos = new ArrayList<Integer>();
 
+        ArrayList<Integer> avisosArray = new ArrayList<Integer>();
+
+
         for(Aviso n : avisos){
+
+            avisosArray.add(n.getId());
 
             Log.i("AvisosWSProvider","n.getId(): "+String.valueOf(n.getId()));
 
@@ -183,10 +189,10 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
         }
 
-        for(int i = 0 /*notificarApos.size()-1*/ ; i < notificarApos.size() /*i >= 0*/; i++ /* i-- */){
+        for(int i = (notificarApos.size()-1) /*notificarApos.size()-1*/ ; i >= 0 /*i >= 0*/; i-- /* i-- */){
 
             Intent intent = new Intent(this.context,AvisosActivity.class);
-            NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle(avisos[notificarApos.get(i)].getTitulo()).setContentText(avisos[notificarApos.get(i)].getMensagem());
+            NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle(avisos[avisosArray.indexOf(notificarApos.get(i))].getTitulo()).setContentText(avisos[avisosArray.indexOf(notificarApos.get(i))].getMensagem());
             TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this.context);
             taskStackBuilder.addParentStack(AvisosActivity.class);
             taskStackBuilder.addNextIntent(intent);

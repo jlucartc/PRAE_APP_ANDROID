@@ -3,6 +3,7 @@ package com.example.luca.prae_app.workers;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
 import com.example.luca.prae_app.models.Noticia;
@@ -32,11 +33,21 @@ public class AtualizarDados extends Worker {
 
         this.noticiasWebServiceProvider = new NoticiasWebServiceProvider(this.context);
 
-        this.noticiasWebServiceProvider.execute();
-
         this.avisosWebServiceProvider = new AvisosWebServiceProvider(this.context);
 
-        this.avisosWebServiceProvider.execute();
+        if(this.noticiasWebServiceProvider.getStatus() != AsyncTask.Status.RUNNING){
+
+
+            this.noticiasWebServiceProvider.execute();
+
+        }
+
+        if(this.avisosWebServiceProvider.getStatus() != AsyncTask.Status.RUNNING){
+
+
+            this.avisosWebServiceProvider.execute();
+
+        }
 
         return Result.SUCCESS;
 
