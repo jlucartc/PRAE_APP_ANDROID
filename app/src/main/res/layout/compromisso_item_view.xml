@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#dddddd"
+        android:background="@drawable/green_button_selector"
         android:orientation="horizontal"
         android:paddingBottom="5dp"
         android:paddingLeft="5dp"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/calendario" />
+            app:srcCompat="@drawable/calendario2" />
 
         <View
             android:id="@+id/divider4"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="título do compromisso"
                 android:text="Título do compromisso"
-                android:textColor="#000000"
+                android:textColor="#119911"
                 android:textSize="16sp" />
 
             <TextView

@@ -186,7 +186,7 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
         for(int i = 0 /*notificarApos.size()-1*/ ; i < notificarApos.size() /*i >= 0*/; i++ /* i-- */){
 
             Intent intent = new Intent(this.context,AvisosActivity.class);
-            NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle(avisos[i].getTitulo()).setContentText(avisos[i].getMensagem());
+            NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle(avisos[notificarApos.get(i)].getTitulo()).setContentText(avisos[notificarApos.get(i)].getMensagem());
             TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this.context);
             taskStackBuilder.addParentStack(AvisosActivity.class);
             taskStackBuilder.addNextIntent(intent);
