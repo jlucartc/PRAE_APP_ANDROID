@@ -13,6 +13,12 @@ public class Aviso {
     @SerializedName("id")
     private int id;
 
+    @SerializedName("titulo_link")
+    private String tituloLink;
+
+    @SerializedName("link")
+    private String link;
+
     private Boolean isNovo;
 
     public String getTitulo() {
@@ -45,5 +51,21 @@ public class Aviso {
 
     public void setNovo(Boolean novo) {
         isNovo = novo;
+    }
+
+    public String getTituloLink() {
+        return tituloLink;
+    }
+
+    public void setTituloLink(String tituloLink) {
+        this.tituloLink = tituloLink;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

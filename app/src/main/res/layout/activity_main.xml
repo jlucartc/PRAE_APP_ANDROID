@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="0dp"
-        android:padding="10dp"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="10dp">
 
@@ -59,13 +58,13 @@
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/mapa_da_prae"
+                android:id="@+id/avisos"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/green_button_selector"
-                android:drawableTop="@drawable/mapa2"
+                android:drawableTop="@drawable/avisos_160"
                 android:gravity="bottom|center_horizontal"
                 android:onClick="avisos"
                 android:paddingBottom="10dp"
@@ -184,10 +183,10 @@
                 android:gravity="bottom|center_horizontal"
                 android:onClick="mapaDaPrae"
                 android:padding="10dp"
+                android:paddingTop="10dp"
                 android:text="Mapas da PRAE"
                 android:textColor="#ff7711"
-                android:textSize="12dp"
-                android:paddingTop="10dp" />
+                android:textSize="12dp" />
         </TableRow>
 
     </TableLayout>

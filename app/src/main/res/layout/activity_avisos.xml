@@ -6,18 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".menu_pages.avisos.AvisosActivity">
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/avisosRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/avisos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/green_button_selector"
-            android:onClick="checarAvisos"
-            android:text="Checar avisos"
-            android:textColor="#119911" />
-    </LinearLayout>
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>

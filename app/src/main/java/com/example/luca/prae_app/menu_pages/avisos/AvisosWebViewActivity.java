@@ -1,15 +1,14 @@
-package com.example.luca.prae_app.menu_pages.noticias;
+package com.example.luca.prae_app.menu_pages.avisos;
 
 import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.app.Activity;
-import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.example.luca.prae_app.R;
 
-public class NoticiaWebViewActivity extends Activity {
+public class AvisosWebViewActivity extends AppCompatActivity {
 
     private WebView webView;
     private String url;
@@ -31,10 +30,11 @@ public class NoticiaWebViewActivity extends Activity {
         this.webView.getSettings().setJavaScriptEnabled(true);
         this.webView.getSettings().setPluginState(WebSettings.PluginState.ON);
         this.webView.getSettings().setAllowFileAccess(true);
-        this.webView.setWebViewClient(new NoticiasWebViewClient());
+        this.webView.setWebViewClient(new AvisosWebViewClient());
         this.webView.loadUrl(this.url);
 
 
     }
+
 
 }

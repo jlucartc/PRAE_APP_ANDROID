@@ -14,7 +14,7 @@
     <string name="title_activity_ajuda_de_custo_documentacao_necessaria">
         AjudaDeCustoDocumentacaoNecessariaActivity
     </string>
-    <string name="localhost">http://192.168.0.104:8000</string>
+    <string name="localhost">http://192.168.2.101:8000</string>
     <string name="title_activity_mostrar_mapa">MostrarMapaActivity</string>
     <string name="title_activity_main2">AbasActivity</string>
     <string name="tab_text_1">Tab 1</string>
