@@ -5,10 +5,10 @@
     <!-- <corners android:radius="10dp"/> -->
 
     <solid
-        android:color="#ccffcc"/>
+        android:color="@color/greenButtonSolid"/>
 
     <stroke
-        android:color="#66cc66"
+        android:color="@color/greenButtonBorder"
         android:width="2dp"/>
 
 </shape>
