@@ -43,7 +43,9 @@ public class AvisosAdapter extends RecyclerView.Adapter<AvisosViewHolder> {
     public void onBindViewHolder(@NonNull AvisosViewHolder avisosViewHolder, int i) {
 
 
-        avisosViewHolder.getAvisoMensagem().setText(this.avisos[i].getTitulo());
+        avisosViewHolder.getAvisoMensagem().setText(this.avisos[i].getMensagem());
+        avisosViewHolder.getTitulo().setText(this.avisos[i].getTitulo());
+        avisosViewHolder.getTituloLink().setText(this.avisos[i].getTituloLink());
         avisosViewHolder.getId().setText(String.valueOf(this.avisos[i].getId()));
         avisosViewHolder.getLink().setText(this.avisos[i].getLink());
 

@@ -8,7 +8,7 @@
         android:color="@color/greenButtonSolid"/>
 
     <stroke
-        android:color="@color/greenButtonBorder"
+        android:color="@color/greenButtonSolid"
         android:width="2dp"/>
 
 </shape>

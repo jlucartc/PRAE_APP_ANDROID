@@ -8,7 +8,7 @@
         android:color="@color/yellowButtonSolid"/>
 
     <stroke
-        android:color="@color/yellowButtonBorder"
+        android:color="@color/yellowButtonSolid"
         android:width="2dp"/>
 
 </shape>

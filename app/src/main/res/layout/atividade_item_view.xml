@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="1dp">
+    android:background="#eeeeee"
+    android:paddingBottom="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/green_button_selector"
+        android:layout_height="wrap_content"
+        android:background="@drawable/atividades_button_selector"
         android:orientation="horizontal"
         android:paddingBottom="5dp"
         android:paddingLeft="5dp"
@@ -43,21 +44,23 @@
                 android:contentDescription="título do compromisso"
                 android:text="Título do compromisso"
                 android:textColor="#119911"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/horario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="Horário de início do compromisso"
-                android:text="Horário de início do compromisso: 00:00" />
+                android:text="Horário de início do compromisso: 00:00"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/local"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="local onde ocorrerá o compromisso"
-                android:text="Local do compromisso" />
+                android:text="Local do compromisso"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 

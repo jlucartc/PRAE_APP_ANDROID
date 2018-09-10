@@ -57,6 +57,22 @@ public class AvisosViewHolder extends RecyclerView.ViewHolder {
     public void setId(TextView id) {
         this.id = id;
     }
+
+    public TextView getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(TextView titulo) {
+        this.titulo = titulo;
+    }
+
+    public TextView getTituloLink() {
+        return tituloLink;
+    }
+
+    public void setTituloLink(TextView tituloLink) {
+        this.tituloLink = tituloLink;
+    }
 }
 
 

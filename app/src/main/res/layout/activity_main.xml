@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="0dp"
+        android:background="#ffffff"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="10dp">
 
@@ -17,12 +18,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#cceecc">
+            android:background="#ffffff">
 
             <Button
                 android:id="@+id/noticias"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/noticias"
@@ -34,12 +36,14 @@
                 android:paddingTop="20dp"
                 android:text="Noticias"
                 android:textColor="@color/greenButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/calendario_de_atividades"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/calendario2"
@@ -51,7 +55,8 @@
                 android:paddingTop="20dp"
                 android:text="Atividades"
                 android:textColor="@color/greenButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/avisos"
@@ -68,20 +73,23 @@
                 android:paddingTop="20dp"
                 android:text="Avisos"
                 android:textColor="@color/greenButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="#cceeff">
+            android:background="#ffffff">
 
             <Button
                 android:id="@+id/bolsas"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/blue_button_selector"
                 android:drawableTop="@drawable/bolsas_160"
@@ -91,12 +99,14 @@
                 android:paddingTop="20dp"
                 android:text="Bolsas"
                 android:textColor="@color/blueButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/auxilios"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/blue_button_selector"
                 android:drawableTop="@drawable/auxilios_160"
@@ -106,7 +116,8 @@
                 android:paddingTop="20dp"
                 android:text="Auxílios"
                 android:textColor="@color/blueButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/servicos"
@@ -121,21 +132,24 @@
                 android:paddingTop="20dp"
                 android:text="Serviços"
                 android:textColor="@color/blueButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="#ffeecc"
+            android:background="#ffffff"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/voce_sabia"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/yellow_button_selector"
                 android:drawableTop="@drawable/voce_sabia_160"
@@ -145,12 +159,14 @@
                 android:paddingTop="20dp"
                 android:text="Você sabia?"
                 android:textColor="@color/yellowButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/fale_conosco"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/yellow_button_selector"
                 android:drawableTop="@drawable/fale_conosco_160"
@@ -160,7 +176,8 @@
                 android:paddingTop="20dp"
                 android:text="Fale conosco"
                 android:textColor="@color/yellowButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/email"
@@ -175,7 +192,8 @@
                 android:paddingTop="20dp"
                 android:text="Mapas da PRAE"
                 android:textColor="@color/yellowButtonText"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:textStyle="normal" />
         </TableRow>
 
     </TableLayout>
