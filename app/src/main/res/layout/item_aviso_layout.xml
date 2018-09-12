@@ -42,6 +42,7 @@
                 android:paddingRight="15dp"
                 android:singleLine="false"
                 android:text="Mensagem notícia com mais de vinte caracteres para preencher a area de texto"
+                android:textColor="#119911"
                 android:textSize="20dp" />
 
             <TextView

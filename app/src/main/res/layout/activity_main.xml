@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:padding="10dp"
     tools:context=".MainActivity">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="fill"
         android:background="#ffffff"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="10dp">
@@ -31,8 +33,6 @@
                 android:gravity="bottom|center_horizontal"
                 android:onClick="noticias"
                 android:paddingBottom="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Noticias"
                 android:textColor="@color/greenButtonText"
@@ -50,10 +50,9 @@
                 android:gravity="bottom|center_horizontal"
                 android:onClick="calendarioDeAtividades"
                 android:paddingBottom="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
                 android:paddingTop="20dp"
-                android:text="Atividades"
+                android:singleLine="false"
+                android:text="atividades"
                 android:textColor="@color/greenButtonText"
                 android:textSize="12sp"
                 android:textStyle="normal" />
@@ -68,8 +67,6 @@
                 android:gravity="bottom|center_horizontal"
                 android:onClick="avisos"
                 android:paddingBottom="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Avisos"
                 android:textColor="@color/greenButtonText"
@@ -197,4 +194,4 @@
         </TableRow>
 
     </TableLayout>
-</android.support.constraint.ConstraintLayout>
+</ScrollView>

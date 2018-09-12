@@ -21,6 +21,8 @@ public class AvisoDetalhesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aviso_detalhes);
 
+        getSupportActionBar().setTitle(getIntent().getStringExtra("titulo"));
+
         this.link = findViewById(R.id.botao_link);
         this.avisoMensagem = findViewById(R.id.avisoMensagem);
         this.titulo = findViewById(R.id.titulo);

@@ -15,6 +15,8 @@ public class AuxilioDetalhesActivity extends CategoriaDetalhesActivity {
 
         setContentView(R.layout.activity_categoria_detalhes);
 
+        getSupportActionBar().setTitle(getIntent().getStringExtra("nome"));
+
         this.setCategoriaId(getIntent().getIntExtra("categoriaId",0));
         this.setCategoriaNome(getIntent().getStringExtra("nome"));
         this.setCategoriaDescricao(getIntent().getStringExtra("descricao"));

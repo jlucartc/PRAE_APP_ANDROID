@@ -15,6 +15,7 @@ public class MapaItemClickListener implements View.OnClickListener {
     private Context context;
     private TextView rota;
     private int mapaId;
+    private String nome;
 
 
     public MapaItemClickListener(Context context, int mapaId){
@@ -29,9 +30,13 @@ public class MapaItemClickListener implements View.OnClickListener {
 
         this.rota = view.findViewById(R.id.rota);
 
+        this.nome = ((TextView)view.findViewById(R.id.nome)).getText().toString();
+
         String url = this.context.getString(R.string.localhost)+this.rota.getText().toString();
 
         Intent intent = new Intent(this.context,MostrarMapaActivity.class);
+
+        intent.putExtra("nome",/*this.nome*/"Nome");
 
         intent.putExtra("rota",url);
 

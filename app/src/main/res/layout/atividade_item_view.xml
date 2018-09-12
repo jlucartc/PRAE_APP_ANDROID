@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#eeeeee"
@@ -39,29 +40,37 @@
 
             <TextView
                 android:id="@+id/titulo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="título do compromisso"
-                android:text="Título do compromisso"
+                android:maxWidth="300dp"
+                android:paddingRight="20dp"
+                android:singleLine="false"
+                android:text="Título do compromisso do item atual"
                 android:textColor="#119911"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/horario"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:contentDescription="Horário de início do compromisso"
+                android:maxWidth="300dp"
+                android:paddingRight="20dp"
                 android:text="Horário de início do compromisso: 00:00"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/local"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="local onde ocorrerá o compromisso"
+                android:maxWidth="300dp"
+                android:paddingRight="20dp"
                 android:text="Local do compromisso"
                 android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

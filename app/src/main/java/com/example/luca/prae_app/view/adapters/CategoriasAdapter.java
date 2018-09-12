@@ -15,9 +15,6 @@ import com.example.luca.prae_app.models.Categoria;
 import com.example.luca.prae_app.view.listeners.CategoriaClickListener;
 import com.example.luca.prae_app.view.view_holders.CategoriaViewHolder;
 
-import static com.example.luca.prae_app.R.drawable.*;
-import static com.example.luca.prae_app.R.drawable.blue_button_selector;
-
 public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder> {
 
 
@@ -33,7 +30,7 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder>
     @Override
     public CategoriaViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.bolsa_item_layout,viewGroup,false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.categoria_item_layout,viewGroup,false);
 
         Button b = v.findViewById(R.id.botaoBolsa);
         b.setOnClickListener(new CategoriaClickListener(viewGroup.getContext(),this.getCategorias()[i]));
@@ -54,7 +51,7 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder>
 
             categoriaViewHolder.getBotaoBolsa().setTextColor(Color.parseColor("#1155ff"));
 
-            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_button_selector));
+            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_white_button_selector));
 
         }else if(this.getCategorias()[i].getTipoCategoria() == 2){
 
@@ -62,7 +59,7 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder>
 
             categoriaViewHolder.getBotaoBolsa().setTextColor(Color.parseColor("#1155ff"));
 
-            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_button_selector));
+            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_white_button_selector));
 
 
         }else if(this.getCategorias()[i].getTipoCategoria() == 3){
@@ -71,7 +68,7 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder>
 
             categoriaViewHolder.getBotaoBolsa().setTextColor(Color.parseColor("#1155ff"));
 
-            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_button_selector));
+            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_white_button_selector));
 
 
         }

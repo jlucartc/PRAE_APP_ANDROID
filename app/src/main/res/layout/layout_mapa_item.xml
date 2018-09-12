@@ -5,32 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="1dp"
-    android:background="@drawable/yellow_button_selector">
+    android:background="@drawable/yellow_white_button_selector"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/mapas_160" />
-
-    <TextView
-        android:id="@+id/nome"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="5dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Nome do mapa"
-        android:textColor="#ff7711"
-        android:textSize="16sp" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/rota"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView"
-        android:visibility="gone" />
+        <TextView
+            android:id="@+id/rota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mapas_160" />
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="Nome do mapa"
+            android:textColor="#ff7711"
+            android:textSize="16sp" />
+    </LinearLayout>
+
 </LinearLayout>

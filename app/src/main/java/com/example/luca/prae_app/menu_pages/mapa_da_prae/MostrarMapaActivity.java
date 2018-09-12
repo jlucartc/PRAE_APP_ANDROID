@@ -31,13 +31,14 @@ public class MostrarMapaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_mapa);
 
-        this.getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#ff7711\">" + "Ver mapa" + "</font>"));
+        this.getSupportActionBar().setTitle(getIntent().getStringExtra("nome"));
+        this.getSupportActionBar().hide();
 
         //BitmapDrawable bg = new BitmapDrawable(BitmapFactory.decodeResource(getResources(),R.drawable.yellow_button));
 
         //bg.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
 
-        this.getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ffffcc")));
+        //this.getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ffffcc")));
 
         this.rota = getIntent().getStringExtra("rota");
 
