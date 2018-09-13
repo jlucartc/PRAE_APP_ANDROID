@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.luca.prae_app.R;
-import com.example.luca.prae_app.view.listeners.AvisoLinkListener;
+import com.example.luca.prae_app.view.listeners.AvisoLinkClickListener;
 
 public class AvisoDetalhesActivity extends AppCompatActivity {
 
@@ -31,6 +31,6 @@ public class AvisoDetalhesActivity extends AppCompatActivity {
         this.titulo.setText(getIntent().getStringExtra("titulo"));
         this.url = getIntent().getStringExtra("url");
 
-        this.link.setOnClickListener(new AvisoLinkListener(this.url));
+        this.link.setOnClickListener(new AvisoLinkClickListener(this.url));
     }
 }

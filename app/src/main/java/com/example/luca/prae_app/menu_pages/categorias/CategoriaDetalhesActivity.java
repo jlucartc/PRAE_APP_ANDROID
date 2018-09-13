@@ -60,8 +60,11 @@ public class CategoriaDetalhesActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(this.categoriaNome);
 
             TextView descricao = findViewById(R.id.descricao);
+            TextView nome = findViewById(R.id.nome);
+
 
             descricao.setText(this.categoriaDescricao);
+            nome.setText(this.categoriaNome);
 
             this.secoes = this.secoesWebServiceProvider.execute().get();
             this.documentos = this.documentosWebServiceProvider.execute().get();

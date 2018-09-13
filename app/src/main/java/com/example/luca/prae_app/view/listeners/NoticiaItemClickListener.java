@@ -6,8 +6,8 @@ import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.luca.prae_app.menu_pages.noticias.NoticiaWebViewActivity;
 import com.example.luca.prae_app.R;
+import com.example.luca.prae_app.menu_pages.webview.WebViewActivity;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,7 +31,7 @@ public class NoticiaItemClickListener implements View.OnClickListener {
 
         this.url = (TextView)view.findViewById(R.id.url);
 
-        Intent intent = new Intent(this.context,NoticiaWebViewActivity.class);
+        Intent intent = new Intent(this.context,WebViewActivity.class);
 
         intent.putExtra("url",this.url.getText());
 

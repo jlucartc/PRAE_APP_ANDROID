@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".menu_pages.servicos.ServicosActivity">
+    tools:context=".menu_pages.bolsas.BolsasActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,26 +14,24 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/restauranteUnivertsitario"
+            android:id="@+id/bia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Restaurante Universitário"
+            android:text="Bolsa de Iniciação ao desporto"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/residenciaUniversitaria"
+            android:id="@+id/bid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Residência Universitária"
+            android:text="Bolsa de Iniciação ao Desporto"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
             android:textSize="16sp" />
-
     </LinearLayout>
 </ScrollView>

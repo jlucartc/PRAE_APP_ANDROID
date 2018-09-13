@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_prae_app_launcher_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".MainActivity" android:screenOrientation="portrait">-->
+
+        <!-- <activity android:name=".MainActivity" android:screenOrientation="portrait"> -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +27,6 @@
             android:name=".menu_pages.noticias.NoticiasActivity"
             android:label="@string/title_activity_noticias"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".menu_pages.noticias.NoticiaWebViewActivity"
-            android:label="@string/title_activity_web_view" />
         <activity
             android:name=".menu_pages.calendario_de_atividades.CalendarioDeAtividadesActivity"
             android:label="@string/title_activity_calendario_de_atividades" />
@@ -53,7 +51,18 @@
         <activity android:name=".menu_pages.categorias.CategoriasActivity" />
         <activity android:name=".menu_pages.avisos.AvisosActivity" />
         <activity android:name=".menu_pages.avisos.AvisoDetalhesActivity" />
-        <activity android:name=".menu_pages.avisos.AvisosWebViewActivity"></activity>
+        <activity android:name=".menu_pages.webview.WebViewActivity" />
+        <activity android:name=".menu_pages.bolsas.BolsasActivity" />
+        <activity android:name=".menu_pages.servicos.ServicosActivity" />
+        <activity android:name=".menu_pages.auxilios.AuxiliosActivity" />
+        <activity android:name=".menu_pages.auxilios.isencaoDoRU.IsencaoDoRUActivity" />
+        <activity android:name=".menu_pages.auxilios.auxilioMoradia.AuxilioMoradiaActivity" />
+        <activity android:name=".menu_pages.auxilios.auxilioEmergencial.AuxilioEmergencialActivity" />
+        <activity android:name=".menu_pages.auxilios.auxilioCreche.AuxilioCrecheActivity" />
+        <activity android:name=".menu_pages.auxilios.ajudaDeCusto.AjudaDeCustoActivity" />
+        <activity android:name=".menu_pages.bolsas.BID.BIDActivity" />
+        <activity android:name=".menu_pages.bolsas.BIA.BIAActivity" />
+        <activity android:name=".menu_pages.servicos.restauranteUniversitario.RestauranteUniversitarioActivity"></activity>
     </application>
 
 </manifest>

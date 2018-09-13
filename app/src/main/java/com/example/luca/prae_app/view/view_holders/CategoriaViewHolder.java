@@ -12,6 +12,7 @@ public class CategoriaViewHolder extends RecyclerView.ViewHolder {
     private Button botaoCategoria;
 
     public CategoriaViewHolder(@NonNull View itemView) {
+
         super(itemView);
 
         this.botaoCategoria = (Button)itemView.findViewById(R.id.botaoBolsa);

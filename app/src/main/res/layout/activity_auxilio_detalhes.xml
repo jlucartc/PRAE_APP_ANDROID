@@ -4,6 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_pages.auxilios.AuxilioDetalhesActivity">
+    tools:context=".menu_pages.categorias.CategoriasActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Nome da bolsa"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:lineSpacingExtra="4sp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="O Programa Bolsa de Iniciação Acadêmica tem por objetivo propiciar aos estudantes de Cursos de Graduação Presenciais da Universidade Federal do Ceará (UFC) – em situação de vulnerabilidade sócio-econômica comprovada – especialmente os de semestres iniciais, condições financeiras para sua permanência e desempenho acadêmico satisfatório, mediante atuação, em caráter de iniciação acadêmica, nas diversas unidades da Instituição."
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Button" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

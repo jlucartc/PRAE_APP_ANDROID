@@ -1,10 +1,12 @@
 package com.example.luca.prae_app.view.adapters;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,7 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder>
 
 
     private Categoria[] categorias;
+    private Context context;
 
     public CategoriasAdapter(Categoria[] categorias){
 
@@ -33,7 +36,8 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder>
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.categoria_item_layout,viewGroup,false);
 
         Button b = v.findViewById(R.id.botaoBolsa);
-        b.setOnClickListener(new CategoriaClickListener(viewGroup.getContext(),this.getCategorias()[i]));
+
+        this.context = viewGroup.getContext();
 
         return new CategoriaViewHolder(v);
 
@@ -43,41 +47,24 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriaViewHolder>
     @Override
     public void onBindViewHolder(@NonNull CategoriaViewHolder categoriaViewHolder, int i) {
 
-        categoriaViewHolder.getBotaoBolsa().setText(this.getCategorias()[i].getNome());
+        Log.i("CategoriasAdapter",String.valueOf(i));
 
-        if(this.getCategorias()[i].getTipoCategoria() == 1){
+        Log.i("CategoriasAdapter",String.valueOf(this.getCategorias()[i].getNome()));
 
-            // Bolsas
+        categoriaViewHolder.getBotaoBolsa().setText((this.getCategorias())[i].getNome());
 
-            categoriaViewHolder.getBotaoBolsa().setTextColor(Color.parseColor("#1155ff"));
+        categoriaViewHolder.getBotaoBolsa().setOnClickListener(new CategoriaClickListener(this.context,(this.getCategorias())[i]));
 
-            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_white_button_selector));
+        categoriaViewHolder.getBotaoBolsa().setTextColor(Color.parseColor("#1155ff"));
 
-        }else if(this.getCategorias()[i].getTipoCategoria() == 2){
+        categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_white_button_selector));
 
-            // Auxilios
-
-            categoriaViewHolder.getBotaoBolsa().setTextColor(Color.parseColor("#1155ff"));
-
-            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_white_button_selector));
-
-
-        }else if(this.getCategorias()[i].getTipoCategoria() == 3){
-
-            // Serviços
-
-            categoriaViewHolder.getBotaoBolsa().setTextColor(Color.parseColor("#1155ff"));
-
-            categoriaViewHolder.getBotaoBolsa().setBackground(categoriaViewHolder.getBotaoBolsa().getResources().getDrawable(R.drawable.blue_white_button_selector));
-
-
-        }
 
     }
 
     @Override
     public int getItemCount() {
-        return this.getCategorias().length;
+        return this.categorias.length;
     }
 
     public Categoria[] getCategorias() {

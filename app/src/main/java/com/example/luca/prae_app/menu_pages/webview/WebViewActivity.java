@@ -1,14 +1,15 @@
-package com.example.luca.prae_app.menu_pages.avisos;
+package com.example.luca.prae_app.menu_pages.webview;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.example.luca.prae_app.R;
 
-public class AvisosWebViewActivity extends AppCompatActivity {
+public class WebViewActivity extends AppCompatActivity {
 
     private WebView webView;
     private String url;
@@ -30,11 +31,10 @@ public class AvisosWebViewActivity extends AppCompatActivity {
         this.webView.getSettings().setJavaScriptEnabled(true);
         this.webView.getSettings().setPluginState(WebSettings.PluginState.ON);
         this.webView.getSettings().setAllowFileAccess(true);
-        this.webView.setWebViewClient(new AvisosWebViewClient());
+        this.webView.setWebViewClient(new WebViewClient());
         this.webView.loadUrl(this.url);
 
 
     }
-
 
 }

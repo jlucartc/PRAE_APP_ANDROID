@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".menu_pages.auxilios.AuxiliosActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/ajudaDeCusto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/blue_white_button_selector"
+            android:text="Ajuda de custo"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#1155ff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/auxilioCreche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/blue_white_button_selector"
+            android:text="Auxílio creche"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#1155ff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/auxilioEmergencial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/blue_white_button_selector"
+            android:text="Auxílio emergêncial"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#1155ff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/auxilioMoradia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/blue_white_button_selector"
+            android:text="Auxílio moradia"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#1155ff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/isencaoDoRU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/blue_white_button_selector"
+            android:text="Isenção do RU"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#1155ff"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

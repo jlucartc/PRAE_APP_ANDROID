@@ -3,13 +3,13 @@ package com.example.luca.prae_app.view.listeners;
 import android.content.Intent;
 import android.view.View;
 
-import com.example.luca.prae_app.menu_pages.avisos.AvisosWebViewActivity;
+import com.example.luca.prae_app.menu_pages.webview.WebViewActivity;
 
-public class AvisoLinkListener implements View.OnClickListener {
+public class BolsaLinkClickListener implements View.OnClickListener {
 
     private String url;
 
-    public AvisoLinkListener(String url){
+    public BolsaLinkClickListener(String url){
 
         this.url = url;
 
@@ -19,7 +19,7 @@ public class AvisoLinkListener implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        Intent i = new Intent(view.getContext(),AvisosWebViewActivity.class);
+        Intent i = new Intent(view.getContext(),WebViewActivity.class);
 
         i.putExtra("url",this.url);
 
