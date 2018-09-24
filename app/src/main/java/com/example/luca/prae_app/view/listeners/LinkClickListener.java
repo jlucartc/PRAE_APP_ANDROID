@@ -5,11 +5,11 @@ import android.view.View;
 
 import com.example.luca.prae_app.menu_pages.webview.WebViewActivity;
 
-public class BolsaLinkClickListener implements View.OnClickListener {
+public class LinkClickListener implements View.OnClickListener {
 
     private String url;
 
-    public BolsaLinkClickListener(String url){
+    public LinkClickListener(String url){
 
         this.url = url;
 

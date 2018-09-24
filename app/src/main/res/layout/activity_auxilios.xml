@@ -21,6 +21,7 @@
             android:background="@drawable/blue_white_button_selector"
             android:text="Ajuda de custo"
             android:textAppearance="@style/TextAppearance.AppCompat"
+            android:onClick="ajudaDeCusto"
             android:textColor="#1155ff"
             android:textSize="16sp" />
 
@@ -32,6 +33,7 @@
             android:background="@drawable/blue_white_button_selector"
             android:text="Auxílio creche"
             android:textAppearance="@style/TextAppearance.AppCompat"
+            android:onClick="auxilioCreche"
             android:textColor="#1155ff"
             android:textSize="16sp" />
 
@@ -42,6 +44,7 @@
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
             android:text="Auxílio emergêncial"
+            android:onClick="auxilioEmergencial"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
             android:textSize="16sp" />
@@ -53,6 +56,7 @@
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
             android:text="Auxílio moradia"
+            android:onClick="auxilioMoradia"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
             android:textSize="16sp" />
@@ -64,8 +68,10 @@
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
             android:text="Isenção do RU"
+            android:onClick="isencaoDoRU"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:visibility="visible" />
     </LinearLayout>
 </ScrollView>

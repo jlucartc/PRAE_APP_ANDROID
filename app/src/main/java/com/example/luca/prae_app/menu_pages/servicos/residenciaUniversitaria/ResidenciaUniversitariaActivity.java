@@ -1,4 +1,4 @@
-package com.example.luca.prae_app.menu_pages.auxilios.auxilioMoradia;
+package com.example.luca.prae_app.menu_pages.servicos.residenciaUniversitaria;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.view.listeners.LinkClickListener;
 
-public class AuxilioMoradiaActivity extends AppCompatActivity {
+public class ResidenciaUniversitariaActivity extends AppCompatActivity {
 
     private String nome;
     private String descricao;
@@ -19,19 +19,17 @@ public class AuxilioMoradiaActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_auxilio_detalhes);
-
+        setContentView(R.layout.activity_servico_detalhes);
 
         TextView nomeTV = findViewById(R.id.nome);
         TextView descricaoTV = findViewById(R.id.descricao);
-        link = "http://www.prae.ufc.br/auxilio-moradia/";
+        link = "http://www.prae.ufc.br/residencia-universitaria/";
         Button linkB = findViewById(R.id.link);
 
-        nomeTV.setText("Auxílio Moradia");
-        descricaoTV.setText("Objetivo: viabilizar a permanência de estudantes do cursos de graduação, em comprovada situação de vulnerabilidade econômica.\n" + "obs: não impede de receber outra bolsa de programas da UFC.\n");
-
-
+        nomeTV.setText("Residência Universitária");
+        descricaoTV.setText("Propiciar a permanência do estudante em situação de vulnerabilidade econômica, vindo do interior do estado, ou de outros estados, assegurando-lhe moradia, alimentação e apoio psicossocial.");
         linkB.setOnClickListener(new LinkClickListener(this.link));
+
 
     }
 }

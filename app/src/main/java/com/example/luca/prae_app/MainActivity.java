@@ -10,13 +10,16 @@ import android.view.View;
 import android.widget.Button;
 
 
+import com.example.luca.prae_app.menu_pages.auxilios.AuxiliosActivity;
 import com.example.luca.prae_app.menu_pages.avisos.AvisosActivity;
+import com.example.luca.prae_app.menu_pages.bolsas.BolsasActivity;
 import com.example.luca.prae_app.menu_pages.calendario_de_atividades.CalendarioDeAtividadesActivity;
 import com.example.luca.prae_app.menu_pages.categorias.CategoriasActivity;
 import com.example.luca.prae_app.menu_pages.fale_conosco.FaleConoscoActivity;
 import com.example.luca.prae_app.menu_pages.mapa_da_prae.MapaDaPraeActivity;
 import com.example.luca.prae_app.menu_pages.noticias.NoticiasActivity;
 import com.example.luca.prae_app.menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity;
+import com.example.luca.prae_app.menu_pages.servicos.ServicosActivity;
 import com.example.luca.prae_app.menu_pages.voce_sabia.VoceSabiaActivity;
 import com.example.luca.prae_app.workers.AtualizarDados;
 import com.google.gson.Gson;
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void bolsas(View view){
 
-        Intent intent = new Intent(this,CategoriasActivity.class);
+        Intent intent = new Intent(this,BolsasActivity.class);
         intent.putExtra("tipo",1);
         startActivity(intent);
 
@@ -85,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void auxilios(View view){
 
-        Intent intent = new Intent(this,CategoriasActivity.class);
+        Intent intent = new Intent(this,AuxiliosActivity.class);
         intent.putExtra("tipo",2);
         startActivity(intent);
 
@@ -93,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void servicos(View view){
 
-        Intent intent = new Intent(this,CategoriasActivity.class);
+        Intent intent = new Intent(this,ServicosActivity.class);
         intent.putExtra("tipo",3);
         startActivity(intent);
 

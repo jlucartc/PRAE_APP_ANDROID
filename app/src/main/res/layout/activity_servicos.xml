@@ -14,15 +14,17 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/restauranteUnivertsitario"
+            android:id="@+id/restauranteUniversitario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
             android:text="Restaurante Universitário"
             android:textAppearance="@style/TextAppearance.AppCompat"
+            android:onClick="restauranteUniversitario"
             android:textColor="#1155ff"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/residenciaUniversitaria"
@@ -31,6 +33,7 @@
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
             android:text="Residência Universitária"
+            android:onClick="residenciaUniversitaria"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
             android:textSize="16sp" />

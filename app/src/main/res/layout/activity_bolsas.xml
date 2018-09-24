@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Bolsa de Iniciação ao desporto"
+            android:text="Bolsa de Iniciação Acadêmica"
+            android:onClick="bia"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
             android:textSize="16sp" />
@@ -29,7 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Bolsa de Iniciação ao Desporto"
+            android:onClick="bid"
+            android:text="Bolsa de Incentivo ao Desporto"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="#1155ff"
             android:textSize="16sp" />
