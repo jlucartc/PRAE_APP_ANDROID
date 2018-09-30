@@ -3,6 +3,8 @@ package com.example.luca.prae_app.menu_pages.voce_sabia;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -11,12 +13,20 @@ import com.example.luca.prae_app.menu_pages.webview.WebViewActivity;
 
 public class VoceSabiaActivity extends AppCompatActivity {
 
+    private ViewPager viewPager;
+
+    private PagerAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_voce_sabia);
+        setContentView(R.layout.slide_layout);
 
-        getSupportActionBar().setTitle("Você Sabia?");
+        getSupportActionBar().hide();
+
+        this.viewPager = (ViewPager)findViewById(R.id.slidesViewPager);
+        this.adapter = new SlidesAdapter();
+        this.viewPager.setAdapter(this.adapter);
 
     }
 
