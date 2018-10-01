@@ -58,6 +58,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_gravity="bottom|center_horizontal"
                 android:text="Button"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:visibility="gone" />
