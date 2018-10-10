@@ -13,6 +13,13 @@ import com.example.luca.prae_app.menu_pages.webview.WebViewActivity;
 
 public class VoceSabiaActivity extends AppCompatActivity {
 
+    /*
+    *
+    * viewPager -> View que irá suportar a iteração através de slides.
+    * adapter -> adaptador que ira determinar como os slides serão construídos e destruídos.
+    *
+    * */
+
     private ViewPager viewPager;
 
     private PagerAdapter adapter;
@@ -22,13 +29,27 @@ public class VoceSabiaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slide_layout);
 
+        // Esconde a barra superior
         getSupportActionBar().hide();
 
+
+        /*
+        *   Configura o Adapter dos slides e o adiciona ao ViewPager
+        *   da view desta Activity
+        *
+        * */
         this.viewPager = (ViewPager)findViewById(R.id.slidesViewPager);
         this.adapter = new SlidesAdapter();
         this.viewPager.setAdapter(this.adapter);
 
     }
+
+    /*
+    *
+    *   Função responsável por acionar a WebView que acessa os links
+    *   dos slides.
+    *
+    * */
 
     public void linkParaSite(View v){
 

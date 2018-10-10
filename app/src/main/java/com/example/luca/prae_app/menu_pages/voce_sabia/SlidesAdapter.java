@@ -15,35 +15,109 @@ import com.example.luca.prae_app.view.listeners.LinkClickListener;
 
 public class SlidesAdapter extends PagerAdapter {
 
-    private String[] lista_titulos = {"Sobre a PRAE","Coordenadorias",
-    "CASE","CAD","CRU","Quer saber mais?"};
+    /*
+    *   Inicialização das listas contendo os títulos, conteudos e as imagens dos slides.
+    *
+    *   Os títulos e conteúdos estão declarados em /res/values/strings. Para adicionar os textos de
+    *   uma nova aba, ou modificar uma aba atual, basta declarar novas strings nesse documento
+    *   e inserí-las nas listas correspondentes, seguindo o modelo abaixo ou, se for
+    *   o caso, apenas altere as linhas já existentes.
+    *
+    *   As imagens estão declaradas em /res/drawables e devem seguir o mesmo procedimentos dos
+    *   textos.
+    *
+    * */
 
-    private String[] lista_conteudos = {
-            "A PRAE - Pró-Reitoria de Assuntos Estudantis é a unidade que administra políticas para o progresso e apoio ao estudante de graduação da Universidade Federal do Ceará (UFC).\n\nSeu objetivo é incentivar, acompanhar e promover o desenvolvimento do estudante em toda sua trajetória acadêmica, através de ações efetivas nas áreas social, técnico-científica, cultural, política e esportiva.\n",
-            "Vem cá, você sabia que a PRAE tem três coordenadorias?\n"+"Pois é, as coordenadorias têm o objetivo de juntas estimularem e auxiliarem os estudantes no geral. Tem um trabalho forte desde o planejamento a execução dos programas assistenciais dirigidos  comunidade estudantil.\n",
-            "Descrição da CASE",
-            "Descrição da CAD",
-            "Descrição da CRU",
-            "Deseja saber mais ainda sobre a PRAE? Acesse o site no link abaixo e fique por dentro de tudo o que a PRAE anda fazendo para você."
+    private String[] listaTitulos = {
+            String.valueOf(R.string.tituloAba1),
+            String.valueOf(R.string.tituloAba2),
+            String.valueOf(R.string.tituloAba3),
+            String.valueOf(R.string.tituloAba4),
+            String.valueOf(R.string.tituloAba5),
+            String.valueOf(R.string.tituloAba6)};
+
+    private String[] listaConteudos = {
+            String.valueOf(R.string.conteudoAba1),
+            String.valueOf(R.string.conteudoAba1),
+            String.valueOf(R.string.conteudoAba1),
+            String.valueOf(R.string.conteudoAba1),
+            String.valueOf(R.string.conteudoAba1),
+            String.valueOf(R.string.conteudoAba1)
     };
 
-    private int[] lista_imagens = {R.drawable.acolhimento,R.drawable.acolhimento,R.drawable.acolhimento,R.drawable.acolhimento,R.drawable.acolhimento,R.drawable.acolhimento};
+    private int[] listaImagens = {
+            R.drawable.acolhimento,
+            R.drawable.acolhimento,
+            R.drawable.acolhimento,
+            R.drawable.acolhimento,
+            R.drawable.acolhimento,
+            R.drawable.acolhimento
+    };
 
-    private Boolean[] lista_has_link = {false,false,false,false,false,true};
+    /*
+    *
+    *  listaHasLink : determina se a aba de determinado índice possuirá algum link ou não
+    *  listaLinkTitulos : lista com os títulos dos links
+    *  listaLinks : lista com as strings com as urls dos links
+    *
+    *  Se uma determinada aba não possuir links, todas as listas deverão possuir valor 'null'
+    *  nos índices correspondentes às abas.
+    *
+    * */
 
-    private String[] lista_links_titulos = {null,null,null,null,null,"Ir para o site da PRAE"};
+    private Boolean[] listaHasLink = {
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+    };
 
-    private String[] lista_links = {null,null,null,null,null,"http://prae.ufc.br"};
+    private String[] listaLinksTitulos = {
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Ir para o site da PRAE"
+    };
+
+    private String[] listaLinks = {
+            null,
+            null,
+            null,
+            null,
+            null,
+            "http://prae.ufc.br"
+    };
+
+    /*
+    *   Retorna o número correspondente à quantidade de abas
+    *
+    * */
 
     @Override
     public int getCount() {
-        return this.lista_titulos.length;
+        return this.listaTitulos.length;
     }
+
+    /*
+    *
+    *  Checa se determinada view pertence ao objeto
+    *
+    * */
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
         return (view == (LinearLayout)o);
     }
+
+    /*
+    *
+    *  Função responsável por instanciar a view do slide e setar as suas informações
+    *
+    * */
 
     @NonNull
     @Override
@@ -57,9 +131,9 @@ public class SlidesAdapter extends PagerAdapter {
         Button link = v.findViewById(R.id.link);
         LinearLayout dots = v.findViewById(R.id.dots);
 
-        titulo.setText(this.lista_titulos[position]);
-        conteudo.setText(this.lista_conteudos[position]);
-        imagem.setImageDrawable(v.getResources().getDrawable(R.drawable.acolhimento));
+        titulo.setText(this.listaTitulos[position]);
+        conteudo.setText(this.listaConteudos[position]);
+        imagem.setImageDrawable(v.getResources().getDrawable(this.listaImagens[position]));
         imagem.setMinimumWidth(150);
         imagem.setMinimumHeight(150);
         imagem.setMaxHeight(150);
@@ -87,11 +161,11 @@ public class SlidesAdapter extends PagerAdapter {
             }
         }
 
-        if(this.lista_has_link[position]){
+        if(this.listaHasLink[position]){
 
             link.setVisibility(View.VISIBLE);
-            link.setText(this.lista_links_titulos[position]);
-            link.setOnClickListener(new LinkClickListener(this.lista_links[position]));
+            link.setText(this.listaLinksTitulos[position]);
+            link.setOnClickListener(new LinkClickListener(this.listaLinks[position]));
 
         }
 
@@ -100,6 +174,12 @@ public class SlidesAdapter extends PagerAdapter {
         return v;
 
     }
+
+    /*
+    *
+    * Função responsável por destruir os itens da view
+    *
+    * */
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {

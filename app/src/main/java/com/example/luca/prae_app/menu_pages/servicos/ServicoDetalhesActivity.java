@@ -15,7 +15,15 @@ public class ServicoDetalhesActivity extends CategoriaDetalhesActivity {
 
         setContentView(R.layout.activity_categoria_detalhes);
 
+        // Seta o texto presente na barra superior
+
         getSupportActionBar().setTitle(getIntent().getStringExtra("nome"));
+
+        /*
+        *
+        * Configura os elementos da view com os valores da categoria
+        *
+        * */
 
         this.setCategoriaId(getIntent().getIntExtra("categoriaId",0));
         this.setCategoriaNome(getIntent().getStringExtra("nome"));

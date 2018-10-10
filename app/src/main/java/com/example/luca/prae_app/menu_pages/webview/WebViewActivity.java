@@ -11,6 +11,13 @@ import com.example.luca.prae_app.R;
 
 public class WebViewActivity extends AppCompatActivity {
 
+    /*
+    *
+    *  webView : elemento responsável por carregar o link acessado
+    *  url : link a ser acessado pelo webView
+    *
+    * */
+
     private WebView webView;
     private String url;
 
@@ -20,9 +27,20 @@ public class WebViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
 
+        /*
+        *  url e webView são setados
+        *
+        * */
+
         this.url = getIntent().getStringExtra("url");
 
         this.webView = (WebView)findViewById(R.id.webView);
+
+
+        /*
+        * Configura a WebView e apresenta o link
+        *
+        * */
 
         this.webView.getSettings().setBuiltInZoomControls(true);
         this.webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);

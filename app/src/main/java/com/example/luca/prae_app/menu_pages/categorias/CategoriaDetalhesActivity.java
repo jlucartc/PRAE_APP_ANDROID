@@ -24,6 +24,8 @@ import java.util.concurrent.ExecutionException;
 public class CategoriaDetalhesActivity extends AppCompatActivity {
 
 
+    // Declara as variáveis da classe
+
     private SecoesWebServiceProvider secoesWebServiceProvider;
     private DocumentosWebServiceProvider documentosWebServiceProvider;
     private LinearLayout listaSecoes;
@@ -43,6 +45,8 @@ public class CategoriaDetalhesActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_categoria_detalhes);
 
+        // seta as informações da categoria
+
         this.setCategoriaId(getIntent().getIntExtra("categoriaId",0));
         this.setCategoriaNome(getIntent().getStringExtra("nome"));
         this.setCategoriaDescricao(getIntent().getStringExtra("descricao"));
@@ -52,6 +56,8 @@ public class CategoriaDetalhesActivity extends AppCompatActivity {
         this.construirActivity();
 
     }
+
+    // constrói a activity de acordo com...
 
     public void construirActivity(){
 

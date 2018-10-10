@@ -19,7 +19,15 @@ public class ServicosActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_servicos);
 
+
     }
+
+    /*
+    *
+    * Aciona a Activity de residência universitária através de um botão presente
+    * na view desta Activity.
+    *
+    * */
 
     public void residenciaUniversitaria(View v){
 
@@ -28,10 +36,16 @@ public class ServicosActivity extends AppCompatActivity {
 
     }
 
+    /*
+     *
+     * Aciona a Activity de restaurante universitário através de um botão presente
+     * na view desta Activity.
+     *
+     * */
+
     public void restauranteUniversitario(View v){
 
         Intent intent = new Intent(this,RestauranteUniversitarioActivity.class);
-        //intent.putExtra("nome",((TextView)findViewById(R.id.restauranteUniversitario)).getText().toString();
         startActivity(intent);
 
     }

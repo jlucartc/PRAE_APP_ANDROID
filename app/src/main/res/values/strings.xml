@@ -14,6 +14,7 @@
     <string name="title_activity_ajuda_de_custo_documentacao_necessaria">
         AjudaDeCustoDocumentacaoNecessariaActivity
     </string>
+    <!-- Link do webservice que irá prover os dados para o aplicativo -->
     <string name="localhost">http://192.168.2.101:8000</string>
     <string name="title_activity_mostrar_mapa">MostrarMapaActivity</string>
     <string name="title_activity_main2">AbasActivity</string>
@@ -23,4 +24,18 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_aba">AbaActivity</string>string>
+    <!-- Textos das abas de "Você sabia?"-->
+    <string name="tituloAba1">Sobre a PRAE</string>
+    <string name="conteudoAba1">"A PRAE - Pró-Reitoria de Assuntos Estudantis é a unidade que administra políticas para o progresso e apoio ao estudante de graduação da Universidade Federal do Ceará (UFC).\n\nSeu objetivo é incentivar, acompanhar e promover o desenvolvimento do estudante em toda sua trajetória acadêmica, através de ações efetivas nas áreas social, técnico-científica, cultural, política e esportiva.\n"</string>
+    <string name="tituloAba2">Coordenadorias</string>
+    <string name="conteudoAba2">"Vem cá, você sabia que a PRAE tem três coordenadorias?\n"+"Pois é, as coordenadorias têm o objetivo de juntas estimularem e auxiliarem os estudantes no geral. Tem um trabalho forte desde o planejamento a execução dos programas assistenciais dirigidos  comunidade estudantil.\n"</string>
+    <string name="tituloAba3">CASE</string>
+    <string name="conteudoAba3">"Descrição da CASE"</string>
+    <string name="tituloAba4">CAD</string>
+    <string name="conteudoAba4">"Descrição da CAD"</string>
+    <string name="tituloAba5">CRU</string>
+    <string name="conteudoAba5">"Descrição da CRU"</string>
+    <string name="tituloAba6">Quer saber mais?</string>
+    <string name="conteudoAba6">"Deseja saber mais ainda sobre a PRAE? Acesse o site no link abaixo e fique por dentro de tudo o que a PRAE anda fazendo para você."</string>
+
 </resources>

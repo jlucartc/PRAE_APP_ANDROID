@@ -3,17 +3,29 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!-- Cor do botão amarelo quando não é clicado  -->
     <color name="yellowButtonSolid">#ffffcc</color>
+    <!-- Cor da borda do botão amarelo -->
     <color name="yellowButtonBorder">#ffff66</color>
+    <!-- Cor do botão amarelo quando ele é pressionado  -->
     <color name="yellowButtonPressed">#ffff99</color>
+    <!-- Cor do texto do botão amarelo  -->
     <color name="yellowButtonText">#ff7711</color>
+    <!-- Cor do botão azul quando não é clicado  -->
     <color name="blueButtonSolid">#ccffff</color>
+    <!-- Cor da borda do botão azul  -->
     <color name="blueButtonBorder">#99ccff</color>
+    <!-- Cor do botão azul quando ele é pressionado  -->
     <color name="blueButtonPressed">#66ffff</color>
+    <!-- Cor do texto do botão azul  -->
     <color name="blueButtonText">#1155ff</color>
+    <!-- Cor do botão verde quando não é clicado  -->
     <color name="greenButtonSolid">#ccffcc</color>
+    <!-- Cor da borda do botão verde  -->
     <color name="greenButtonBorder">#66cc66</color>
+    <!-- Cor do botão verde quando ele é pressionado  -->
     <color name="greenButtonPressed">#99ff99</color>
+    <!-- Cor do texto do botão verde  -->
     <color name="greenButtonText">#119911</color>
 
 
