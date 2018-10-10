@@ -27,6 +27,15 @@ public class AtualizarDados extends Worker {
     @SuppressLint("WrongThread")
     @NonNull
     @Override
+
+    /*
+    *   Função responsável por executar os códigos que se comunicam com
+    *   o webservice e retornam os dados de notícias e de avisos. Esse código executa
+    *   a cada 15 minutos.
+    *
+    *
+    * */
+
     public Worker.Result doWork() {
 
         this.context = this.getApplicationContext();
@@ -35,6 +44,7 @@ public class AtualizarDados extends Worker {
 
         this.avisosWebServiceProvider = new AvisosWebServiceProvider(this.context);
 
+        // Checa se o código já está sendo rodado
         if(this.noticiasWebServiceProvider.getStatus() != AsyncTask.Status.RUNNING){
 
 
@@ -42,6 +52,7 @@ public class AtualizarDados extends Worker {
 
         }
 
+        // Checa se o código já está sendo rodado
         if(this.avisosWebServiceProvider.getStatus() != AsyncTask.Status.RUNNING){
 
 

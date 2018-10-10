@@ -44,9 +44,6 @@
             android:label="@string/title_activity_mostrar_mapa" />
         <activity android:name=".menu_pages.categorias.CategoriaDetalhesActivity" />
         <activity android:name=".menu_pages.categorias.SecaoActivity" />
-        <activity android:name=".menu_pages.bolsas.BolsaDetalhesActivity" />
-        <activity android:name=".menu_pages.auxilios.AuxilioDetalhesActivity" />
-        <activity android:name=".menu_pages.servicos.ServicoDetalhesActivity" />
         <activity android:name=".menu_pages.notificacoes_por_email.NotificacoesPorEmailActivity" />
         <activity android:name=".menu_pages.categorias.CategoriasActivity" />
         <activity android:name=".menu_pages.avisos.AvisosActivity" />
