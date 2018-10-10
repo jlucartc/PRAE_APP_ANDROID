@@ -11,7 +11,6 @@ import com.example.luca.prae_app.menu_pages.auxilios.auxilioCreche.AuxilioCreche
 import com.example.luca.prae_app.menu_pages.auxilios.auxilioEmergencial.AuxilioEmergencialActivity;
 import com.example.luca.prae_app.menu_pages.auxilios.auxilioMoradia.AuxilioMoradiaActivity;
 import com.example.luca.prae_app.menu_pages.auxilios.isencaoDoRU.IsencaoDoRUActivity;
-import com.example.luca.prae_app.menu_pages.categorias.CategoriasActivity;
 
 public class AuxiliosActivity extends AppCompatActivity {
 

@@ -14,7 +14,6 @@ import com.example.luca.prae_app.menu_pages.auxilios.AuxiliosActivity;
 import com.example.luca.prae_app.menu_pages.avisos.AvisosActivity;
 import com.example.luca.prae_app.menu_pages.bolsas.BolsasActivity;
 import com.example.luca.prae_app.menu_pages.calendario_de_atividades.CalendarioDeAtividadesActivity;
-import com.example.luca.prae_app.menu_pages.categorias.CategoriasActivity;
 import com.example.luca.prae_app.menu_pages.fale_conosco.FaleConoscoActivity;
 import com.example.luca.prae_app.menu_pages.mapa_da_prae.MapaDaPraeActivity;
 import com.example.luca.prae_app.menu_pages.noticias.NoticiasActivity;

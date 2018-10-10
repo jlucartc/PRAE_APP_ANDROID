@@ -20,7 +20,6 @@
 	- avisos : telas do submenu "Avisos" ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)
 	- bolsas : telas do submenu "Bolsas" ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)
 	- calendario_de_atividades : telas do submenu "Atividades" ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)
-	- categorias : Activities que geram as telas de cada categoria (bolsas, auxílios, serviços)
 	- fale_conosco : telas do submenu "Fale conosco"![#c5f015](https://placehold.it/15/c5f015/000000?text=+) 
 	- mapa_da_prae : telas do submenu "Mapas da PRAE" ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)
 	- noticias : tela do submenu "Notícias" ![#c5f015](https://placehold.it/15/c5f015/000000?text=+)
