@@ -30,7 +30,7 @@ public class VoceSabiaActivity extends AppCompatActivity {
         setContentView(R.layout.slide_layout);
 
         // Esconde a barra superior
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
 
         /*
@@ -39,7 +39,7 @@ public class VoceSabiaActivity extends AppCompatActivity {
         *
         * */
         this.viewPager = (ViewPager)findViewById(R.id.slidesViewPager);
-        this.adapter = new SlidesAdapter();
+        this.adapter = new SlidesAdapter(this.getApplicationContext());
         this.viewPager.setAdapter(this.adapter);
 
     }

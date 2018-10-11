@@ -26,7 +26,7 @@ public class CalendarioDeAtividadesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setTitle("Calendário de atividades");
+        //getSupportActionBar().setTitle("Calendário de atividades");
 
         this.compromissosWebServiceProvider = new CompromissosWebServiceProvider(this);
 

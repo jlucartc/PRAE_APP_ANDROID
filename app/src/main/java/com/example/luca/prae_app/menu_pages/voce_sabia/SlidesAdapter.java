@@ -1,5 +1,7 @@
 package com.example.luca.prae_app.menu_pages.voce_sabia;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -28,31 +30,45 @@ public class SlidesAdapter extends PagerAdapter {
     *
     * */
 
-    private String[] listaTitulos = {
-            String.valueOf(R.string.tituloAba1),
-            String.valueOf(R.string.tituloAba2),
-            String.valueOf(R.string.tituloAba3),
-            String.valueOf(R.string.tituloAba4),
-            String.valueOf(R.string.tituloAba5),
-            String.valueOf(R.string.tituloAba6)};
+    private Context context;
+    private String[] listaTitulos;
+    private String[] listaConteudos;
+    private Integer[] listaImagens;
 
-    private String[] listaConteudos = {
-            String.valueOf(R.string.conteudoAba1),
-            String.valueOf(R.string.conteudoAba1),
-            String.valueOf(R.string.conteudoAba1),
-            String.valueOf(R.string.conteudoAba1),
-            String.valueOf(R.string.conteudoAba1),
-            String.valueOf(R.string.conteudoAba1)
-    };
+    public SlidesAdapter(Context context){
 
-    private int[] listaImagens = {
-            R.drawable.acolhimento,
-            R.drawable.acolhimento,
-            R.drawable.acolhimento,
-            R.drawable.acolhimento,
-            R.drawable.acolhimento,
-            R.drawable.acolhimento
-    };
+        this.context = context;
+
+        this.listaTitulos = new String[]{
+                this.context.getString(R.string.tituloAba1),
+                this.context.getString(R.string.tituloAba2),
+                this.context.getString(R.string.tituloAba3),
+                this.context.getString(R.string.tituloAba4),
+                this.context.getString(R.string.tituloAba5),
+                this.context.getString(R.string.tituloAba6)
+        };
+
+        this.listaConteudos = new String[]{
+                this.context.getString(R.string.conteudoAba1),
+                this.context.getString(R.string.conteudoAba2),
+                this.context.getString(R.string.conteudoAba3),
+                this.context.getString(R.string.conteudoAba4),
+                this.context.getString(R.string.conteudoAba5),
+                this.context.getString(R.string.conteudoAba6)
+        };
+
+        this.listaImagens = new Integer[]{
+                R.drawable.acolhimento,
+                R.drawable.acolhimento,
+                R.drawable.acolhimento,
+                R.drawable.acolhimento,
+                R.drawable.acolhimento,
+                R.drawable.acolhimento
+        };
+
+    }
+
+
 
     /*
     *

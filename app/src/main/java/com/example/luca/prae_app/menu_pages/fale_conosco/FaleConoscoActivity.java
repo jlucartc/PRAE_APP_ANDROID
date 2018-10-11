@@ -15,7 +15,7 @@ public class FaleConoscoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fale_conosco);
 
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         TextView faleConosco = findViewById(R.id.faleConosco);
 

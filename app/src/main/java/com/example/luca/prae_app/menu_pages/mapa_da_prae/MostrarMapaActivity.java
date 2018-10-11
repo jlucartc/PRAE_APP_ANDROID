@@ -31,8 +31,8 @@ public class MostrarMapaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_mapa);
 
-        this.getSupportActionBar().setTitle(getIntent().getStringExtra("nome"));
-        this.getSupportActionBar().hide();
+        //this.getSupportActionBar().setTitle(getIntent().getStringExtra("nome"));
+        //this.getSupportActionBar().hide();
 
         //BitmapDrawable bg = new BitmapDrawable(BitmapFactory.decodeResource(getResources(),R.drawable.yellow_button));
 

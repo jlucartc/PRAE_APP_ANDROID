@@ -14,7 +14,7 @@ public class NotificacoesPorEmailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notificacoes_por_email);
 
-        getSupportActionBar().setTitle("Notificações por email");
+        //getSupportActionBar().setTitle("Notificações por email");
 
         Button enviarEmail = findViewById(R.id.enviarEmail);
         enviarEmail.setOnClickListener(new EnviarEmailListener() );

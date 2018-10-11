@@ -55,7 +55,7 @@ public class AvisosAdapter extends RecyclerView.Adapter<AvisosViewHolder> {
 
         }else{
 
-            avisosViewHolder.getStatusAviso().setVisibility(View.INVISIBLE);
+            avisosViewHolder.getStatusAviso().setVisibility(View.GONE);
 
         }
 

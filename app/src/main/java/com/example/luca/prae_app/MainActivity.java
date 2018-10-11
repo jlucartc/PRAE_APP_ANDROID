@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("Aplicativo da PRAE");
-        getSupportActionBar().hide();
+        //getSupportActionBar().setTitle("Aplicativo da PRAE");
+        //getSupportActionBar().hide();
 
         Log.i("MainActivity","onCreate");
 

@@ -10,26 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
-        android:background="@drawable/avisos_button_selector"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        android:background="@drawable/avisos_button_selector">
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0.1"
             android:paddingLeft="5dp"
             app:srcCompat="@drawable/avisos_icon" />
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.6"
+            android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingBottom="5dp"
-            android:paddingLeft="10dp">
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
 
             <TextView
                 android:id="@+id/titulo"

@@ -24,7 +24,7 @@ public class NoticiasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setTitle("Noticias");
+        //getSupportActionBar().setTitle("Noticias");
 
         this.noticiasWebServiceProvider = new NoticiasWebServiceProvider(this.getApplicationContext());
         try {

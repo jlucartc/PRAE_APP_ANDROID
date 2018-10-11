@@ -9,48 +9,67 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/nome"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="Nome da bolsa"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/descricao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:lineSpacingExtra="4sp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="O Programa Bolsa de Iniciação Acadêmica tem por objetivo propiciar aos estudantes de Cursos de Graduação Presenciais da Universidade Federal do Ceará (UFC) – em situação de vulnerabilidade sócio-econômica comprovada – especialmente os de semestres iniciais, condições financeiras para sua permanência e desempenho acadêmico satisfatório, mediante atuação, em caráter de iniciação acadêmica, nas diversas unidades da Instituição."
-                android:textColor="#000000"
-                android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Nome da bolsa"
+                    android:textColor="@color/blueButtonText"
+                    android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/link"
+                <TextView
+                    android:id="@+id/descricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="O Programa Bolsa de Iniciação Acadêmica tem por objetivo propiciar aos estudantes de Cursos de Graduação Presenciais da Universidade Federal do Ceará (UFC) – em situação de vulnerabilidade sócio-econômica comprovada – especialmente os de semestres iniciais, condições financeiras para sua permanência e desempenho acadêmico satisfatório, mediante atuação, em caráter de iniciação acadêmica, nas diversas unidades da Instituição."
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Ir para o link"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="16sp" />
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/blue_button_selector"
+                    android:text="Ir para o link"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@color/blueButtonText"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

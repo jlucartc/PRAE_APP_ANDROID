@@ -24,7 +24,7 @@ public class MapaDaPraeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setTitle("Mapas da PRAE");
+        //getSupportActionBar().setTitle("Mapas da PRAE");
 
         this.mapasWebServiceProvider = new MapasWebServiceProvider(this.getApplicationContext());
 

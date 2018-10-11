@@ -10,68 +10,85 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:padding="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingBottom="40dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="40dp">
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/titulo"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
-                android:text="Título do slide"
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:layout_weight="0.80"
+                android:gravity="top|center_horizontal"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/conteudo"
+                <TextView
+                    android:id="@+id/titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Título do slide"
+                    android:textColor="@color/yellowButtonText"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/conteudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="8sp"
+                    android:maxWidth="200dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imagem"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@color/greenButtonSolid" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
-                android:lineSpacingExtra="8sp"
-                android:maxWidth="200dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                android:textColor="#555555"
-                android:textSize="16dp" />
+                android:layout_weight="0.15"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imagem"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginBottom="30dp"
-                android:src="@color/greenButtonSolid" />
-
-            <Button
-                android:id="@+id/link"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:text="Button"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:visibility="gone" />
+                <Button
+                    android:id="@+id/link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/yellow_button_selector"
+                    android:text="Button"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@color/yellowButtonText"
+                    android:visibility="gone" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/dots"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_weight="0.05"
                 android:gravity="bottom|center_horizontal"
                 android:orientation="horizontal">
 
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

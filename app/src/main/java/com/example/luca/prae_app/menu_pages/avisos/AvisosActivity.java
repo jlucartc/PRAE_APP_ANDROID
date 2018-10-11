@@ -28,7 +28,7 @@ public class AvisosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avisos);
 
-        getSupportActionBar().setTitle("Avisos");
+        //getSupportActionBar().setTitle("Avisos");
 
         this.avisosWebServiceProvider = new AvisosWebServiceProvider(this.getApplicationContext());
 
