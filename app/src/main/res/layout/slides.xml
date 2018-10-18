@@ -71,10 +71,11 @@
                     android:layout_marginBottom="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:background="@drawable/yellow_button_selector"
+                    android:background="#ffcc55"
                     android:text="Button"
                     android:textAppearance="@style/TextAppearance.AppCompat"
-                    android:textColor="@color/yellowButtonText"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
                     android:visibility="gone" />
             </LinearLayout>
 

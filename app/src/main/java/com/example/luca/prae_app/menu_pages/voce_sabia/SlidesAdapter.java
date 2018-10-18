@@ -42,28 +42,19 @@ public class SlidesAdapter extends PagerAdapter {
         this.listaTitulos = new String[]{
                 this.context.getString(R.string.tituloAba1),
                 this.context.getString(R.string.tituloAba2),
-                this.context.getString(R.string.tituloAba3),
-                this.context.getString(R.string.tituloAba4),
-                this.context.getString(R.string.tituloAba5),
                 this.context.getString(R.string.tituloAba6)
         };
 
         this.listaConteudos = new String[]{
                 this.context.getString(R.string.conteudoAba1),
                 this.context.getString(R.string.conteudoAba2),
-                this.context.getString(R.string.conteudoAba3),
-                this.context.getString(R.string.conteudoAba4),
-                this.context.getString(R.string.conteudoAba5),
                 this.context.getString(R.string.conteudoAba6)
         };
 
         this.listaImagens = new Integer[]{
-                R.drawable.acolhimento,
-                R.drawable.acolhimento,
-                R.drawable.acolhimento,
-                R.drawable.acolhimento,
-                R.drawable.acolhimento,
-                R.drawable.acolhimento
+                R.drawable.sobre_a_prae,
+                R.drawable.coordenadorias,
+                R.drawable.saiba_mais
         };
 
     }
@@ -84,25 +75,16 @@ public class SlidesAdapter extends PagerAdapter {
     private Boolean[] listaHasLink = {
             false,
             false,
-            false,
-            false,
-            false,
             true
     };
 
     private String[] listaLinksTitulos = {
             null,
             null,
-            null,
-            null,
-            null,
             "Ir para o site da PRAE"
     };
 
     private String[] listaLinks = {
-            null,
-            null,
-            null,
             null,
             null,
             "http://prae.ufc.br"
@@ -149,11 +131,7 @@ public class SlidesAdapter extends PagerAdapter {
 
         titulo.setText(this.listaTitulos[position]);
         conteudo.setText(this.listaConteudos[position]);
-        imagem.setImageDrawable(v.getResources().getDrawable(this.listaImagens[position]));
-        imagem.setMinimumWidth(150);
-        imagem.setMinimumHeight(150);
-        imagem.setMaxHeight(150);
-        imagem.setMaxWidth(150);
+
 
         for(int i = 0; i < this.getCount(); i++){
             if(i == position){
@@ -182,6 +160,20 @@ public class SlidesAdapter extends PagerAdapter {
             link.setVisibility(View.VISIBLE);
             link.setText(this.listaLinksTitulos[position]);
             link.setOnClickListener(new LinkClickListener(this.listaLinks[position]));
+
+        }
+
+        if(this.listaImagens[position] != null){
+
+            imagem.setImageDrawable(v.getResources().getDrawable(this.listaImagens[position]));
+            imagem.setMinimumWidth(150);
+            imagem.setMinimumHeight(150);
+            imagem.setMaxHeight(150);
+            imagem.setMaxWidth(150);
+
+        }else{
+
+            imagem.setVisibility(View.GONE);
 
         }
 
