@@ -1,17 +1,14 @@
 package com.example.luca.prae_app.menu_pages.calendario_de_atividades;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.models.Compromisso;
-import com.example.luca.prae_app.providers.CompromissosWebServiceProvider;
+import com.example.luca.prae_app.providers.AtividadesWebServiceProvider;
 import com.example.luca.prae_app.view.adapters.CompromissosAdapter;
 
 import java.util.concurrent.ExecutionException;
@@ -20,7 +17,7 @@ public class CalendarioDeAtividadesActivity extends AppCompatActivity {
 
     private RecyclerView calendarioRecyclerView;
     private Compromisso[] compromissos;
-    private CompromissosWebServiceProvider compromissosWebServiceProvider;
+    private AtividadesWebServiceProvider compromissosWebServiceProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +25,7 @@ public class CalendarioDeAtividadesActivity extends AppCompatActivity {
 
         //getSupportActionBar().setTitle("Calendário de atividades");
 
-        this.compromissosWebServiceProvider = new CompromissosWebServiceProvider(this);
+        this.compromissosWebServiceProvider = new AtividadesWebServiceProvider(this);
 
         try {
 
@@ -44,7 +41,7 @@ public class CalendarioDeAtividadesActivity extends AppCompatActivity {
 
             }else{
 
-                setContentView(R.layout.activity_calendario_de_atividades);
+                setContentView(R.layout.activity_atividades);
 
                 this.calendarioRecyclerView = (RecyclerView)findViewById(R.id.calendarioRecyclerView);
 

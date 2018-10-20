@@ -1,10 +1,15 @@
 package com.example.luca.prae_app.view.adapters;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.luca.prae_app.R;
@@ -37,6 +42,7 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiaItemViewHolder>
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(@NonNull NoticiaItemViewHolder viewHolder, int i) {
 
@@ -44,7 +50,11 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiaItemViewHolder>
         viewHolder.url.setText(this.noticias[i].getGuid());
         if(!this.noticias[i].isNova()){
 
-            viewHolder.statusNoticia.setVisibility(TextView.GONE);
+            viewHolder.getStatusNoticia().setVisibility(View.VISIBLE);
+            viewHolder.getStatusNoticia().setBackground(null);
+            //avisosViewHolder.getStatusNoticia().setBackgroundColor(Color.parseColor("#eeeeee"));
+            viewHolder.getStatusNoticia().setText("Notícia lida");
+            viewHolder.getStatusNoticia().setTextColor(Color.parseColor("#999999"));
 
         }else{
 

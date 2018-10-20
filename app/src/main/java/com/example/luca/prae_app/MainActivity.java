@@ -54,18 +54,18 @@ public class MainActivity extends AppCompatActivity {
 
         this.atualizarNoticiasId = gson.fromJson(this.sharedPreferences.getString("atualizarNoticiasUUID",""),UUID.class);
 
-        if(this.atualizarNoticiasId == null){
+        //if(this.atualizarNoticiasId == null){
 
-            this.atualizarNoticias = new PeriodicWorkRequest.Builder(AtualizarDados.class,15,TimeUnit.MINUTES).build();
+        this.atualizarNoticias = new PeriodicWorkRequest.Builder(AtualizarDados.class,15,TimeUnit.MINUTES).build();
 
-            WorkManager.getInstance().enqueue(atualizarNoticias);
+        WorkManager.getInstance().enqueue(atualizarNoticias);
 
-            SharedPreferences.Editor editor = this.sharedPreferences.edit();
+        SharedPreferences.Editor editor = this.sharedPreferences.edit();
 
-            editor.putString("atualizarNoticiasUUID",this.gson.toJson(this.atualizarNoticias.getId()));
+        editor.putString("atualizarNoticiasUUID",this.gson.toJson(this.atualizarNoticias.getId()));
 
-            editor.commit();
-        }
+        editor.commit();
+        //}
 
     }
 

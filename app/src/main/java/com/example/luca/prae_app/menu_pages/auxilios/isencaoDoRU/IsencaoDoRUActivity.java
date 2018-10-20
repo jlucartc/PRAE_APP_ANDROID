@@ -26,7 +26,9 @@ public class IsencaoDoRUActivity extends AppCompatActivity {
         Button linkB = findViewById(R.id.link);
 
         nomeTV.setText("Isenção do Restaurante Universitário");
-        descricaoTV.setText("Garantir a alimentação àqueles estudantes que se encontram em situação de vulnerabilidade econômica comprovada com intuito de minimizar os efeitos das desigualdades sociais na permanência desse jovens na Universidade\n");
+        descricaoTV.setText("Tá precisando se alimentar, porém tá sem grana até pra passagem.. Já pensou em ter acesso a melhor comida da UFC sem pagar nada?!\n" +
+                "Você sabia que a PRAE tem um programa chamado Isenção do R.U que atende aos alunos que se encontram em situação de vulnerabilidade econômica comprovada?\n" +
+                "Então é só ficar atento ao edital da isenção que é unificado com outros auxílios da PRAE que são lançados semestralmente no site.\n");
 
 
         linkB.setOnClickListener(new LinkClickListener(this.link));

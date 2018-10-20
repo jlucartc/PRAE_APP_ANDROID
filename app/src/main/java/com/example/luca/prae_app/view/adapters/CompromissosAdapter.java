@@ -24,7 +24,7 @@ public class CompromissosAdapter extends RecyclerView.Adapter<CompromissoItemVie
     @Override
     public CompromissoItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.atividade_item_view,viewGroup,false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.atividades_item_view,viewGroup,false);
 
         CompromissoItemViewHolder comp = new CompromissoItemViewHolder(v);
 

@@ -27,7 +27,9 @@ public class ResidenciaUniversitariaActivity extends AppCompatActivity {
         Button linkB = findViewById(R.id.link);
 
         nomeTV.setText("Residência Universitária");
-        descricaoTV.setText("Propiciar a permanência do estudante em situação de vulnerabilidade econômica, vindo do interior do estado, ou de outros estados, assegurando-lhe moradia, alimentação e apoio psicossocial.");
+        descricaoTV.setText("Passou na UFC e mora no interior do Ceará, ou em outros estados?\n" +
+                "Sabia que a universidade possui residências, onde os estudantes em situação de vulnerabilidade econômica podem concorrer a uma vaga?\n" +
+                "Pois é, fique atento aos editais que são lançados anualmente no site da PRAE.\n");
         linkB.setOnClickListener(new LinkClickListener(this.link));
 
 

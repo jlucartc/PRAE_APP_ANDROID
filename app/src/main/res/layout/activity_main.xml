@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:padding="10dp"
+    android:padding="0dp"
     tools:context=".MainActivity">
 
     <TableLayout
@@ -20,41 +20,48 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#ffffff">
+            android:background="@color/greenButtonSolid"
+            android:padding="20dp">
 
             <Button
                 android:id="@+id/noticias"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/noticias"
                 android:gravity="bottom|center_horizontal"
                 android:onClick="noticias"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
-                android:text="Noticias"
+                android:text="Notícias"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/greenButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
             <Button
                 android:id="@+id/calendario_de_atividades"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/calendario2"
                 android:gravity="bottom|center_horizontal"
                 android:onClick="calendarioDeAtividades"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:singleLine="false"
-                android:text="atividades"
+                android:text="Atividades"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/greenButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
             <Button
@@ -67,10 +74,13 @@
                 android:gravity="bottom|center_horizontal"
                 android:onClick="avisos"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Avisos"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/greenButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
         </TableRow>
@@ -78,42 +88,49 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:layout_weight="1"
-            android:background="#ffffff">
+            android:background="@color/blueButtonSolid"
+            android:padding="20dp">
 
             <Button
                 android:id="@+id/bolsas"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/blue_button_selector"
                 android:drawableTop="@drawable/bolsas_160"
                 android:gravity="bottom|center_horizontal"
                 android:onClick="bolsas"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Bolsas"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/blueButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
             <Button
                 android:id="@+id/auxilios"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/blue_button_selector"
                 android:drawableTop="@drawable/auxilios_160"
                 android:gravity="bottom|center_horizontal"
                 android:onClick="auxilios"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Auxílios"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/blueButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
             <Button
@@ -126,10 +143,13 @@
                 android:gravity="bottom|center_horizontal"
                 android:onClick="servicos"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Serviços"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/blueButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
         </TableRow>
@@ -137,43 +157,49 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="#ffffff"
-            android:orientation="vertical">
+            android:background="@color/yellowButtonSolid"
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <Button
                 android:id="@+id/voce_sabia"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/yellow_button_selector"
                 android:drawableTop="@drawable/voce_sabia_160"
                 android:gravity="bottom|center_horizontal"
                 android:onClick="voceSabia"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Você sabia?"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/yellowButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
             <Button
                 android:id="@+id/fale_conosco"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/yellow_button_selector"
                 android:drawableTop="@drawable/fale_conosco_160"
                 android:gravity="bottom|center_horizontal"
                 android:onClick="faleConosco"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Fale conosco"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/yellowButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
 
             <Button
@@ -186,10 +212,13 @@
                 android:gravity="bottom|center_horizontal"
                 android:onClick="mapaDaPrae"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:paddingTop="20dp"
                 android:text="Mapas da PRAE"
+                android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@color/yellowButtonText"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="normal" />
         </TableRow>
 

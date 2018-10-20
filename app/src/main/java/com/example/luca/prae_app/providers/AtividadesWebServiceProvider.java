@@ -16,14 +16,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class CompromissosWebServiceProvider extends AsyncTask<Void,Void,Compromisso[]> {
+public class AtividadesWebServiceProvider extends AsyncTask<Void,Void,Compromisso[]> {
 
     private Compromisso[] compromissosArray;
     private String COMPROMISSOS_URI;
     private Gson gson;
     private Context context;
 
-    public CompromissosWebServiceProvider(Context context){
+    public AtividadesWebServiceProvider(Context context){
 
         this.context = context;
 

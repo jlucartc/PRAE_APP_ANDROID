@@ -12,9 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/atividades_button_selector"
         android:orientation="horizontal"
-        android:paddingBottom="5dp"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp">
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/simboloCalendario"

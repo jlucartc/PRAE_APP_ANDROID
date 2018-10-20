@@ -15,7 +15,7 @@
         AjudaDeCustoDocumentacaoNecessariaActivity
     </string>
     <!-- Link do webservice que irá prover os dados para o aplicativo -->
-    <string name="localhost">http://192.168.0.104:8000</string>
+    <string name="localhost">http://aplicativoprae.online</string>
     <string name="title_activity_mostrar_mapa">MostrarMapaActivity</string>
     <string name="title_activity_main2">AbasActivity</string>
     <string name="tab_text_1">Tab 1</string>

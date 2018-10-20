@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.models.Mapa;
@@ -26,7 +25,7 @@ public class MapasAdapter extends RecyclerView.Adapter<MapaItemViewHolder> {
     @Override
     public MapaItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_mapa_item,viewGroup,false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.mapa_item_layout,viewGroup,false);
 
         v.setOnClickListener(new MapaItemClickListener(viewGroup.getContext(),this.mapas[i].getId()));
 

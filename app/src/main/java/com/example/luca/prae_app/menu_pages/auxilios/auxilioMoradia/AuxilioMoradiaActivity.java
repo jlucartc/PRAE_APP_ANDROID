@@ -28,7 +28,10 @@ public class AuxilioMoradiaActivity extends AppCompatActivity {
         Button linkB = findViewById(R.id.link);
 
         nomeTV.setText("Auxílio Moradia");
-        descricaoTV.setText("Objetivo: viabilizar a permanência de estudantes do cursos de graduação, em comprovada situação de vulnerabilidade econômica.\n" + "obs: não impede de receber outra bolsa de programas da UFC.\n");
+        descricaoTV.setText("Você reside em região metropolitana ou no interior e não foi contemplado com o Programa de Residência Universitária?\n" +
+                "Não se reprima!!\n" +
+                "Nós, da PRAE, disponibilizamos, o auxílio moradia que ajuda na permanência de estudantes dos cursos de graduação, que estão em situação de vulnerabilidade econômica.\n" +
+                "obs: este auxílio não impede o estudante de receber outra bolsa de programas da UFC (único auxílio acumulativo).\n");
 
 
         linkB.setOnClickListener(new LinkClickListener(this.link));

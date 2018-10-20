@@ -28,7 +28,9 @@ public class AuxilioEmergencialActivity extends AppCompatActivity {
         Button linkB = findViewById(R.id.link);
 
         nomeTV.setText("Auxílio Emergencial");
-        descricaoTV.setText("Disponibiliza ajuda financeira, em caráter de eventualidade, a estudantes de graduação, em situação de vulnerabilidade socioeconômica comprovada e que não tenha alcançado por nenhuma de outras ações de apoio financeiro disponíveis na UFC ou pagas com recursos do Governo Federal de modo que possa contribuir para a obtenção de um desempenho acadêmico satisfatório, reduzir o risco de evasão e de propiciar conclusão dos cursos em tempo hábil.\n");
+        descricaoTV.setText("Você é estudante de graduação, está em situação de vulnerabilidade socioeconômica comprovada e não é beneficiado por outras ações de apoio financeiro disponíveis na UFC ou estágio?" +
+                " Sim?\n" +
+                "Esse auxílio tem o intuito de ajudar no desempenho acadêmico satisfatório e a finalidade de reduzir o risco de evasão, propiciando a  conclusão dos cursos em tempo hábil.\n");
 
 
         linkB.setOnClickListener(new LinkClickListener(this.link));

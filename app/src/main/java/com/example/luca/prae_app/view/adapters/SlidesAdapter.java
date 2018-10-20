@@ -1,4 +1,4 @@
-package com.example.luca.prae_app.menu_pages.voce_sabia;
+package com.example.luca.prae_app.view.adapters;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -27,6 +27,9 @@ public class SlidesAdapter extends PagerAdapter {
     *
     *   As imagens estão declaradas em /res/drawables e devem seguir o mesmo procedimentos dos
     *   textos.
+    *
+    *   caso um slide não tenha uma imagem, deve ser adicionado um valor
+    *   null no indice da lista correspondente ao slide.
     *
     * */
 

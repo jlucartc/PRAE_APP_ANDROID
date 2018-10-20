@@ -1,7 +1,10 @@
 package com.example.luca.prae_app.view.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +32,7 @@ public class AvisosAdapter extends RecyclerView.Adapter<AvisosViewHolder> {
     @Override
     public AvisosViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_aviso_layout,viewGroup,false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.aviso_item_layout,viewGroup,false);
 
         v.setOnClickListener(new AvisoClickListener());
 
@@ -39,6 +42,7 @@ public class AvisosAdapter extends RecyclerView.Adapter<AvisosViewHolder> {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(@NonNull AvisosViewHolder avisosViewHolder, int i) {
 
@@ -55,7 +59,11 @@ public class AvisosAdapter extends RecyclerView.Adapter<AvisosViewHolder> {
 
         }else{
 
-            avisosViewHolder.getStatusAviso().setVisibility(View.GONE);
+            avisosViewHolder.getStatusAviso().setVisibility(View.VISIBLE);
+            avisosViewHolder.getStatusAviso().setBackground(null);
+            //avisosViewHolder.getStatusAviso().setBackgroundColor(Color.parseColor("#eeeeee"));
+            avisosViewHolder.getStatusAviso().setText("Aviso lido");
+            avisosViewHolder.getStatusAviso().setTextColor(Color.parseColor("#999999"));
 
         }
 

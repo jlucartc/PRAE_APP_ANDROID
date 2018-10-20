@@ -57,7 +57,8 @@
         <activity android:name=".menu_pages.bolsas.BID.BIDActivity" />
         <activity android:name=".menu_pages.bolsas.BIA.BIAActivity" />
         <activity android:name=".menu_pages.servicos.restauranteUniversitario.RestauranteUniversitarioActivity" />
-        <activity android:name=".menu_pages.servicos.residenciaUniversitaria.ResidenciaUniversitariaActivity"></activity>
+        <activity android:name=".menu_pages.servicos.residenciaUniversitaria.ResidenciaUniversitariaActivity" />
+        <activity android:name=".menu_pages.servicos.dae.DAEActivity"></activity>
     </application>
 
 </manifest>

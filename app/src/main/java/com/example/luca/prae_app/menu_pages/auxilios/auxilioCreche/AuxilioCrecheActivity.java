@@ -27,9 +27,7 @@ public class AuxilioCrecheActivity extends AppCompatActivity {
         Button linkB = findViewById(R.id.link);
 
         nomeTV.setText("Auxílio Creche");
-        descricaoTV.setText("É destinado a mães ou pais de crianças entre 6 e 48 meses de idade incompletos, que estão em situação de vulnerabilidade socioeconômica, que tenham guarda e que morem com filhos(as). Quer saber mais sobre esse auxilio? Corre lá e entra no site da PRAE pra ficar por dentro de tudo!\n" + "\n" + "que se encontrem em situação de vulnerabilidade socioeconômica, Página 1 de 10 que detenham guarda, e que coabitem com filhos(as) em idade entre 6 (seis) e 48 (quarenta e oito) meses incompletos,\n" + "\n" + "Tem o objetivo de contribuir nas despesas de cuidados com a criança com o intuito de proporcionar a frequência regular às aulas, o desempenho acadêmico satisfatório e a conclusão em tempo hábil de seu curso de graduação.\n");
-
-
+        descricaoTV.setText("É destinado a mães ou pais de crianças entre 6 e 48 meses de idade incompletos, que estão em situação de vulnerabilidade socioeconômica, que tenham guarda e que morem com filhos(as). Quer saber mais sobre esse auxílio? Corre lá e entra no site da PRAE para ficar por dentro de tudo!");
         linkB.setOnClickListener(new LinkClickListener(this.link));
 
     }

@@ -2,7 +2,6 @@ package com.example.luca.prae_app.menu_pages.voce_sabia;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +9,7 @@ import android.view.View;
 
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.menu_pages.webview.WebViewActivity;
+import com.example.luca.prae_app.view.adapters.SlidesAdapter;
 
 public class VoceSabiaActivity extends AppCompatActivity {
 

@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:padding="30dp">
+        android:padding="30dp"
+        android:scrollbarAlwaysDrawVerticalTrack="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,15 +23,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.80"
+                android:layout_weight="0.8"
                 android:gravity="top|center_horizontal"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/titulo"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
+                    android:layout_weight="0"
                     android:gravity="center_horizontal"
                     android:text="Título do slide"
                     android:textColor="@color/yellowButtonText"
@@ -41,6 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
+                    android:layout_weight="0"
                     android:gravity="center_horizontal"
                     android:lineSpacingExtra="8sp"
                     android:maxWidth="200dp"
@@ -52,13 +55,16 @@
                     android:id="@+id/imagem"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0"
                     android:src="@color/greenButtonSolid" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:layout_weight="0.15"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -67,11 +73,12 @@
                     android:id="@+id/link"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_gravity="bottom"
                     android:layout_marginBottom="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="#ffcc55"
+                    android:gravity="center"
                     android:text="Button"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textColor="#ffffff"
@@ -84,9 +91,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="0.05"
+                android:layout_weight="0.5"
                 android:gravity="bottom|center_horizontal"
-                android:orientation="horizontal">
+                android:minHeight="0dp"
+                android:orientation="horizontal"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp">
 
             </LinearLayout>
 

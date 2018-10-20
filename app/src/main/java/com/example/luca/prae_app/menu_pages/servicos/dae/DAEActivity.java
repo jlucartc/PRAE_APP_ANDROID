@@ -1,4 +1,4 @@
-package com.example.luca.prae_app.menu_pages.servicos.dap;
+package com.example.luca.prae_app.menu_pages.servicos.dae;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.example.luca.prae_app.R;
 import com.example.luca.prae_app.view.listeners.LinkClickListener;
 
-public class DAPActivity extends AppCompatActivity {
+public class DAEActivity extends AppCompatActivity {
 
     private String nome;
     private String descricao;
@@ -23,7 +23,7 @@ public class DAPActivity extends AppCompatActivity {
 
         TextView nomeTV = findViewById(R.id.nome);
         TextView descricaoTV = findViewById(R.id.descricao);
-        link = "http://www.prae.ufc.br/residencia-universitaria/";
+        link = "http://www.prae.ufc.br/acompanhamento-psicopedagogico-psicologico-e-psicossocial/";
         Button linkB = findViewById(R.id.link);
 
         nomeTV.setText("DAP - Divisão de Apoio ao Estudante");
