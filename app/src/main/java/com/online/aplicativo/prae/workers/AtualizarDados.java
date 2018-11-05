@@ -40,17 +40,7 @@ public class AtualizarDados extends Worker {
 
         this.context = this.getApplicationContext();
 
-        this.noticiasWebServiceProvider = new NoticiasWebServiceProvider(this.context);
-
         this.avisosWebServiceProvider = new AvisosWebServiceProvider(this.context);
-
-        // Checa se o código já está sendo rodado
-        if(this.noticiasWebServiceProvider.getStatus() != AsyncTask.Status.RUNNING){
-
-
-            this.noticiasWebServiceProvider.execute();
-
-        }
 
         // Checa se o código já está sendo rodado
         if(this.avisosWebServiceProvider.getStatus() != AsyncTask.Status.RUNNING){

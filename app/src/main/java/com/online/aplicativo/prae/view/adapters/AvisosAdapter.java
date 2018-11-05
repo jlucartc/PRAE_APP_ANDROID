@@ -56,6 +56,7 @@ public class AvisosAdapter extends RecyclerView.Adapter<AvisosViewHolder> {
         if(this.avisos[i].getNovo() == true){
 
             avisosViewHolder.getStatusAviso().setVisibility(View.VISIBLE);
+            avisosViewHolder.getStatusAviso().setContentDescription("Nova aviso!");
 
         }else{
 
@@ -63,6 +64,7 @@ public class AvisosAdapter extends RecyclerView.Adapter<AvisosViewHolder> {
             avisosViewHolder.getStatusAviso().setBackground(null);
             //avisosViewHolder.getStatusAviso().setBackgroundColor(Color.parseColor("#eeeeee"));
             avisosViewHolder.getStatusAviso().setText("Aviso lido");
+            avisosViewHolder.getStatusAviso().setContentDescription("Aviso lido");
             avisosViewHolder.getStatusAviso().setTextColor(Color.parseColor("#999999"));
 
         }

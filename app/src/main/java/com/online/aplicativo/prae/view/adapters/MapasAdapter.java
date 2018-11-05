@@ -45,6 +45,7 @@ public class MapasAdapter extends RecyclerView.Adapter<MapaItemViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MapaItemViewHolder mapaItemViewHolder, int i) {
 
+        mapaItemViewHolder.getNome().setContentDescription("Nome do mapa");
         mapaItemViewHolder.getNome().setText(this.mapas[i].getNome());
         mapaItemViewHolder.getRota().setText("/mostrarMapa/"+this.mapas[i].getId());
 

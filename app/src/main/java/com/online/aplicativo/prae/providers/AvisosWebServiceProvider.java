@@ -1,11 +1,13 @@
 package com.online.aplicativo.prae.providers;
 
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
@@ -72,7 +74,7 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
             if(this.avisosArray != null){
 
-                ArrayList<Aviso> arrayList = new ArrayList<Aviso>(Arrays.asList(this.avisosArray));
+                ArrayList<Aviso> arrayList = new ArrayList<>(Arrays.asList(this.avisosArray));
                 Collections.sort(arrayList, new Comparator<Aviso>() {
                     @Override
                     public int compare(Aviso aviso, Aviso t1) {
@@ -115,7 +117,7 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
     }
 
-    public void checkAvisos(Aviso[] avisos){
+    private void checkAvisos(Aviso[] avisos){
 
         SharedPreferences sp = this.context.getSharedPreferences("com.example.luca.prae_app",Context.MODE_PRIVATE);
 
@@ -125,7 +127,7 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
         int qAvisos = sp.getInt("qAvisos",0);
 
-        ArrayList<Integer> avisosNaoVistosArrayList = new ArrayList<Integer>();
+        ArrayList<Integer> avisosNaoVistosArrayList = new ArrayList<>();
 
         Scanner s = new Scanner(avisosNaoVistosArray);
 
@@ -149,9 +151,9 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
         int tempId = ultimoIdAvisos;
 
-        ArrayList<Integer> notificarApos = new ArrayList<Integer>();
+        ArrayList<Integer> notificarApos = new ArrayList<>();
 
-        ArrayList<Integer> avisosArray = new ArrayList<Integer>();
+        ArrayList<Integer> avisosArray = new ArrayList<>();
 
 
         for(Aviso n : avisos){
@@ -192,14 +194,33 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
         for(int i = (notificarApos.size()-1) /*notificarApos.size()-1*/ ; i >= 0 /*i >= 0*/; i-- /* i-- */){
 
             Intent intent = new Intent(this.context,AvisosActivity.class);
-            NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context).setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon).setContentTitle(avisos[avisosArray.indexOf(notificarApos.get(i))].getTitulo()).setContentText(avisos[avisosArray.indexOf(notificarApos.get(i))].getMensagem());
+            int importancia = 0;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                importancia = NotificationManager.IMPORTANCE_HIGH;
+            }
+            NotificationChannel notificationChannel = null;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                notificationChannel = new NotificationChannel(this.context.getString(R.string.avisosNotificacao),"Avisos",importancia);
+            }
+            NotificationCompat.Builder notificacao = new NotificationCompat.Builder(this.context,this.context.getString(R.string.avisosNotificacao))
+                    .setSmallIcon(R.drawable.ic_prae_app_notificacoes_icon)
+                    .setContentTitle(avisos[avisosArray.indexOf(notificarApos.get(i))].getTitulo())
+                    .setContentText(avisos[avisosArray.indexOf(notificarApos.get(i))].getMensagem())
+                    .setChannelId(this.context.getString(R.string.avisosNotificacao));
             TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(this.context);
             taskStackBuilder.addParentStack(AvisosActivity.class);
             taskStackBuilder.addNextIntent(intent);
             PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
             notificacao.setContentIntent(pendingIntent);
             NotificationManager notificationManager = (NotificationManager)this.context.getSystemService(Context.NOTIFICATION_SERVICE);
-            notificationManager.notify("prae.avisos",1,notificacao.build());
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && notificationManager != null) {
+                notificationManager.createNotificationChannel(notificationChannel);
+            }
+
+            if(notificationManager != null) {
+                notificationManager.notify("prae.avisos", 1, notificacao.build());
+            }
 
             Log.i("AvisosWSProvider","aviso.getId(): "+avisos[i].getTitulo());
 
@@ -209,16 +230,13 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        Iterator iterator = avisosNaoVistosArrayList.iterator();
+        for (Object anAvisosNaoVistosArrayList : avisosNaoVistosArrayList) {
 
-        while(iterator.hasNext()){
-
-            stringBuilder.append(iterator.next()).append(" ");
+            stringBuilder.append(anAvisosNaoVistosArrayList).append(" ");
 
         }
 
         SharedPreferences.Editor editor = sp.edit();
-
 
         editor.putInt("qAvisos",qAvisos);
 
@@ -226,7 +244,7 @@ public class AvisosWebServiceProvider extends AsyncTask<Void,Void,Aviso[]> {
 
         editor.putInt("ultimoIdAvisos",ultimoIdAvisos);
 
-        editor.commit();
+        editor.apply();
 
         this.avisosArray = avisos;
 

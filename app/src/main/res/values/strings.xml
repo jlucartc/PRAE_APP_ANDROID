@@ -37,5 +37,6 @@
     <string name="conteudoAba5">"Descrição da CRU"</string>
     <string name="tituloAba6">Quer saber mais?</string>
     <string name="conteudoAba6">"Deseja saber mais ainda sobre a PRAE? Acesse o site no link abaixo e fique por dentro de tudo o que a PRAE anda fazendo para você."</string>
+    <string name="avisosNotificacao">avisos</string>
 
 </resources>

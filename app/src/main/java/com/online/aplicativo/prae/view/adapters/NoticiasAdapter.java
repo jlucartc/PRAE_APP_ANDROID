@@ -52,13 +52,14 @@ public class NoticiasAdapter extends RecyclerView.Adapter<NoticiaItemViewHolder>
 
             viewHolder.getStatusNoticia().setVisibility(View.VISIBLE);
             viewHolder.getStatusNoticia().setBackground(null);
-            //avisosViewHolder.getStatusNoticia().setBackgroundColor(Color.parseColor("#eeeeee"));
             viewHolder.getStatusNoticia().setText("Notícia lida");
+            viewHolder.getStatusNoticia().setContentDescription("Notícia lida");
             viewHolder.getStatusNoticia().setTextColor(Color.parseColor("#999999"));
 
         }else{
 
-            viewHolder.statusNoticia.setVisibility(TextView.VISIBLE);
+            viewHolder.getStatusNoticia().setVisibility(TextView.VISIBLE);
+            viewHolder.getStatusNoticia().setContentDescription("Nova notícia");
 
         }
         viewHolder.id.setText(String.valueOf(this.noticias[i].getId()));
