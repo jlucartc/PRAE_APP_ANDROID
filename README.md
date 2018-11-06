@@ -2,6 +2,12 @@
 
   Aplicativo da PRAE, desenvolvido para a plataforma Android.
   
+  ## Baixando os arquivos do projeto
+  
+  - Caso queira utilizar o Git, clique em "Clone or Download" no canto superior direito. Copie o link e use com o comando "git clone [link]"
+
+  - Caso queira baixar os arquivos do projeto, siga o passo anterior mas clique em "Download ZIP".
+
   ## Funcionalidades
   
   - Listar as notícias presentes no site da PRAE (http://prae.ufc.br)
