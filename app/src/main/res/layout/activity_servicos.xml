@@ -20,9 +20,9 @@
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
             android:onClick="dae"
-            android:text="DAE - Divisão de Apoio ao estudante"
+            android:text="Atendimento ao Estudante"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="#1155ff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <Button
@@ -47,7 +47,19 @@
             android:onClick="residenciaUniversitaria"
             android:text="Residência Universitária"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="#1155ff"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/residenciaUniversitaria2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/blue_white_button_selector"
+            android:onClick="restauranteUniversitario"
+            android:text="Restaurante Universitário"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
     </LinearLayout>

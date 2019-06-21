@@ -20,7 +20,7 @@
     <!-- Cor do texto do botão azul  -->
     <color name="blueButtonText">#1155ff</color>
     <!-- Cor do botão verde quando não é clicado  -->
-    <color name="greenButtonSolid">#ccffcc</color>
+    <color name="greenButtonSolid">#FFFFFF</color>
     <!-- Cor da borda do botão verde  -->
     <color name="greenButtonBorder">#66cc66</color>
     <!-- Cor do botão verde quando ele é pressionado  -->

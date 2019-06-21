@@ -19,10 +19,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Ajuda de custo"
-            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:drawableLeft="@drawable/ajuda_de_custo_icon"
+            android:gravity="center|left"
             android:onClick="ajudaDeCusto"
-            android:textColor="#1155ff"
+            android:paddingLeft="5dp"
+            android:text="   Ajuda de Custo"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#020203"
             android:textSize="16sp" />
 
         <Button
@@ -31,10 +34,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Auxílio creche"
-            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:drawableLeft="@drawable/auxilio_creche_icon"
+            android:gravity="left|center_vertical"
             android:onClick="auxilioCreche"
-            android:textColor="#1155ff"
+            android:paddingLeft="5dp"
+            android:text="   Auxílio Creche"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <Button
@@ -43,10 +49,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Auxílio emergêncial"
+            android:drawableLeft="@drawable/auxilio_emergencial_icon"
+            android:gravity="left|center_vertical"
             android:onClick="auxilioEmergencial"
+            android:paddingLeft="5dp"
+            android:text="   Auxílio Emergêncial"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="#1155ff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <Button
@@ -55,10 +64,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Auxílio moradia"
+            android:drawableLeft="@drawable/auxilio_moradia_icon"
+            android:gravity="left|center_vertical"
             android:onClick="auxilioMoradia"
+            android:paddingLeft="5dp"
+            android:text="   Auxílio Moradia"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="#1155ff"
+            android:textColor="#000000"
             android:textSize="16sp" />
 
         <Button
@@ -67,11 +79,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:background="@drawable/blue_white_button_selector"
-            android:text="Isenção do RU"
+            android:drawableLeft="@drawable/insencao_do_ru_icon"
+            android:gravity="left|center_vertical"
             android:onClick="isencaoDoRU"
+            android:text="   Isenção da Taxa do RU"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="#1155ff"
+            android:textColor="#000000"
             android:textSize="16sp"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:paddingLeft="5dp" />
     </LinearLayout>
 </ScrollView>

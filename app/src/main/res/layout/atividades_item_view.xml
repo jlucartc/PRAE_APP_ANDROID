@@ -12,14 +12,14 @@
         android:layout_height="wrap_content"
         android:background="@drawable/atividades_button_selector"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/simboloCalendario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/calendario2" />
+            app:srcCompat="@drawable/atividades_icon" />
 
         <View
             android:id="@+id/divider4"
