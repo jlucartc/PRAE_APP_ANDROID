@@ -15,10 +15,26 @@ public class FaleConoscoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fale_conosco);
 
         //getSupportActionBar().hide();
+        //TextView titulo = findViewById(R.id.nome);
+        //TextView faleConosco = findViewById(R.id.texto);
 
         TextView faleConosco = findViewById(R.id.faleConosco);
 
-        faleConosco.setText(Html.fromHtml("Deseja entrar em contato com a PRAE? O nosso endereço de email é <b><i>case@ufc.br</i></b>. O nosso telefone é <b><i>3366-7444</i></b>. Nosso horário de funcionamento é das <b><i>8 da manhã</i></b> até as <b><i>17 horas</i></b>. Te esperamos aqui! :)"));
+        //titulo.setText("Fale Conosco!");
+        faleConosco.setText(Html.fromHtml("Contatos:<br/>" +
+                "Fone:  <b>(85) 3366-7440/3366-7444</b><br/>" +
+                "E-mail: <b>praeufc@gmail.com</b><br/>" +
+                "<br/>" +
+                "Nos acompanhe nas redes sociais:<br/>" +
+                "Facebook: <b> fb.com/ufprae </b> <br/>" +
+                "Instagram: <b> @praeufc </b> <br/>" +
+                "Canal no youtube: <b> PRAE - UFC </b> <br/>" +
+                "<br/>" +
+                "Horário de funcionamento:<br/>"+
+                "<b> Segunda - Quinta: </b> <br/>" +
+                "<b> &#9679; 08:00 ás 12:00 </b>-<b> 13:00 ás 17:00 </b> <br/>" +"<br/>" +
+                "Na sexta o expediente é interno! </br>" + "<br/>" +
+                "Te esperamos aqui! :)<br/>"));
 
     }
 

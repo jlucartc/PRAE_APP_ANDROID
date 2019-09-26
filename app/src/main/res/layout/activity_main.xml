@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/green_button_selector"
-                android:drawableTop="@drawable/avisos_160"
+                android:drawableTop="@drawable/avisos_icon2"
                 android:gravity="center_horizontal"
                 android:onClick="avisos"
                 android:paddingLeft="20dp"
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="0dp"
                 android:layout_weight="1"
-                android:background="@color/ic_launcher_background_prae_app_launcher_icon"
+                android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/bolsas_icon"
                 android:gravity="center_horizontal"
                 android:onClick="bolsas"
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="0dp"
                 android:layout_weight="1"
-                android:background="@color/ic_launcher_background_prae_app_launcher_icon"
+                android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/auxilios_icon"
                 android:gravity="center_horizontal"
                 android:onClick="auxilios"
@@ -139,7 +139,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/ic_launcher_background_prae_app_launcher_icon"
+                android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/servicos_icon"
                 android:gravity="center_horizontal"
                 android:onClick="servicos"
@@ -169,7 +169,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="0dp"
                 android:layout_weight="1"
-                android:background="@color/ic_launcher_background_prae_app_launcher_icon"
+                android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/voce_sabia_icon"
                 android:gravity="center_horizontal"
                 android:onClick="voceSabia"
@@ -189,7 +189,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="0dp"
                 android:layout_weight="1"
-                android:background="@color/ic_launcher_background_prae_app_launcher_icon"
+                android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/fale_conosco_icon"
                 android:gravity="center_horizontal"
                 android:onClick="faleConosco"
@@ -208,7 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/ic_launcher_background_prae_app_launcher_icon"
+                android:background="@drawable/green_button_selector"
                 android:drawableTop="@drawable/mapas_da_prae"
                 android:gravity="center_horizontal"
                 android:onClick="mapaDaPrae"
@@ -223,5 +223,33 @@
                 android:textStyle="normal" />
         </TableRow>
 
+        <!--<TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/greenButtonSolid"
+            android:padding="0dp">
+
+            <Button
+                android:id="@+id/saude_e_cultura"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/green_button_selector"
+                android:drawableTop="@drawable/avisos_icon2"
+                android:gravity="center_horizontal"
+                android:onClick="avisos"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="0dp"
+                android:text="Saúde e Cultura"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                tools:visibility="visible" />
+
+        </TableRow> -->
     </TableLayout>
 </ScrollView>

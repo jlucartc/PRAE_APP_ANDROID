@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/bia"
+            android:id="@+id/comunicacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/blue_white_button_selector"
@@ -25,7 +25,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/bid"
+            android:id="@+id/educacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"

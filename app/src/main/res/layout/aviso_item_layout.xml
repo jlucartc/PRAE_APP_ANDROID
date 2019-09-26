@@ -60,7 +60,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:paddingLeft="5dp"
-                    app:srcCompat="@drawable/avisos_icon" />
+                    app:srcCompat="@drawable/avisos_icon2" />
 
                 <TextView
                     android:id="@+id/statusAviso"

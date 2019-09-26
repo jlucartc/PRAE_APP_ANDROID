@@ -27,7 +27,7 @@ public class BIDActivity extends AppCompatActivity {
         this.link = "http://www.prae.ufc.br/bolsa-de-incentivo-ao-desporto/";
         Button linkB = findViewById(R.id.link);
         nomeTV.setText("Bolsa de Incentivo ao Desporto");
-        descricaoTV.setText("Hei! Você tem interesse em desenvolver suas capacidades em atividades relacionadas ao desporto? Se tem interesse, então o Programa Bolsa de Incentivo ao Desporto, pode ser uma boa opção, pois  contribui na melhoria da sua trajetória e formação acadêmica.\n" + "Saiba mais clicando no link.\n");
+        descricaoTV.setText("Ei! Você tem interesse em desenvolver suas capacidades em atividades relacionadas ao desporto? Se tem interesse, então o Programa Bolsa de Incentivo ao Desporto, pode ser uma boa opção, pois  contribui na melhoria da sua trajetória e formação acadêmica.\n" + "Saiba mais clicando no link.\n");
 
         linkB.setOnClickListener(new LinkClickListener(this.link));
 

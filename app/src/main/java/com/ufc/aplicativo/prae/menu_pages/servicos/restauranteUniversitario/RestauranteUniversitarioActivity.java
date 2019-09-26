@@ -23,11 +23,11 @@ public class RestauranteUniversitarioActivity extends AppCompatActivity {
 
         TextView nomeTV = findViewById(R.id.nome);
         TextView descricaoTV = findViewById(R.id.descricao);
-        link = "http://www.prae.ufc.br/restaurante-universitario";
+        link = "http://www.ufc.br/restaurante";
         Button linkB = findViewById(R.id.link);
-
+        linkB.setText("IR PARA O SITE");
         nomeTV.setText("Restaurante Universitário");
-        descricaoTV.setText("Garantir a alimentação àqueles estudantes que se encontram em situação de vulnerabilidade econômica comprovada com intuito de minimizar os efeitos das desigualdades sociais na permanência desse jovens na Universidade\n");
+        descricaoTV.setText("O Programa de Restaurante Universitário tem por objetivo oferecer refeição balanceada e de qualidade a estudantes, docentes, servidores técnico-administrativos da UFC e pessoal a serviço da UFC de empresas terceirizadas contratadas, além de constituir um espaço de convivência e integração da comunidade universitária.\n");
 
         linkB.setOnClickListener(new LinkClickListener(this.link));
 
