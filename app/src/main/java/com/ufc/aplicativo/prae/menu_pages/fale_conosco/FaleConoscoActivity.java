@@ -23,10 +23,10 @@ public class FaleConoscoActivity extends AppCompatActivity {
         //titulo.setText("Fale Conosco!");
         faleConosco.setText(Html.fromHtml("Contatos:<br/>" +
                 "Fone:  <b>(85) 3366-7440/3366-7444</b><br/>" +
-                "E-mail: <b>praeufc@gmail.com</b><br/>" +
+                "E-mail: <b>infopraeufc@gmail.com</b><br/>" +
                 "<br/>" +
                 "Nos acompanhe nas redes sociais:<br/>" +
-                "Facebook: <b> fb.com/ufprae </b> <br/>" +
+                "Facebook: <b> fb.com/ufcprae </b> <br/>" +
                 "Instagram: <b> @praeufc </b> <br/>" +
                 "Canal no youtube: <b> PRAE - UFC </b> <br/>" +
                 "<br/>" +
